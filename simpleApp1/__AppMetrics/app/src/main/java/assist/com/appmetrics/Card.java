@@ -1,7 +1,5 @@
 package assist.com.appmetrics;
 
-import org.json.JSONArray;
-
 /**
  * Created by ggallo on 13/6/2017.
  */
@@ -9,11 +7,10 @@ import org.json.JSONArray;
 public class Card {
 
     private String cardTitle;
-    //private String[] usersOnline;
-    private JSONArray usersOnline;
+    private String usersOnline;
     private String usersLastHalfHour;
 
-    public Card(String cardTitle, JSONArray usersOnline, String usersLastHalfHour) {
+    public Card(String cardTitle, String usersOnline, String usersLastHalfHour) {
         this.cardTitle = cardTitle;
         this.usersOnline = usersOnline;
         this.usersLastHalfHour = usersLastHalfHour;
@@ -23,7 +20,7 @@ public class Card {
         return cardTitle;
     }
 
-    public JSONArray getOnlineUsers() {
+    public String getOnlineUsers() {
         return usersOnline;
     }
 

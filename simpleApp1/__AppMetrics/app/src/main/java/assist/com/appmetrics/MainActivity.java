@@ -1,38 +1,33 @@
 package assist.com.appmetrics;
 
-import android.graphics.drawable.AnimationDrawable;
+import android.animation.ObjectAnimator;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
-import android.widget.ImageView;
-import com.android.volley.NetworkResponse;
+import android.view.animation.DecelerateInterpolator;
+import android.widget.ProgressBar;
 import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonArrayRequest;
-import com.android.volley.toolbox.JsonObjectRequest;
 import com.google.firebase.iid.FirebaseInstanceId;
 import com.google.firebase.iid.FirebaseInstanceIdService;
-
 import org.json.JSONArray;
 import org.json.JSONException;
-import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.List;
+
 import assist.com.appmetrics.restclient.VolleyClient;
+
 import static android.content.ContentValues.TAG;
 
 public class MainActivity extends AppCompatActivity {
 
     private List<Card> cardList;
     private CardAdapter adapter;
-    private static final String URL_BASE_DEMO = "https://services.assistsa.com.ar/";
-
-    private AnimationDrawable animationDrawable;
-    //public String[] usersArray = new String[0];
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * Avoid cards duplication when hitting back button from other activity.
+     * This was added to avoid cards duplication when hitting back button from other activity.
      */
     @Override
     public void onRestart() {
@@ -72,44 +67,49 @@ public class MainActivity extends AppCompatActivity {
         initRequest();
     }
 
-    public void initRequest() {
+    private void initRequest() {
         // Init ProgressBar
-        ImageView mProgressBar = (ImageView) findViewById(R.id.main_progress);
-        mProgressBar.setBackgroundResource(R.drawable.circular_progressbar);
-        animationDrawable = (AnimationDrawable)mProgressBar.getBackground();
-        mProgressBar.setVisibility(View.VISIBLE);
-        animationDrawable.start();
+        ProgressBar mprogressBar = (ProgressBar) findViewById(R.id.circular_progress_bar_main);
+        ObjectAnimator anim = ObjectAnimator.ofInt(mprogressBar, "progress", 0, 100);
+        anim.setInterpolator(new DecelerateInterpolator());
+        anim.start();
 
-        //String url = "https://api.myjson.com/bins/kcxx3";
-
-        String url = URL_BASE_DEMO + "SWCFAppMetrics/Services/Mobile.svc/GetCardInfo";
-        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest (Request.Method.GET, url, null, new Response.Listener<JSONObject>() {
+        String url = "https://api.myjson.com/bins/kcxx3";
+        JsonArrayRequest jsArrayRequest = new JsonArrayRequest (Request.Method.GET, url, null, new Response.Listener<JSONArray>() {
             @Override
-            public void onResponse(JSONObject response) {
+            public void onResponse(JSONArray response) {
+                for (int i = 0; i < response.length(); i++) {
                     try {
-                        JSONArray usersOnline = response.getJSONArray("items");
-                        cardList.add(new Card("TG", usersOnline, "1"));
+                        String cardTitle = response.getJSONObject(i).getString("cardTitle");
+                        String usersOnline = response.getJSONObject(i).getString("usersOnline");
+                        String usersLastHalfHour = response.getJSONObject(i).getString("usersLastHalfHour");
+
+                        cardList.add(new Card(cardTitle, usersOnline, usersLastHalfHour));
+
                     } catch (JSONException ex) {
                         System.out.println(ex);
                     }
+                }
+                adapter.notifyDataSetChanged();
                 hideProgressBar();
             }
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
                 String hola = error.toString();
+                // TODO Auto-generated method stub
             }
         });
 
         // Access the RequestQueue through your singleton class.
-        VolleyClient.getInstance(this).addToRequestQueue(jsonObjectRequest);
+        VolleyClient.getInstance(this).addToRequestQueue(jsArrayRequest);
     }
 
     public void hideProgressBar() {
-        ImageView mProgressBar = (ImageView) findViewById(R.id.main_progress);
-        mProgressBar.setVisibility(View.GONE);
-        animationDrawable.stop();
+        ProgressBar mprogressBar = (ProgressBar) findViewById(R.id.circular_progress_bar_main);
+        mprogressBar.setVisibility(View.INVISIBLE);
     }
+
 
     public static class MyFirebaseInstanceIDService extends FirebaseInstanceIdService {
 
@@ -127,4 +127,6 @@ public class MainActivity extends AppCompatActivity {
         }
 
     }
+
+
 }

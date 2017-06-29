@@ -10,12 +10,6 @@ import android.text.Layout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
-import org.json.JSONArray;
-import org.json.JSONObject;
-
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -26,7 +20,6 @@ public class CardAdapter extends RecyclerView.Adapter<CardViewHolder>{
 
     private List<Card> cardList;
     private Context mContext;
-    String cityString = "";
 
     CardAdapter(Context mContext, List<Card> cardList) {
         this.mContext = mContext;
@@ -67,18 +60,7 @@ public class CardAdapter extends RecyclerView.Adapter<CardViewHolder>{
         Drawable elDraguable = elContesto.getResources().getDrawable(appIcon);
 
         holder.cardTitle.setImageDrawable(elDraguable);
-        JSONArray usu = card.getOnlineUsers();
-
-        for (int i = 0; i < usu.length(); i++) {
-            try {
-                JSONObject JO = usu.getJSONObject(i);
-                cityString = JO.getString("userName");
-
-            } catch (Exception ex) {}
-        }
-        String usersQty = String.valueOf(usu.length());
-        holder.usersOnline.setText(usersQty);
-
+        holder.usersOnline.setText(card.getOnlineUsers());
         holder.usersLastHalfHour.setText(card.getUsersLastHalfHour());
         holder.cardTitle.setOnClickListener(new View.OnClickListener() {
             @Override

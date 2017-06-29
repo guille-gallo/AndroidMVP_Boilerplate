@@ -10,7 +10,7 @@
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="match_parent" >
-        <!--<ProgressBar
+        <ProgressBar
             android:id="@+id/circular_progress_bar_main"
             style="?android:attr/progressBarStyleHorizontal"
             android:layout_width="100dp"
@@ -20,13 +20,7 @@
             android:indeterminate="false"
             android:max="100"
             android:progress="1"
-            android:progressDrawable="@drawable/circular_progressbar" />-->
-        <ImageView
-            android:id="@+id/main_progress"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:visibility="visible" />
+            android:progressDrawable="@drawable/circular_progressbar" />
     </RelativeLayout>
 
     <android.support.v7.widget.RecyclerView

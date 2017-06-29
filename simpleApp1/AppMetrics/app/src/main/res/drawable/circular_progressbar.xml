@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--
 <shape
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:innerRadiusRatio="2.3"
@@ -6,4 +7,38 @@
     android:thickness="5dp"
     android:useLevel="true">
     <solid android:color="@color/colorPrimaryDark" />
-</shape>
+</shape>-->
+
+<animation-list    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:oneshot="false">
+    <item
+        android:drawable="@drawable/frame_0"
+        android:duration="80" />
+    <item
+        android:drawable="@drawable/frame_2"
+        android:duration="80" />
+    <item
+        android:drawable="@drawable/frame_4"
+        android:duration="80" />
+    <item
+        android:drawable="@drawable/frame_6"
+        android:duration="80" />
+    <item
+        android:drawable="@drawable/frame_8"
+        android:duration="80" />
+    <item
+        android:drawable="@drawable/frame_10"
+        android:duration="80" />
+    <item
+        android:drawable="@drawable/frame_12"
+        android:duration="80" />
+    <item
+        android:drawable="@drawable/frame_14"
+        android:duration="80" />
+    <item
+        android:drawable="@drawable/frame_16"
+        android:duration="80" />
+    <item
+        android:drawable="@drawable/frame_18"
+        android:duration="80" />
+</animation-list>

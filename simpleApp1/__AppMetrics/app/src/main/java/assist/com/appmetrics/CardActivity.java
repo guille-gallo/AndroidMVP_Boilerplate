@@ -1,7 +1,6 @@
 package assist.com.appmetrics;
 
 import android.animation.ObjectAnimator;
-import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -9,7 +8,6 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.View;
 import android.view.animation.DecelerateInterpolator;
-import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.ProgressBar;
 import com.android.volley.Request;
@@ -30,10 +28,6 @@ public class CardActivity extends AppCompatActivity {
     ArrayList<UserDetail> datos = new ArrayList<>();
     UserDetailAdapter adapter;
     public ListView lista;
-
-
-    private AnimationDrawable animationDrawable;
-    private ImageView mProgressBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,15 +54,10 @@ public class CardActivity extends AppCompatActivity {
 
     public void initRequest() {
         // Init ProgressBar
-        /*ProgressBar mprogressBar = (ProgressBar) findViewById(R.id.circular_progress_bar);
+        ProgressBar mprogressBar = (ProgressBar) findViewById(R.id.circular_progress_bar);
         ObjectAnimator anim = ObjectAnimator.ofInt(mprogressBar, "progress", 0, 100);
         anim.setInterpolator(new DecelerateInterpolator());
-        anim.start();*/
-
-        mProgressBar.setBackgroundResource(R.drawable.circular_progressbar);
-        animationDrawable = (AnimationDrawable)mProgressBar.getBackground();
-        mProgressBar.setVisibility(View.VISIBLE);
-        animationDrawable.start();
+        anim.start();
 
         String url = "https://api.myjson.com/bins/7bukn";
         JsonArrayRequest jsArrayRequest = new JsonArrayRequest (Request.Method.GET, url, null, new Response.Listener<JSONArray>() {
@@ -101,9 +90,8 @@ public class CardActivity extends AppCompatActivity {
     }
 
     public void hideProgressBar() {
-        /*ProgressBar mprogressBar = (ProgressBar) findViewById(R.id.circular_progress_bar);
-        mprogressBar.setVisibility(View.INVISIBLE);*/
-
+        ProgressBar mprogressBar = (ProgressBar) findViewById(R.id.circular_progress_bar);
+        mprogressBar.setVisibility(View.INVISIBLE);
     }
 
     @Override
