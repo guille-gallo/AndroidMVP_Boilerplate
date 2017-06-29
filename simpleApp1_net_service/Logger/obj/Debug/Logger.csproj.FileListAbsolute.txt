@@ -1,0 +1,24 @@
+E:\Projects\OndaVerde - Etapa_3\OndaVerde\Logger\bin\Debug\Logger.dll
+E:\Projects\OndaVerde - Etapa_3\OndaVerde\Logger\bin\Debug\Logger.pdb
+E:\Projects\OndaVerde - Etapa_3\OndaVerde\Logger\obj\Debug\Logger.csprojResolveAssemblyReference.cache
+E:\Projects\OndaVerde - Etapa_3\OndaVerde\Logger\obj\Debug\Logger.dll
+E:\Projects\OndaVerde - Etapa_3\OndaVerde\Logger\obj\Debug\Logger.pdb
+E:\Projects\TaxiGuardianSL\TaxiGuardian\Logger\bin\Debug\Logger.dll
+E:\Projects\TaxiGuardianSL\TaxiGuardian\Logger\bin\Debug\Logger.pdb
+E:\Projects\TaxiGuardianSL\TaxiGuardian\Logger\obj\Debug\Logger.csprojResolveAssemblyReference.cache
+E:\Projects\TaxiGuardianSL\TaxiGuardian\Logger\obj\Debug\Logger.dll
+E:\Projects\TaxiGuardianSL\TaxiGuardian\Logger\obj\Debug\Logger.pdb
+E:\Projects\TaxiGuardian\TaxiGuardian\Logger\bin\Debug\Logger.dll
+E:\Projects\TaxiGuardian\TaxiGuardian\Logger\bin\Debug\Logger.pdb
+E:\Projects\TaxiGuardian\TaxiGuardian\Logger\obj\Debug\Logger.dll
+E:\Projects\TaxiGuardian\TaxiGuardian\Logger\obj\Debug\Logger.pdb
+E:\Projects\TaxiGuardian\TaxiGuardian\Logger\obj\Debug\Logger.csprojResolveAssemblyReference.cache
+C:\proyectos\taxiguardian\TaxiGuardian\Logger\bin\Debug\Logger.dll
+C:\proyectos\taxiguardian\TaxiGuardian\Logger\bin\Debug\Logger.pdb
+C:\proyectos\taxiguardian\TaxiGuardian\Logger\obj\Debug\Logger.csprojResolveAssemblyReference.cache
+C:\proyectos\taxiguardian\TaxiGuardian\Logger\obj\Debug\Logger.dll
+C:\proyectos\taxiguardian\TaxiGuardian\Logger\obj\Debug\Logger.pdb
+C:\proyectos\FrameworkMobile\AppMetrics_Service\Logger\bin\Debug\Logger.dll
+C:\proyectos\FrameworkMobile\AppMetrics_Service\Logger\bin\Debug\Logger.pdb
+C:\proyectos\FrameworkMobile\AppMetrics_Service\Logger\obj\Debug\Logger.dll
+C:\proyectos\FrameworkMobile\AppMetrics_Service\Logger\obj\Debug\Logger.pdb

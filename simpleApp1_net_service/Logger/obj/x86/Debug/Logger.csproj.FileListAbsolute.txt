@@ -1,0 +1,5 @@
+C:\proyectos\taxiguardian\TaxiGuardian\Logger\bin\Debug\Logger.dll
+C:\proyectos\taxiguardian\TaxiGuardian\Logger\bin\Debug\Logger.pdb
+C:\proyectos\taxiguardian\TaxiGuardian\Logger\obj\x86\Debug\Logger.csprojResolveAssemblyReference.cache
+C:\proyectos\taxiguardian\TaxiGuardian\Logger\obj\x86\Debug\Logger.dll
+C:\proyectos\taxiguardian\TaxiGuardian\Logger\obj\x86\Debug\Logger.pdb

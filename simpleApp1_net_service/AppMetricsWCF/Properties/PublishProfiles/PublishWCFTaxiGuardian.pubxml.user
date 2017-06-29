@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <LastUsedBuildConfiguration>Release</LastUsedBuildConfiguration>
+    <LastUsedPlatform>Any CPU</LastUsedPlatform>
+    <TimeStampOfAssociatedLegacyPublishXmlFile>
+    </TimeStampOfAssociatedLegacyPublishXmlFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="bin/AppMetricsWCF.dll">
+      <publishTime>06/28/2017 16:57:59</publishTime>
+    </File>
+    <File Include="bin/Common.dll">
+      <publishTime>06/26/2017 14:49:45</publishTime>
+    </File>
+    <File Include="bin/Common.pdb">
+      <publishTime>09/08/2015 16:36:33</publishTime>
+    </File>
+    <File Include="bin/DataAccess.dll">
+      <publishTime>06/27/2017 15:56:44</publishTime>
+    </File>
+    <File Include="bin/DataAccess.pdb">
+      <publishTime>09/08/2015 16:36:33</publishTime>
+    </File>
+    <File Include="bin/Logger.dll">
+      <publishTime>06/26/2017 14:49:45</publishTime>
+    </File>
+    <File Include="bin/Logger.pdb">
+      <publishTime>09/08/2015 16:36:32</publishTime>
+    </File>
+    <File Include="bin/Logic.dll">
+      <publishTime>06/28/2017 16:57:59</publishTime>
+    </File>
+    <File Include="bin/Logic.pdb">
+      <publishTime>10/22/2015 16:49:06</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>06/12/2017 10:47:35</publishTime>
+    </File>
+    <File Include="bin/WCFOndaVerde.dll">
+      <publishTime>04/06/2017 12:40:05</publishTime>
+    </File>
+    <File Include="bin/WCFTaxiGuardian.dll">
+      <publishTime>06/01/2017 10:46:12</publishTime>
+    </File>
+    <File Include="bin/WCFTaxiGuardian.pdb">
+      <publishTime>10/22/2015 16:49:09</publishTime>
+    </File>
+    <File Include="bin/WCFTaxiGuardian.xml">
+      <publishTime>10/22/2015 16:49:09</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>06/22/2017 15:40:39</publishTime>
+    </File>
+    <File Include="Images/head_escudo.png">
+      <publishTime>05/05/2017 13:11:58</publishTime>
+    </File>
+    <File Include="Images/ic_cuadriculado.png">
+      <publishTime>05/05/2017 13:11:58</publishTime>
+    </File>
+    <File Include="Images/ic_google_play.png">
+      <publishTime>05/05/2017 13:11:58</publishTime>
+    </File>
+    <File Include="Images/logo_taxi.png">
+      <publishTime>05/05/2017 13:11:58</publishTime>
+    </File>
+    <File Include="Services/Mobile.svc">
+      <publishTime>06/22/2017 15:40:39</publishTime>
+    </File>
+    <File Include="Services/Web.svc">
+      <publishTime>06/22/2017 15:40:40</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>06/28/2017 16:58:00</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

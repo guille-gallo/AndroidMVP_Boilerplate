@@ -1,0 +1,2582 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="GeoGuardianCitiesModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="GeoGuardianCitiesModelStoreContainer">
+          <EntitySet Name="Alert" EntityType="GeoGuardianCitiesModel.Store.Alert" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="AlertCondition" EntityType="GeoGuardianCitiesModel.Store.AlertCondition" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="AlertLog" EntityType="GeoGuardianCitiesModel.Store.AlertLog" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="AlertLogComment" EntityType="GeoGuardianCitiesModel.Store.AlertLogComment" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="AlertLogSound" EntityType="GeoGuardianCitiesModel.Store.AlertLogSound" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="AlertLogState" EntityType="GeoGuardianCitiesModel.Store.AlertLogState" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="AlertType" EntityType="GeoGuardianCitiesModel.Store.AlertType" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="City" EntityType="GeoGuardianCitiesModel.Store.City" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Country" EntityType="GeoGuardianCitiesModel.Store.Country" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Gender" EntityType="GeoGuardianCitiesModel.Store.Gender" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="LoginAudit" EntityType="GeoGuardianCitiesModel.Store.LoginAudit" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="MenuItem" EntityType="GeoGuardianCitiesModel.Store.MenuItem" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="MenuItemUserType" EntityType="GeoGuardianCitiesModel.Store.MenuItemUserType" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Message" EntityType="GeoGuardianCitiesModel.Store.Message" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="MessageRecipient" EntityType="GeoGuardianCitiesModel.Store.MessageRecipient" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="MessageState" EntityType="GeoGuardianCitiesModel.Store.MessageState" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Notification" EntityType="GeoGuardianCitiesModel.Store.Notification" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Package" EntityType="GeoGuardianCitiesModel.Store.Package" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Parameter" EntityType="GeoGuardianCitiesModel.Store.Parameter" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ParamsBlockAlert" EntityType="GeoGuardianCitiesModel.Store.ParamsBlockAlert" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="PushEvent" EntityType="GeoGuardianCitiesModel.Store.PushEvent" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="PushEventState" EntityType="GeoGuardianCitiesModel.Store.PushEventState" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="PushEventType" EntityType="GeoGuardianCitiesModel.Store.PushEventType" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="PushEventUser" EntityType="GeoGuardianCitiesModel.Store.PushEventUser" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="PushEventUserState" EntityType="GeoGuardianCitiesModel.Store.PushEventUserState" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Server" EntityType="GeoGuardianCitiesModel.Store.Server" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="State" EntityType="GeoGuardianCitiesModel.Store.State" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="TrackingInfo" EntityType="GeoGuardianCitiesModel.Store.TrackingInfo" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="User" EntityType="GeoGuardianCitiesModel.Store.User" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="UserEmergencyNumber" EntityType="GeoGuardianCitiesModel.Store.UserEmergencyNumber" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="UserPackage" EntityType="GeoGuardianCitiesModel.Store.UserPackage" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="UserStatus" EntityType="GeoGuardianCitiesModel.Store.UserStatus" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="UserType" EntityType="GeoGuardianCitiesModel.Store.UserType" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK_Alert_AlertType" Association="GeoGuardianCitiesModel.Store.FK_Alert_AlertType">
+            <End Role="AlertType" EntitySet="AlertType" />
+            <End Role="Alert" EntitySet="Alert" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Alert_CityHall" Association="GeoGuardianCitiesModel.Store.FK_Alert_CityHall">
+            <End Role="City" EntitySet="City" />
+            <End Role="Alert" EntitySet="Alert" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AlertCondition_AlertCondition" Association="GeoGuardianCitiesModel.Store.FK_AlertCondition_AlertCondition">
+            <End Role="AlertCondition" EntitySet="AlertCondition" />
+            <End Role="AlertCondition1" EntitySet="AlertCondition" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AlertLog_Alert" Association="GeoGuardianCitiesModel.Store.FK_AlertLog_Alert">
+            <End Role="Alert" EntitySet="Alert" />
+            <End Role="AlertLog" EntitySet="AlertLog" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AlertLog_AlertCondition" Association="GeoGuardianCitiesModel.Store.FK_AlertLog_AlertCondition">
+            <End Role="AlertCondition" EntitySet="AlertCondition" />
+            <End Role="AlertLog" EntitySet="AlertLog" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AlertLog_AlertLogState" Association="GeoGuardianCitiesModel.Store.FK_AlertLog_AlertLogState">
+            <End Role="AlertLogState" EntitySet="AlertLogState" />
+            <End Role="AlertLog" EntitySet="AlertLog" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AlertLog_User" Association="GeoGuardianCitiesModel.Store.FK_AlertLog_User">
+            <End Role="User" EntitySet="User" />
+            <End Role="AlertLog" EntitySet="AlertLog" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AlertLog_User1" Association="GeoGuardianCitiesModel.Store.FK_AlertLog_User1">
+            <End Role="User" EntitySet="User" />
+            <End Role="AlertLog" EntitySet="AlertLog" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AlertLogComment_AlertLog" Association="GeoGuardianCitiesModel.Store.FK_AlertLogComment_AlertLog">
+            <End Role="AlertLog" EntitySet="AlertLog" />
+            <End Role="AlertLogComment" EntitySet="AlertLogComment" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AlertLogComment_User" Association="GeoGuardianCitiesModel.Store.FK_AlertLogComment_User">
+            <End Role="User" EntitySet="User" />
+            <End Role="AlertLogComment" EntitySet="AlertLogComment" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AlertLogSound_AlertLog" Association="GeoGuardianCitiesModel.Store.FK_AlertLogSound_AlertLog">
+            <End Role="AlertLog" EntitySet="AlertLog" />
+            <End Role="AlertLogSound" EntitySet="AlertLogSound" />
+          </AssociationSet>
+          <AssociationSet Name="FK_City_State" Association="GeoGuardianCitiesModel.Store.FK_City_State">
+            <End Role="State" EntitySet="State" />
+            <End Role="City" EntitySet="City" />
+          </AssociationSet>
+          <AssociationSet Name="FK_LoginAudit_User" Association="GeoGuardianCitiesModel.Store.FK_LoginAudit_User">
+            <End Role="User" EntitySet="User" />
+            <End Role="LoginAudit" EntitySet="LoginAudit" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MenuItem_MenuItem" Association="GeoGuardianCitiesModel.Store.FK_MenuItem_MenuItem">
+            <End Role="MenuItem" EntitySet="MenuItem" />
+            <End Role="MenuItem1" EntitySet="MenuItem" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MenuItemUserType_MenuItem" Association="GeoGuardianCitiesModel.Store.FK_MenuItemUserType_MenuItem">
+            <End Role="MenuItem" EntitySet="MenuItem" />
+            <End Role="MenuItemUserType" EntitySet="MenuItemUserType" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MenuItemUserType_UserType" Association="GeoGuardianCitiesModel.Store.FK_MenuItemUserType_UserType">
+            <End Role="UserType" EntitySet="UserType" />
+            <End Role="MenuItemUserType" EntitySet="MenuItemUserType" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Message_Alert" Association="GeoGuardianCitiesModel.Store.FK_Message_Alert">
+            <End Role="AlertLog" EntitySet="AlertLog" />
+            <End Role="Message" EntitySet="Message" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Message_MessageState" Association="GeoGuardianCitiesModel.Store.FK_Message_MessageState">
+            <End Role="MessageState" EntitySet="MessageState" />
+            <End Role="Message" EntitySet="Message" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Message_User" Association="GeoGuardianCitiesModel.Store.FK_Message_User">
+            <End Role="User" EntitySet="User" />
+            <End Role="Message" EntitySet="Message" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MessageRecipient_Message" Association="GeoGuardianCitiesModel.Store.FK_MessageRecipient_Message">
+            <End Role="Message" EntitySet="Message" />
+            <End Role="MessageRecipient" EntitySet="MessageRecipient" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MessageRecipient_MessageState" Association="GeoGuardianCitiesModel.Store.FK_MessageRecipient_MessageState">
+            <End Role="MessageState" EntitySet="MessageState" />
+            <End Role="MessageRecipient" EntitySet="MessageRecipient" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MessageRecipient_User" Association="GeoGuardianCitiesModel.Store.FK_MessageRecipient_User">
+            <End Role="User" EntitySet="User" />
+            <End Role="MessageRecipient" EntitySet="MessageRecipient" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Notification_CityHall" Association="GeoGuardianCitiesModel.Store.FK_Notification_CityHall">
+            <End Role="City" EntitySet="City" />
+            <End Role="Notification" EntitySet="Notification" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ParamsBlockAlert_AlertCondition" Association="GeoGuardianCitiesModel.Store.FK_ParamsBlockAlert_AlertCondition">
+            <End Role="AlertCondition" EntitySet="AlertCondition" />
+            <End Role="ParamsBlockAlert" EntitySet="ParamsBlockAlert" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ParamsBlockAlert_City" Association="GeoGuardianCitiesModel.Store.FK_ParamsBlockAlert_City">
+            <End Role="City" EntitySet="City" />
+            <End Role="ParamsBlockAlert" EntitySet="ParamsBlockAlert" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PushEvent_Message" Association="GeoGuardianCitiesModel.Store.FK_PushEvent_Message">
+            <End Role="Message" EntitySet="Message" />
+            <End Role="PushEvent" EntitySet="PushEvent" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PushEvent_PushEventState" Association="GeoGuardianCitiesModel.Store.FK_PushEvent_PushEventState">
+            <End Role="PushEventState" EntitySet="PushEventState" />
+            <End Role="PushEvent" EntitySet="PushEvent" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PushEvent_PushEventType" Association="GeoGuardianCitiesModel.Store.FK_PushEvent_PushEventType">
+            <End Role="PushEventType" EntitySet="PushEventType" />
+            <End Role="PushEvent" EntitySet="PushEvent" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PushEventUser_PushEvent" Association="GeoGuardianCitiesModel.Store.FK_PushEventUser_PushEvent">
+            <End Role="PushEvent" EntitySet="PushEvent" />
+            <End Role="PushEventUser" EntitySet="PushEventUser" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PushEventUser_PushEventUserState" Association="GeoGuardianCitiesModel.Store.FK_PushEventUser_PushEventUserState">
+            <End Role="PushEventUserState" EntitySet="PushEventUserState" />
+            <End Role="PushEventUser" EntitySet="PushEventUser" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PushEventUser_User" Association="GeoGuardianCitiesModel.Store.FK_PushEventUser_User">
+            <End Role="User" EntitySet="User" />
+            <End Role="PushEventUser" EntitySet="PushEventUser" />
+          </AssociationSet>
+          <AssociationSet Name="FK_State_Country" Association="GeoGuardianCitiesModel.Store.FK_State_Country">
+            <End Role="Country" EntitySet="Country" />
+            <End Role="State" EntitySet="State" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TrackingInfo_User" Association="GeoGuardianCitiesModel.Store.FK_TrackingInfo_User">
+            <End Role="User" EntitySet="User" />
+            <End Role="TrackingInfo" EntitySet="TrackingInfo" />
+          </AssociationSet>
+          <AssociationSet Name="FK_User_City" Association="GeoGuardianCitiesModel.Store.FK_User_City">
+            <End Role="City" EntitySet="City" />
+            <End Role="User" EntitySet="User" />
+          </AssociationSet>
+          <AssociationSet Name="FK_User_Gender" Association="GeoGuardianCitiesModel.Store.FK_User_Gender">
+            <End Role="Gender" EntitySet="Gender" />
+            <End Role="User" EntitySet="User" />
+          </AssociationSet>
+          <AssociationSet Name="FK_User_UserStatus" Association="GeoGuardianCitiesModel.Store.FK_User_UserStatus">
+            <End Role="UserStatus" EntitySet="UserStatus" />
+            <End Role="User" EntitySet="User" />
+          </AssociationSet>
+          <AssociationSet Name="FK_User_UserType" Association="GeoGuardianCitiesModel.Store.FK_User_UserType">
+            <End Role="UserType" EntitySet="UserType" />
+            <End Role="User" EntitySet="User" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UserEmergencyNumber_User" Association="GeoGuardianCitiesModel.Store.FK_UserEmergencyNumber_User">
+            <End Role="User" EntitySet="User" />
+            <End Role="UserEmergencyNumber" EntitySet="UserEmergencyNumber" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UserPackage_Package" Association="GeoGuardianCitiesModel.Store.FK_UserPackage_Package">
+            <End Role="Package" EntitySet="Package" />
+            <End Role="UserPackage" EntitySet="UserPackage" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UserPackage_User" Association="GeoGuardianCitiesModel.Store.FK_UserPackage_User">
+            <End Role="User" EntitySet="User" />
+            <End Role="UserPackage" EntitySet="UserPackage" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Alert">
+          <Key>
+            <PropertyRef Name="AlertID" />
+          </Key>
+          <Property Name="AlertID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="AlertName" Type="varchar" MaxLength="50" />
+          <Property Name="AlertTypeID" Type="int" Nullable="false" />
+          <Property Name="IsActive" Type="bit" Nullable="false" />
+          <Property Name="CreationDate" Type="datetime" Nullable="false" />
+          <Property Name="UserIDCreation" Type="int" Nullable="false" />
+          <Property Name="AlertDescription" Type="varchar" MaxLength="500" />
+          <Property Name="CityID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="AlertCondition">
+          <Key>
+            <PropertyRef Name="AlertConditionID" />
+          </Key>
+          <Property Name="AlertConditionID" Type="int" Nullable="false" />
+          <Property Name="AlertConditionName" Type="varchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6005: The data type 'geography' is not supported; the column 'UserPosition' in table 'GeoGuardianCities.dbo.AlertLog' was excluded.
+      -->
+        <EntityType Name="AlertLog">
+          <Key>
+            <PropertyRef Name="AlertLogID" />
+          </Key>
+          <Property Name="AlertLogID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="AlertID" Type="int" Nullable="false" />
+          <Property Name="AlertDateTime" Type="datetime" Nullable="false" />
+          <Property Name="UserID" Type="int" Nullable="false" />
+          <Property Name="AlertConditionID" Type="int" Nullable="false" />
+          <Property Name="AddressPosition" Type="varchar" MaxLength="250" />
+          <Property Name="AlertLogStateID" Type="int" Nullable="false" />
+          <Property Name="BlockUserID" Type="int" />
+          <Property Name="BlockDateTime" Type="datetime" />
+          <Property Name="UserPositionAccuracy" Type="float" Nullable="false" />
+          <Property Name="Reported" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="AlertLogComment">
+          <Key>
+            <PropertyRef Name="AlertLogCommentID" />
+          </Key>
+          <Property Name="AlertLogCommentID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="CommentDateTime" Type="datetime" Nullable="false" />
+          <Property Name="UserID" Type="int" Nullable="false" />
+          <Property Name="AlertComment" Type="varchar" Nullable="false" MaxLength="500" />
+          <Property Name="AlertLogID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="AlertLogSound">
+          <Key>
+            <PropertyRef Name="AlertLogID" />
+            <PropertyRef Name="FileName" />
+          </Key>
+          <Property Name="AlertLogID" Type="int" Nullable="false" />
+          <Property Name="FileName" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="DateTime" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="AlertLogState">
+          <Key>
+            <PropertyRef Name="AlertLogStateID" />
+          </Key>
+          <Property Name="AlertLogStateID" Type="int" Nullable="false" />
+          <Property Name="AlertLogStateName" Type="varchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="AlertType">
+          <Key>
+            <PropertyRef Name="AlertTypeID" />
+          </Key>
+          <Property Name="AlertTypeID" Type="int" Nullable="false" />
+          <Property Name="AlertTypeName" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="PriorityLevel" Type="int" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6005: The data type 'geography' is not supported; the column 'Coordinate' in table 'GeoGuardianCities.dbo.City' was excluded.
+      -->
+        <EntityType Name="City">
+          <Key>
+            <PropertyRef Name="CityID" />
+          </Key>
+          <Property Name="CityID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="StateID" Type="int" Nullable="false" />
+          <Property Name="DefaultZoomLevel" Type="int" Nullable="false" />
+          <Property Name="MinZoomLevel" Type="int" Nullable="false" />
+          <Property Name="ZoomThreshold" Type="int" Nullable="false" />
+          <Property Name="ZipCode" Type="varchar" MaxLength="50" />
+          <Property Name="AliasNames" Type="varchar" Nullable="false" MaxLength="250" />
+          <Property Name="Code" Type="varchar" MaxLength="30" />
+          <Property Name="CreationDate" Type="datetime" Nullable="false" />
+          <Property Name="IsActive" Type="bit" Nullable="false" />
+          <Property Name="AboutUsText" Type="varchar" MaxLength="500" />
+          <Property Name="WelcomeText" Type="varchar" MaxLength="500" />
+          <Property Name="CertificateSerialNumber" Type="varchar" MaxLength="250" />
+          <Property Name="ContactMail" Type="varchar" MaxLength="70" />
+          <Property Name="LastCheckedDateTime" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Country">
+          <Key>
+            <PropertyRef Name="CountryID" />
+          </Key>
+          <Property Name="CountryID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="Code" Type="varchar" Nullable="false" MaxLength="2" />
+        </EntityType>
+        <EntityType Name="Gender">
+          <Key>
+            <PropertyRef Name="GenderID" />
+          </Key>
+          <Property Name="GenderID" Type="int" Nullable="false" />
+          <Property Name="GenderName" Type="varchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="LoginAudit">
+          <Key>
+            <PropertyRef Name="LoginAuditID" />
+          </Key>
+          <Property Name="LoginAuditID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="LoginAuditDate" Type="datetime" Nullable="false" />
+          <Property Name="UserID" Type="int" Nullable="false" />
+          <Property Name="IP" Type="varchar" Nullable="false" MaxLength="15" />
+        </EntityType>
+        <EntityType Name="MenuItem">
+          <Key>
+            <PropertyRef Name="MenuItemID" />
+          </Key>
+          <Property Name="MenuItemID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ParentMenuItemID" Type="int" />
+          <Property Name="MenuItemName" Type="varchar" Nullable="false" MaxLength="150" />
+          <Property Name="IsActive" Type="bit" Nullable="false" />
+          <Property Name="Path" Type="varchar" MaxLength="150" />
+          <Property Name="Alias" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="MenuItemUserType">
+          <Key>
+            <PropertyRef Name="MenuItemID" />
+            <PropertyRef Name="UserTypeID" />
+          </Key>
+          <Property Name="MenuItemID" Type="int" Nullable="false" />
+          <Property Name="UserTypeID" Type="int" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6005: The data type 'geography' is not supported; the column 'Coordinate' in table 'GeoGuardianCities.dbo.Message' was excluded.
+      -->
+        <EntityType Name="Message">
+          <Key>
+            <PropertyRef Name="MessageID" />
+          </Key>
+          <Property Name="MessageID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Subject" Type="varchar" MaxLength="500" />
+          <Property Name="Body" Type="varchar(max)" Nullable="false" />
+          <Property Name="MessageDate" Type="datetime" Nullable="false" />
+          <Property Name="UserID" Type="int" Nullable="false" />
+          <Property Name="MessageStateID" Type="int" Nullable="false" />
+          <Property Name="IsImportant" Type="bit" Nullable="false" />
+          <Property Name="Address" Type="varchar" MaxLength="250" />
+          <Property Name="AlertLogID" Type="int" />
+        </EntityType>
+        <EntityType Name="MessageRecipient">
+          <Key>
+            <PropertyRef Name="MessageID" />
+            <PropertyRef Name="UserID" />
+          </Key>
+          <Property Name="MessageID" Type="int" Nullable="false" />
+          <Property Name="UserID" Type="int" Nullable="false" />
+          <Property Name="MessageStateID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="MessageState">
+          <Key>
+            <PropertyRef Name="MessageStateID" />
+          </Key>
+          <Property Name="MessageStateID" Type="int" Nullable="false" />
+          <Property Name="StateName" Type="varchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Notification">
+          <Key>
+            <PropertyRef Name="NotificationID" />
+          </Key>
+          <Property Name="NotificationID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="NotificationDateTime" Type="datetime" Nullable="false" />
+          <Property Name="Title" Type="varchar" Nullable="false" MaxLength="150" />
+          <Property Name="Text" Type="varchar" Nullable="false" MaxLength="500" />
+          <Property Name="CityID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Package">
+          <Key>
+            <PropertyRef Name="PackageID" />
+          </Key>
+          <Property Name="PackageID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="PackageName" Type="varchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Parameter">
+          <Key>
+            <PropertyRef Name="ParameterID" />
+          </Key>
+          <Property Name="ParameterID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ParameterName" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="ParameterKey" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="ParameterValue" Type="varchar(max)" />
+          <Property Name="Description" Type="varchar" MaxLength="250" />
+          <Property Name="IsMobile" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ParamsBlockAlert">
+          <Key>
+            <PropertyRef Name="AlertConditionID" />
+            <PropertyRef Name="CityID" />
+          </Key>
+          <Property Name="AlertConditionID" Type="int" Nullable="false" />
+          <Property Name="CityID" Type="int" Nullable="false" />
+          <Property Name="BlockTime" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PushEvent">
+          <Key>
+            <PropertyRef Name="PushEventID" />
+          </Key>
+          <Property Name="PushEventID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="EventDateTime" Type="datetime" Nullable="false" />
+          <Property Name="PushEventTypeID" Type="int" Nullable="false" />
+          <Property Name="PushEventStateID" Type="int" Nullable="false" />
+          <Property Name="MessageID" Type="int" />
+        </EntityType>
+        <EntityType Name="PushEventState">
+          <Key>
+            <PropertyRef Name="PushEventStateID" />
+          </Key>
+          <Property Name="PushEventStateID" Type="int" Nullable="false" />
+          <Property Name="PushEventStateName" Type="varchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="PushEventType">
+          <Key>
+            <PropertyRef Name="PushEventTypeID" />
+          </Key>
+          <Property Name="PushEventTypeID" Type="int" Nullable="false" />
+          <Property Name="PushEventTypeName" Type="varchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="PushEventUser">
+          <Key>
+            <PropertyRef Name="PushEventID" />
+            <PropertyRef Name="UserID" />
+          </Key>
+          <Property Name="PushEventID" Type="int" Nullable="false" />
+          <Property Name="UserID" Type="int" Nullable="false" />
+          <Property Name="PushEventUserStateID" Type="int" Nullable="false" />
+          <Property Name="SendRetries" Type="int" Nullable="false" />
+          <Property Name="ProcessDateTime" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PushEventUserState">
+          <Key>
+            <PropertyRef Name="PushEventUserStateID" />
+          </Key>
+          <Property Name="PushEventUserStateID" Type="int" Nullable="false" />
+          <Property Name="PushEventUserStateName" Type="varchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Server">
+          <Key>
+            <PropertyRef Name="ServerID" />
+          </Key>
+          <Property Name="ServerID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ServerName" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Url" Type="varchar" Nullable="false" MaxLength="500" />
+          <Property Name="Availability" Type="float" />
+          <Property Name="ProcessorTimeHistory" Type="varchar(max)" />
+        </EntityType>
+        <EntityType Name="State">
+          <Key>
+            <PropertyRef Name="StateID" />
+          </Key>
+          <Property Name="StateID" Type="int" Nullable="false" />
+          <Property Name="Name" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="CountryID" Type="int" Nullable="false" />
+          <Property Name="AliasNames" Type="nvarchar" Nullable="false" MaxLength="250" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6005: The data type 'geography' is not supported; the column 'Coordinate' in table 'GeoGuardianCities.dbo.TrackingInfo' was excluded.
+      -->
+        <EntityType Name="TrackingInfo">
+          <Key>
+            <PropertyRef Name="TrackingInfoID" />
+          </Key>
+          <Property Name="TrackingInfoID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="TrackingDateTime" Type="datetime" Nullable="false" />
+          <Property Name="UserID" Type="int" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6005: The data type 'geography' is not supported; the column 'LastPosition' in table 'GeoGuardianCities.dbo.User' was excluded.
+      -->
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="UserID" />
+          </Key>
+          <Property Name="UserID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="FirstName" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="LastName" Type="varchar" MaxLength="100" />
+          <Property Name="UserName" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Password" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="Email" Type="varchar" Nullable="false" MaxLength="250" />
+          <Property Name="PrefixMobilePhone" Type="varchar" MaxLength="10" />
+          <Property Name="MobilePhone" Type="varchar" MaxLength="20" />
+          <Property Name="LastLogin" Type="datetime" />
+          <Property Name="GenderID" Type="int" Nullable="false" />
+          <Property Name="Birthday" Type="date" />
+          <Property Name="IsActive" Type="bit" Nullable="false" />
+          <Property Name="CreationDate" Type="datetime" Nullable="false" />
+          <Property Name="ProfilePicture" Type="varbinary(max)" />
+          <Property Name="UserStatusID" Type="int" Nullable="false" />
+          <Property Name="Address" Type="varchar" MaxLength="250" />
+          <Property Name="TrackingEnabled" Type="bit" Nullable="false" />
+          <Property Name="LastPositionDateTime" Type="datetime" />
+          <Property Name="LastStatusChange" Type="datetime" />
+          <Property Name="SignInTokenDate" Type="datetime" />
+          <Property Name="ProfilePictureThumb" Type="varbinary(max)" />
+          <Property Name="PendingConfirmation" Type="bit" Nullable="false" />
+          <Property Name="SignInToken" Type="varchar" MaxLength="100" />
+          <Property Name="UserTypeID" Type="int" Nullable="false" />
+          <Property Name="CurrentSessionID" Type="varchar" MaxLength="50" />
+          <Property Name="PictureLastUpdate" Type="datetime" Nullable="false" />
+          <Property Name="CityID" Type="int" />
+          <Property Name="PushDeviceRegistrationID" Type="varchar" MaxLength="500" />
+          <Property Name="LoginAttempts" Type="int" Nullable="false" />
+          <Property Name="GeoGuardianVersion" Type="varchar" MaxLength="7" />
+          <Property Name="DeviceInfo" Type="varchar" MaxLength="50" />
+          <Property Name="AndroidVersion" Type="varchar" MaxLength="7" />
+        </EntityType>
+        <EntityType Name="UserEmergencyNumber">
+          <Key>
+            <PropertyRef Name="UserID" />
+            <PropertyRef Name="Number" />
+          </Key>
+          <Property Name="UserID" Type="int" Nullable="false" />
+          <Property Name="Number" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Description" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="UserPackage">
+          <Key>
+            <PropertyRef Name="PackageID" />
+            <PropertyRef Name="UserID" />
+          </Key>
+          <Property Name="PackageID" Type="int" Nullable="false" />
+          <Property Name="UserID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="UserStatus">
+          <Key>
+            <PropertyRef Name="UserStatusID" />
+          </Key>
+          <Property Name="UserStatusID" Type="int" Nullable="false" />
+          <Property Name="UserStatusName" Type="varchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="UserType">
+          <Key>
+            <PropertyRef Name="UserTypeID" />
+          </Key>
+          <Property Name="UserTypeID" Type="int" Nullable="false" />
+          <Property Name="UserTypeName" Type="varchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <Association Name="FK_Alert_AlertType">
+          <End Role="AlertType" Type="GeoGuardianCitiesModel.Store.AlertType" Multiplicity="1" />
+          <End Role="Alert" Type="GeoGuardianCitiesModel.Store.Alert" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AlertType">
+              <PropertyRef Name="AlertTypeID" />
+            </Principal>
+            <Dependent Role="Alert">
+              <PropertyRef Name="AlertTypeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Alert_CityHall">
+          <End Role="City" Type="GeoGuardianCitiesModel.Store.City" Multiplicity="1" />
+          <End Role="Alert" Type="GeoGuardianCitiesModel.Store.Alert" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="City">
+              <PropertyRef Name="CityID" />
+            </Principal>
+            <Dependent Role="Alert">
+              <PropertyRef Name="CityID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AlertCondition_AlertCondition">
+          <End Role="AlertCondition" Type="GeoGuardianCitiesModel.Store.AlertCondition" Multiplicity="1" />
+          <End Role="AlertCondition1" Type="GeoGuardianCitiesModel.Store.AlertCondition" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="AlertCondition">
+              <PropertyRef Name="AlertConditionID" />
+            </Principal>
+            <Dependent Role="AlertCondition1">
+              <PropertyRef Name="AlertConditionID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AlertLog_Alert">
+          <End Role="Alert" Type="GeoGuardianCitiesModel.Store.Alert" Multiplicity="1" />
+          <End Role="AlertLog" Type="GeoGuardianCitiesModel.Store.AlertLog" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Alert">
+              <PropertyRef Name="AlertID" />
+            </Principal>
+            <Dependent Role="AlertLog">
+              <PropertyRef Name="AlertID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AlertLog_AlertCondition">
+          <End Role="AlertCondition" Type="GeoGuardianCitiesModel.Store.AlertCondition" Multiplicity="1" />
+          <End Role="AlertLog" Type="GeoGuardianCitiesModel.Store.AlertLog" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AlertCondition">
+              <PropertyRef Name="AlertConditionID" />
+            </Principal>
+            <Dependent Role="AlertLog">
+              <PropertyRef Name="AlertConditionID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AlertLog_AlertLogState">
+          <End Role="AlertLogState" Type="GeoGuardianCitiesModel.Store.AlertLogState" Multiplicity="1" />
+          <End Role="AlertLog" Type="GeoGuardianCitiesModel.Store.AlertLog" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AlertLogState">
+              <PropertyRef Name="AlertLogStateID" />
+            </Principal>
+            <Dependent Role="AlertLog">
+              <PropertyRef Name="AlertLogStateID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AlertLog_User">
+          <End Role="User" Type="GeoGuardianCitiesModel.Store.User" Multiplicity="1" />
+          <End Role="AlertLog" Type="GeoGuardianCitiesModel.Store.AlertLog" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="UserID" />
+            </Principal>
+            <Dependent Role="AlertLog">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AlertLog_User1">
+          <End Role="User" Type="GeoGuardianCitiesModel.Store.User" Multiplicity="0..1" />
+          <End Role="AlertLog" Type="GeoGuardianCitiesModel.Store.AlertLog" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="UserID" />
+            </Principal>
+            <Dependent Role="AlertLog">
+              <PropertyRef Name="BlockUserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AlertLogComment_AlertLog">
+          <End Role="AlertLog" Type="GeoGuardianCitiesModel.Store.AlertLog" Multiplicity="1" />
+          <End Role="AlertLogComment" Type="GeoGuardianCitiesModel.Store.AlertLogComment" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AlertLog">
+              <PropertyRef Name="AlertLogID" />
+            </Principal>
+            <Dependent Role="AlertLogComment">
+              <PropertyRef Name="AlertLogID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AlertLogComment_User">
+          <End Role="User" Type="GeoGuardianCitiesModel.Store.User" Multiplicity="1" />
+          <End Role="AlertLogComment" Type="GeoGuardianCitiesModel.Store.AlertLogComment" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="UserID" />
+            </Principal>
+            <Dependent Role="AlertLogComment">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AlertLogSound_AlertLog">
+          <End Role="AlertLog" Type="GeoGuardianCitiesModel.Store.AlertLog" Multiplicity="1" />
+          <End Role="AlertLogSound" Type="GeoGuardianCitiesModel.Store.AlertLogSound" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AlertLog">
+              <PropertyRef Name="AlertLogID" />
+            </Principal>
+            <Dependent Role="AlertLogSound">
+              <PropertyRef Name="AlertLogID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_City_State">
+          <End Role="State" Type="GeoGuardianCitiesModel.Store.State" Multiplicity="1" />
+          <End Role="City" Type="GeoGuardianCitiesModel.Store.City" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="State">
+              <PropertyRef Name="StateID" />
+            </Principal>
+            <Dependent Role="City">
+              <PropertyRef Name="StateID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_LoginAudit_User">
+          <End Role="User" Type="GeoGuardianCitiesModel.Store.User" Multiplicity="1" />
+          <End Role="LoginAudit" Type="GeoGuardianCitiesModel.Store.LoginAudit" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="UserID" />
+            </Principal>
+            <Dependent Role="LoginAudit">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MenuItem_MenuItem">
+          <End Role="MenuItem" Type="GeoGuardianCitiesModel.Store.MenuItem" Multiplicity="0..1" />
+          <End Role="MenuItem1" Type="GeoGuardianCitiesModel.Store.MenuItem" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MenuItem">
+              <PropertyRef Name="MenuItemID" />
+            </Principal>
+            <Dependent Role="MenuItem1">
+              <PropertyRef Name="ParentMenuItemID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MenuItemUserType_MenuItem">
+          <End Role="MenuItem" Type="GeoGuardianCitiesModel.Store.MenuItem" Multiplicity="1" />
+          <End Role="MenuItemUserType" Type="GeoGuardianCitiesModel.Store.MenuItemUserType" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MenuItem">
+              <PropertyRef Name="MenuItemID" />
+            </Principal>
+            <Dependent Role="MenuItemUserType">
+              <PropertyRef Name="MenuItemID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MenuItemUserType_UserType">
+          <End Role="UserType" Type="GeoGuardianCitiesModel.Store.UserType" Multiplicity="1" />
+          <End Role="MenuItemUserType" Type="GeoGuardianCitiesModel.Store.MenuItemUserType" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UserType">
+              <PropertyRef Name="UserTypeID" />
+            </Principal>
+            <Dependent Role="MenuItemUserType">
+              <PropertyRef Name="UserTypeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Message_Alert">
+          <End Role="AlertLog" Type="GeoGuardianCitiesModel.Store.AlertLog" Multiplicity="0..1" />
+          <End Role="Message" Type="GeoGuardianCitiesModel.Store.Message" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AlertLog">
+              <PropertyRef Name="AlertLogID" />
+            </Principal>
+            <Dependent Role="Message">
+              <PropertyRef Name="AlertLogID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Message_MessageState">
+          <End Role="MessageState" Type="GeoGuardianCitiesModel.Store.MessageState" Multiplicity="1" />
+          <End Role="Message" Type="GeoGuardianCitiesModel.Store.Message" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MessageState">
+              <PropertyRef Name="MessageStateID" />
+            </Principal>
+            <Dependent Role="Message">
+              <PropertyRef Name="MessageStateID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Message_User">
+          <End Role="User" Type="GeoGuardianCitiesModel.Store.User" Multiplicity="1" />
+          <End Role="Message" Type="GeoGuardianCitiesModel.Store.Message" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="UserID" />
+            </Principal>
+            <Dependent Role="Message">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MessageRecipient_Message">
+          <End Role="Message" Type="GeoGuardianCitiesModel.Store.Message" Multiplicity="1" />
+          <End Role="MessageRecipient" Type="GeoGuardianCitiesModel.Store.MessageRecipient" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Message">
+              <PropertyRef Name="MessageID" />
+            </Principal>
+            <Dependent Role="MessageRecipient">
+              <PropertyRef Name="MessageID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MessageRecipient_MessageState">
+          <End Role="MessageState" Type="GeoGuardianCitiesModel.Store.MessageState" Multiplicity="1" />
+          <End Role="MessageRecipient" Type="GeoGuardianCitiesModel.Store.MessageRecipient" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MessageState">
+              <PropertyRef Name="MessageStateID" />
+            </Principal>
+            <Dependent Role="MessageRecipient">
+              <PropertyRef Name="MessageStateID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MessageRecipient_User">
+          <End Role="User" Type="GeoGuardianCitiesModel.Store.User" Multiplicity="1" />
+          <End Role="MessageRecipient" Type="GeoGuardianCitiesModel.Store.MessageRecipient" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="UserID" />
+            </Principal>
+            <Dependent Role="MessageRecipient">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Notification_CityHall">
+          <End Role="City" Type="GeoGuardianCitiesModel.Store.City" Multiplicity="1" />
+          <End Role="Notification" Type="GeoGuardianCitiesModel.Store.Notification" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="City">
+              <PropertyRef Name="CityID" />
+            </Principal>
+            <Dependent Role="Notification">
+              <PropertyRef Name="CityID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ParamsBlockAlert_AlertCondition">
+          <End Role="AlertCondition" Type="GeoGuardianCitiesModel.Store.AlertCondition" Multiplicity="1" />
+          <End Role="ParamsBlockAlert" Type="GeoGuardianCitiesModel.Store.ParamsBlockAlert" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AlertCondition">
+              <PropertyRef Name="AlertConditionID" />
+            </Principal>
+            <Dependent Role="ParamsBlockAlert">
+              <PropertyRef Name="AlertConditionID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ParamsBlockAlert_City">
+          <End Role="City" Type="GeoGuardianCitiesModel.Store.City" Multiplicity="1" />
+          <End Role="ParamsBlockAlert" Type="GeoGuardianCitiesModel.Store.ParamsBlockAlert" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="City">
+              <PropertyRef Name="CityID" />
+            </Principal>
+            <Dependent Role="ParamsBlockAlert">
+              <PropertyRef Name="CityID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PushEvent_Message">
+          <End Role="Message" Type="GeoGuardianCitiesModel.Store.Message" Multiplicity="0..1" />
+          <End Role="PushEvent" Type="GeoGuardianCitiesModel.Store.PushEvent" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Message">
+              <PropertyRef Name="MessageID" />
+            </Principal>
+            <Dependent Role="PushEvent">
+              <PropertyRef Name="MessageID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PushEvent_PushEventState">
+          <End Role="PushEventState" Type="GeoGuardianCitiesModel.Store.PushEventState" Multiplicity="1" />
+          <End Role="PushEvent" Type="GeoGuardianCitiesModel.Store.PushEvent" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PushEventState">
+              <PropertyRef Name="PushEventStateID" />
+            </Principal>
+            <Dependent Role="PushEvent">
+              <PropertyRef Name="PushEventStateID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PushEvent_PushEventType">
+          <End Role="PushEventType" Type="GeoGuardianCitiesModel.Store.PushEventType" Multiplicity="1" />
+          <End Role="PushEvent" Type="GeoGuardianCitiesModel.Store.PushEvent" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PushEventType">
+              <PropertyRef Name="PushEventTypeID" />
+            </Principal>
+            <Dependent Role="PushEvent">
+              <PropertyRef Name="PushEventTypeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PushEventUser_PushEvent">
+          <End Role="PushEvent" Type="GeoGuardianCitiesModel.Store.PushEvent" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="PushEventUser" Type="GeoGuardianCitiesModel.Store.PushEventUser" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PushEvent">
+              <PropertyRef Name="PushEventID" />
+            </Principal>
+            <Dependent Role="PushEventUser">
+              <PropertyRef Name="PushEventID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PushEventUser_PushEventUserState">
+          <End Role="PushEventUserState" Type="GeoGuardianCitiesModel.Store.PushEventUserState" Multiplicity="1" />
+          <End Role="PushEventUser" Type="GeoGuardianCitiesModel.Store.PushEventUser" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PushEventUserState">
+              <PropertyRef Name="PushEventUserStateID" />
+            </Principal>
+            <Dependent Role="PushEventUser">
+              <PropertyRef Name="PushEventUserStateID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PushEventUser_User">
+          <End Role="User" Type="GeoGuardianCitiesModel.Store.User" Multiplicity="1" />
+          <End Role="PushEventUser" Type="GeoGuardianCitiesModel.Store.PushEventUser" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="UserID" />
+            </Principal>
+            <Dependent Role="PushEventUser">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_State_Country">
+          <End Role="Country" Type="GeoGuardianCitiesModel.Store.Country" Multiplicity="1" />
+          <End Role="State" Type="GeoGuardianCitiesModel.Store.State" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Country">
+              <PropertyRef Name="CountryID" />
+            </Principal>
+            <Dependent Role="State">
+              <PropertyRef Name="CountryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TrackingInfo_User">
+          <End Role="User" Type="GeoGuardianCitiesModel.Store.User" Multiplicity="1" />
+          <End Role="TrackingInfo" Type="GeoGuardianCitiesModel.Store.TrackingInfo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="UserID" />
+            </Principal>
+            <Dependent Role="TrackingInfo">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_User_City">
+          <End Role="City" Type="GeoGuardianCitiesModel.Store.City" Multiplicity="0..1" />
+          <End Role="User" Type="GeoGuardianCitiesModel.Store.User" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="City">
+              <PropertyRef Name="CityID" />
+            </Principal>
+            <Dependent Role="User">
+              <PropertyRef Name="CityID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_User_Gender">
+          <End Role="Gender" Type="GeoGuardianCitiesModel.Store.Gender" Multiplicity="1" />
+          <End Role="User" Type="GeoGuardianCitiesModel.Store.User" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Gender">
+              <PropertyRef Name="GenderID" />
+            </Principal>
+            <Dependent Role="User">
+              <PropertyRef Name="GenderID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_User_UserStatus">
+          <End Role="UserStatus" Type="GeoGuardianCitiesModel.Store.UserStatus" Multiplicity="1" />
+          <End Role="User" Type="GeoGuardianCitiesModel.Store.User" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UserStatus">
+              <PropertyRef Name="UserStatusID" />
+            </Principal>
+            <Dependent Role="User">
+              <PropertyRef Name="UserStatusID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_User_UserType">
+          <End Role="UserType" Type="GeoGuardianCitiesModel.Store.UserType" Multiplicity="1" />
+          <End Role="User" Type="GeoGuardianCitiesModel.Store.User" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UserType">
+              <PropertyRef Name="UserTypeID" />
+            </Principal>
+            <Dependent Role="User">
+              <PropertyRef Name="UserTypeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UserEmergencyNumber_User">
+          <End Role="User" Type="GeoGuardianCitiesModel.Store.User" Multiplicity="1" />
+          <End Role="UserEmergencyNumber" Type="GeoGuardianCitiesModel.Store.UserEmergencyNumber" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="UserID" />
+            </Principal>
+            <Dependent Role="UserEmergencyNumber">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UserPackage_Package">
+          <End Role="Package" Type="GeoGuardianCitiesModel.Store.Package" Multiplicity="1" />
+          <End Role="UserPackage" Type="GeoGuardianCitiesModel.Store.UserPackage" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Package">
+              <PropertyRef Name="PackageID" />
+            </Principal>
+            <Dependent Role="UserPackage">
+              <PropertyRef Name="PackageID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UserPackage_User">
+          <End Role="User" Type="GeoGuardianCitiesModel.Store.User" Multiplicity="1" />
+          <End Role="UserPackage" Type="GeoGuardianCitiesModel.Store.UserPackage" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="UserID" />
+            </Principal>
+            <Dependent Role="UserPackage">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="GeoGuardianCitiesModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Alert" EntityType="GeoGuardianCitiesModel.Alert" />
+          <EntitySet Name="AlertCondition" EntityType="GeoGuardianCitiesModel.AlertCondition" />
+          <EntitySet Name="AlertLog" EntityType="GeoGuardianCitiesModel.AlertLog" />
+          <EntitySet Name="AlertLogComment" EntityType="GeoGuardianCitiesModel.AlertLogComment" />
+          <EntitySet Name="AlertLogSound" EntityType="GeoGuardianCitiesModel.AlertLogSound" />
+          <EntitySet Name="AlertLogState" EntityType="GeoGuardianCitiesModel.AlertLogState" />
+          <EntitySet Name="AlertType" EntityType="GeoGuardianCitiesModel.AlertType" />
+          <EntitySet Name="City" EntityType="GeoGuardianCitiesModel.City" />
+          <EntitySet Name="Country" EntityType="GeoGuardianCitiesModel.Country" />
+          <EntitySet Name="Gender" EntityType="GeoGuardianCitiesModel.Gender" />
+          <EntitySet Name="LoginAudit" EntityType="GeoGuardianCitiesModel.LoginAudit" />
+          <EntitySet Name="MenuItem" EntityType="GeoGuardianCitiesModel.MenuItem" />
+          <EntitySet Name="Message" EntityType="GeoGuardianCitiesModel.Message" />
+          <EntitySet Name="MessageRecipient" EntityType="GeoGuardianCitiesModel.MessageRecipient" />
+          <EntitySet Name="MessageState" EntityType="GeoGuardianCitiesModel.MessageState" />
+          <EntitySet Name="Notification" EntityType="GeoGuardianCitiesModel.Notification" />
+          <EntitySet Name="Package" EntityType="GeoGuardianCitiesModel.Package" />
+          <EntitySet Name="Parameter" EntityType="GeoGuardianCitiesModel.Parameter" />
+          <EntitySet Name="ParamsBlockAlert" EntityType="GeoGuardianCitiesModel.ParamsBlockAlert" />
+          <EntitySet Name="PushEvent" EntityType="GeoGuardianCitiesModel.PushEvent" />
+          <EntitySet Name="PushEventState" EntityType="GeoGuardianCitiesModel.PushEventState" />
+          <EntitySet Name="PushEventType" EntityType="GeoGuardianCitiesModel.PushEventType" />
+          <EntitySet Name="PushEventUser" EntityType="GeoGuardianCitiesModel.PushEventUser" />
+          <EntitySet Name="PushEventUserState" EntityType="GeoGuardianCitiesModel.PushEventUserState" />
+          <EntitySet Name="Server" EntityType="GeoGuardianCitiesModel.Server" />
+          <EntitySet Name="State" EntityType="GeoGuardianCitiesModel.State" />
+          <EntitySet Name="TrackingInfo" EntityType="GeoGuardianCitiesModel.TrackingInfo" />
+          <EntitySet Name="User" EntityType="GeoGuardianCitiesModel.User" />
+          <EntitySet Name="UserEmergencyNumber" EntityType="GeoGuardianCitiesModel.UserEmergencyNumber" />
+          <EntitySet Name="UserStatus" EntityType="GeoGuardianCitiesModel.UserStatus" />
+          <EntitySet Name="UserType" EntityType="GeoGuardianCitiesModel.UserType" />
+          <AssociationSet Name="FK_Alert_AlertType" Association="GeoGuardianCitiesModel.FK_Alert_AlertType">
+            <End Role="AlertType" EntitySet="AlertType" />
+            <End Role="Alert" EntitySet="Alert" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Alert_CityHall" Association="GeoGuardianCitiesModel.FK_Alert_CityHall">
+            <End Role="City" EntitySet="City" />
+            <End Role="Alert" EntitySet="Alert" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AlertLog_Alert" Association="GeoGuardianCitiesModel.FK_AlertLog_Alert">
+            <End Role="Alert" EntitySet="Alert" />
+            <End Role="AlertLog" EntitySet="AlertLog" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AlertCondition_AlertCondition" Association="GeoGuardianCitiesModel.FK_AlertCondition_AlertCondition">
+            <End Role="AlertCondition" EntitySet="AlertCondition" />
+            <End Role="AlertCondition1" EntitySet="AlertCondition" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AlertLog_AlertCondition" Association="GeoGuardianCitiesModel.FK_AlertLog_AlertCondition">
+            <End Role="AlertCondition" EntitySet="AlertCondition" />
+            <End Role="AlertLog" EntitySet="AlertLog" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ParamsBlockAlert_AlertCondition" Association="GeoGuardianCitiesModel.FK_ParamsBlockAlert_AlertCondition">
+            <End Role="AlertCondition" EntitySet="AlertCondition" />
+            <End Role="ParamsBlockAlert" EntitySet="ParamsBlockAlert" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AlertLog_AlertLogState" Association="GeoGuardianCitiesModel.FK_AlertLog_AlertLogState">
+            <End Role="AlertLogState" EntitySet="AlertLogState" />
+            <End Role="AlertLog" EntitySet="AlertLog" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AlertLog_User" Association="GeoGuardianCitiesModel.FK_AlertLog_User">
+            <End Role="User" EntitySet="User" />
+            <End Role="AlertLog" EntitySet="AlertLog" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AlertLog_User1" Association="GeoGuardianCitiesModel.FK_AlertLog_User1">
+            <End Role="User" EntitySet="User" />
+            <End Role="AlertLog" EntitySet="AlertLog" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AlertLogComment_AlertLog" Association="GeoGuardianCitiesModel.FK_AlertLogComment_AlertLog">
+            <End Role="AlertLog" EntitySet="AlertLog" />
+            <End Role="AlertLogComment" EntitySet="AlertLogComment" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AlertLogSound_AlertLog" Association="GeoGuardianCitiesModel.FK_AlertLogSound_AlertLog">
+            <End Role="AlertLog" EntitySet="AlertLog" />
+            <End Role="AlertLogSound" EntitySet="AlertLogSound" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Message_Alert" Association="GeoGuardianCitiesModel.FK_Message_Alert">
+            <End Role="AlertLog" EntitySet="AlertLog" />
+            <End Role="Message" EntitySet="Message" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AlertLogComment_User" Association="GeoGuardianCitiesModel.FK_AlertLogComment_User">
+            <End Role="User" EntitySet="User" />
+            <End Role="AlertLogComment" EntitySet="AlertLogComment" />
+          </AssociationSet>
+          <AssociationSet Name="FK_City_State" Association="GeoGuardianCitiesModel.FK_City_State">
+            <End Role="State" EntitySet="State" />
+            <End Role="City" EntitySet="City" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Notification_CityHall" Association="GeoGuardianCitiesModel.FK_Notification_CityHall">
+            <End Role="City" EntitySet="City" />
+            <End Role="Notification" EntitySet="Notification" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ParamsBlockAlert_City" Association="GeoGuardianCitiesModel.FK_ParamsBlockAlert_City">
+            <End Role="City" EntitySet="City" />
+            <End Role="ParamsBlockAlert" EntitySet="ParamsBlockAlert" />
+          </AssociationSet>
+          <AssociationSet Name="FK_User_City" Association="GeoGuardianCitiesModel.FK_User_City">
+            <End Role="City" EntitySet="City" />
+            <End Role="User" EntitySet="User" />
+          </AssociationSet>
+          <AssociationSet Name="FK_State_Country" Association="GeoGuardianCitiesModel.FK_State_Country">
+            <End Role="Country" EntitySet="Country" />
+            <End Role="State" EntitySet="State" />
+          </AssociationSet>
+          <AssociationSet Name="FK_User_Gender" Association="GeoGuardianCitiesModel.FK_User_Gender">
+            <End Role="Gender" EntitySet="Gender" />
+            <End Role="User" EntitySet="User" />
+          </AssociationSet>
+          <AssociationSet Name="FK_LoginAudit_User" Association="GeoGuardianCitiesModel.FK_LoginAudit_User">
+            <End Role="User" EntitySet="User" />
+            <End Role="LoginAudit" EntitySet="LoginAudit" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MenuItem_MenuItem" Association="GeoGuardianCitiesModel.FK_MenuItem_MenuItem">
+            <End Role="MenuItem" EntitySet="MenuItem" />
+            <End Role="MenuItem1" EntitySet="MenuItem" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Message_MessageState" Association="GeoGuardianCitiesModel.FK_Message_MessageState">
+            <End Role="MessageState" EntitySet="MessageState" />
+            <End Role="Message" EntitySet="Message" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Message_User" Association="GeoGuardianCitiesModel.FK_Message_User">
+            <End Role="User" EntitySet="User" />
+            <End Role="Message" EntitySet="Message" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MessageRecipient_Message" Association="GeoGuardianCitiesModel.FK_MessageRecipient_Message">
+            <End Role="Message" EntitySet="Message" />
+            <End Role="MessageRecipient" EntitySet="MessageRecipient" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PushEvent_Message" Association="GeoGuardianCitiesModel.FK_PushEvent_Message">
+            <End Role="Message" EntitySet="Message" />
+            <End Role="PushEvent" EntitySet="PushEvent" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MessageRecipient_MessageState" Association="GeoGuardianCitiesModel.FK_MessageRecipient_MessageState">
+            <End Role="MessageState" EntitySet="MessageState" />
+            <End Role="MessageRecipient" EntitySet="MessageRecipient" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MessageRecipient_User" Association="GeoGuardianCitiesModel.FK_MessageRecipient_User">
+            <End Role="User" EntitySet="User" />
+            <End Role="MessageRecipient" EntitySet="MessageRecipient" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PushEvent_PushEventState" Association="GeoGuardianCitiesModel.FK_PushEvent_PushEventState">
+            <End Role="PushEventState" EntitySet="PushEventState" />
+            <End Role="PushEvent" EntitySet="PushEvent" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PushEvent_PushEventType" Association="GeoGuardianCitiesModel.FK_PushEvent_PushEventType">
+            <End Role="PushEventType" EntitySet="PushEventType" />
+            <End Role="PushEvent" EntitySet="PushEvent" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PushEventUser_PushEvent" Association="GeoGuardianCitiesModel.FK_PushEventUser_PushEvent">
+            <End Role="PushEvent" EntitySet="PushEvent" />
+            <End Role="PushEventUser" EntitySet="PushEventUser" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PushEventUser_PushEventUserState" Association="GeoGuardianCitiesModel.FK_PushEventUser_PushEventUserState">
+            <End Role="PushEventUserState" EntitySet="PushEventUserState" />
+            <End Role="PushEventUser" EntitySet="PushEventUser" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PushEventUser_User" Association="GeoGuardianCitiesModel.FK_PushEventUser_User">
+            <End Role="User" EntitySet="User" />
+            <End Role="PushEventUser" EntitySet="PushEventUser" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TrackingInfo_User" Association="GeoGuardianCitiesModel.FK_TrackingInfo_User">
+            <End Role="User" EntitySet="User" />
+            <End Role="TrackingInfo" EntitySet="TrackingInfo" />
+          </AssociationSet>
+          <AssociationSet Name="FK_User_UserStatus" Association="GeoGuardianCitiesModel.FK_User_UserStatus">
+            <End Role="UserStatus" EntitySet="UserStatus" />
+            <End Role="User" EntitySet="User" />
+          </AssociationSet>
+          <AssociationSet Name="FK_User_UserType" Association="GeoGuardianCitiesModel.FK_User_UserType">
+            <End Role="UserType" EntitySet="UserType" />
+            <End Role="User" EntitySet="User" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UserEmergencyNumber_User" Association="GeoGuardianCitiesModel.FK_UserEmergencyNumber_User">
+            <End Role="User" EntitySet="User" />
+            <End Role="UserEmergencyNumber" EntitySet="UserEmergencyNumber" />
+          </AssociationSet>
+          <AssociationSet Name="MenuItemUserType" Association="GeoGuardianCitiesModel.MenuItemUserType">
+            <End Role="MenuItem" EntitySet="MenuItem" />
+            <End Role="UserType" EntitySet="UserType" />
+          </AssociationSet>
+          <AssociationSet Name="UserPackage" Association="GeoGuardianCitiesModel.UserPackage">
+            <End Role="Package" EntitySet="Package" />
+            <End Role="User" EntitySet="User" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Alert">
+          <Key>
+            <PropertyRef Name="AlertID" />
+          </Key>
+          <Property Name="AlertID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="AlertName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="AlertTypeID" Type="Int32" Nullable="false" />
+          <Property Name="IsActive" Type="Boolean" Nullable="false" />
+          <Property Name="CreationDate" Type="DateTime" Nullable="false" />
+          <Property Name="UserIDCreation" Type="Int32" Nullable="false" />
+          <Property Name="AlertDescription" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="CityID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="AlertType" Relationship="GeoGuardianCitiesModel.FK_Alert_AlertType" FromRole="Alert" ToRole="AlertType" />
+          <NavigationProperty Name="City" Relationship="GeoGuardianCitiesModel.FK_Alert_CityHall" FromRole="Alert" ToRole="City" />
+          <NavigationProperty Name="AlertLog" Relationship="GeoGuardianCitiesModel.FK_AlertLog_Alert" FromRole="Alert" ToRole="AlertLog" />
+        </EntityType>
+        <EntityType Name="AlertCondition">
+          <Key>
+            <PropertyRef Name="AlertConditionID" />
+          </Key>
+          <Property Name="AlertConditionID" Type="Int32" Nullable="false" />
+          <Property Name="AlertConditionName" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="AlertCondition1" Relationship="GeoGuardianCitiesModel.FK_AlertCondition_AlertCondition" FromRole="AlertCondition" ToRole="AlertCondition1" />
+          <NavigationProperty Name="AlertCondition2" Relationship="GeoGuardianCitiesModel.FK_AlertCondition_AlertCondition" FromRole="AlertCondition1" ToRole="AlertCondition" />
+          <NavigationProperty Name="AlertLog" Relationship="GeoGuardianCitiesModel.FK_AlertLog_AlertCondition" FromRole="AlertCondition" ToRole="AlertLog" />
+          <NavigationProperty Name="ParamsBlockAlert" Relationship="GeoGuardianCitiesModel.FK_ParamsBlockAlert_AlertCondition" FromRole="AlertCondition" ToRole="ParamsBlockAlert" />
+        </EntityType>
+        <EntityType Name="AlertLog">
+          <Key>
+            <PropertyRef Name="AlertLogID" />
+          </Key>
+          <Property Name="AlertLogID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="AlertID" Type="Int32" Nullable="false" />
+          <Property Name="AlertDateTime" Type="DateTime" Nullable="false" />
+          <Property Name="UserID" Type="Int32" Nullable="false" />
+          <Property Name="AlertConditionID" Type="Int32" Nullable="false" />
+          <Property Name="AddressPosition" Type="String" MaxLength="250" Unicode="false" FixedLength="false" />
+          <Property Name="AlertLogStateID" Type="Int32" Nullable="false" />
+          <Property Name="BlockUserID" Type="Int32" />
+          <Property Name="BlockDateTime" Type="DateTime" />
+          <Property Name="UserPositionAccuracy" Type="Double" Nullable="false" />
+          <Property Name="Reported" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="Alert" Relationship="GeoGuardianCitiesModel.FK_AlertLog_Alert" FromRole="AlertLog" ToRole="Alert" />
+          <NavigationProperty Name="AlertCondition" Relationship="GeoGuardianCitiesModel.FK_AlertLog_AlertCondition" FromRole="AlertLog" ToRole="AlertCondition" />
+          <NavigationProperty Name="AlertLogState" Relationship="GeoGuardianCitiesModel.FK_AlertLog_AlertLogState" FromRole="AlertLog" ToRole="AlertLogState" />
+          <NavigationProperty Name="User" Relationship="GeoGuardianCitiesModel.FK_AlertLog_User" FromRole="AlertLog" ToRole="User" />
+          <NavigationProperty Name="User1" Relationship="GeoGuardianCitiesModel.FK_AlertLog_User1" FromRole="AlertLog" ToRole="User" />
+          <NavigationProperty Name="AlertLogComment" Relationship="GeoGuardianCitiesModel.FK_AlertLogComment_AlertLog" FromRole="AlertLog" ToRole="AlertLogComment" />
+          <NavigationProperty Name="AlertLogSound" Relationship="GeoGuardianCitiesModel.FK_AlertLogSound_AlertLog" FromRole="AlertLog" ToRole="AlertLogSound" />
+          <NavigationProperty Name="Message" Relationship="GeoGuardianCitiesModel.FK_Message_Alert" FromRole="AlertLog" ToRole="Message" />
+        </EntityType>
+        <EntityType Name="AlertLogComment">
+          <Key>
+            <PropertyRef Name="AlertLogCommentID" />
+          </Key>
+          <Property Name="AlertLogCommentID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CommentDateTime" Type="DateTime" Nullable="false" />
+          <Property Name="UserID" Type="Int32" Nullable="false" />
+          <Property Name="AlertComment" Type="String" Nullable="false" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="AlertLogID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="AlertLog" Relationship="GeoGuardianCitiesModel.FK_AlertLogComment_AlertLog" FromRole="AlertLogComment" ToRole="AlertLog" />
+          <NavigationProperty Name="User" Relationship="GeoGuardianCitiesModel.FK_AlertLogComment_User" FromRole="AlertLogComment" ToRole="User" />
+        </EntityType>
+        <EntityType Name="AlertLogSound">
+          <Key>
+            <PropertyRef Name="AlertLogID" />
+            <PropertyRef Name="FileName" />
+          </Key>
+          <Property Name="AlertLogID" Type="Int32" Nullable="false" />
+          <Property Name="FileName" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="DateTime" Type="DateTime" Nullable="false" />
+          <NavigationProperty Name="AlertLog" Relationship="GeoGuardianCitiesModel.FK_AlertLogSound_AlertLog" FromRole="AlertLogSound" ToRole="AlertLog" />
+        </EntityType>
+        <EntityType Name="AlertLogState">
+          <Key>
+            <PropertyRef Name="AlertLogStateID" />
+          </Key>
+          <Property Name="AlertLogStateID" Type="Int32" Nullable="false" />
+          <Property Name="AlertLogStateName" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="AlertLog" Relationship="GeoGuardianCitiesModel.FK_AlertLog_AlertLogState" FromRole="AlertLogState" ToRole="AlertLog" />
+        </EntityType>
+        <EntityType Name="AlertType">
+          <Key>
+            <PropertyRef Name="AlertTypeID" />
+          </Key>
+          <Property Name="AlertTypeID" Type="Int32" Nullable="false" />
+          <Property Name="AlertTypeName" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="PriorityLevel" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Alert" Relationship="GeoGuardianCitiesModel.FK_Alert_AlertType" FromRole="AlertType" ToRole="Alert" />
+        </EntityType>
+        <EntityType Name="City">
+          <Key>
+            <PropertyRef Name="CityID" />
+          </Key>
+          <Property Name="CityID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="StateID" Type="Int32" Nullable="false" />
+          <Property Name="DefaultZoomLevel" Type="Int32" Nullable="false" />
+          <Property Name="MinZoomLevel" Type="Int32" Nullable="false" />
+          <Property Name="ZoomThreshold" Type="Int32" Nullable="false" />
+          <Property Name="ZipCode" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="AliasNames" Type="String" Nullable="false" MaxLength="250" Unicode="false" FixedLength="false" />
+          <Property Name="Code" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+          <Property Name="CreationDate" Type="DateTime" Nullable="false" />
+          <Property Name="IsActive" Type="Boolean" Nullable="false" />
+          <Property Name="AboutUsText" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="WelcomeText" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="CertificateSerialNumber" Type="String" MaxLength="250" Unicode="false" FixedLength="false" />
+          <Property Name="ContactMail" Type="String" MaxLength="70" Unicode="false" FixedLength="false" />
+          <Property Name="LastCheckedDateTime" Type="DateTime" />
+          <NavigationProperty Name="Alert" Relationship="GeoGuardianCitiesModel.FK_Alert_CityHall" FromRole="City" ToRole="Alert" />
+          <NavigationProperty Name="State" Relationship="GeoGuardianCitiesModel.FK_City_State" FromRole="City" ToRole="State" />
+          <NavigationProperty Name="Notification" Relationship="GeoGuardianCitiesModel.FK_Notification_CityHall" FromRole="City" ToRole="Notification" />
+          <NavigationProperty Name="ParamsBlockAlert" Relationship="GeoGuardianCitiesModel.FK_ParamsBlockAlert_City" FromRole="City" ToRole="ParamsBlockAlert" />
+          <NavigationProperty Name="User" Relationship="GeoGuardianCitiesModel.FK_User_City" FromRole="City" ToRole="User" />
+        </EntityType>
+        <EntityType Name="Country">
+          <Key>
+            <PropertyRef Name="CountryID" />
+          </Key>
+          <Property Name="CountryID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="Code" Type="String" Nullable="false" MaxLength="2" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="State" Relationship="GeoGuardianCitiesModel.FK_State_Country" FromRole="Country" ToRole="State" />
+        </EntityType>
+        <EntityType Name="Gender">
+          <Key>
+            <PropertyRef Name="GenderID" />
+          </Key>
+          <Property Name="GenderID" Type="Int32" Nullable="false" />
+          <Property Name="GenderName" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="User" Relationship="GeoGuardianCitiesModel.FK_User_Gender" FromRole="Gender" ToRole="User" />
+        </EntityType>
+        <EntityType Name="LoginAudit">
+          <Key>
+            <PropertyRef Name="LoginAuditID" />
+          </Key>
+          <Property Name="LoginAuditID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="LoginAuditDate" Type="DateTime" Nullable="false" />
+          <Property Name="UserID" Type="Int32" Nullable="false" />
+          <Property Name="IP" Type="String" Nullable="false" MaxLength="15" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="User" Relationship="GeoGuardianCitiesModel.FK_LoginAudit_User" FromRole="LoginAudit" ToRole="User" />
+        </EntityType>
+        <EntityType Name="MenuItem">
+          <Key>
+            <PropertyRef Name="MenuItemID" />
+          </Key>
+          <Property Name="MenuItemID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ParentMenuItemID" Type="Int32" />
+          <Property Name="MenuItemName" Type="String" Nullable="false" MaxLength="150" Unicode="false" FixedLength="false" />
+          <Property Name="IsActive" Type="Boolean" Nullable="false" />
+          <Property Name="Path" Type="String" MaxLength="150" Unicode="false" FixedLength="false" />
+          <Property Name="Alias" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="MenuItem1" Relationship="GeoGuardianCitiesModel.FK_MenuItem_MenuItem" FromRole="MenuItem" ToRole="MenuItem1" />
+          <NavigationProperty Name="MenuItem2" Relationship="GeoGuardianCitiesModel.FK_MenuItem_MenuItem" FromRole="MenuItem1" ToRole="MenuItem" />
+          <NavigationProperty Name="UserType" Relationship="GeoGuardianCitiesModel.MenuItemUserType" FromRole="MenuItem" ToRole="UserType" />
+        </EntityType>
+        <EntityType Name="Message">
+          <Key>
+            <PropertyRef Name="MessageID" />
+          </Key>
+          <Property Name="MessageID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Subject" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="Body" Type="String" Nullable="false" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="MessageDate" Type="DateTime" Nullable="false" />
+          <Property Name="UserID" Type="Int32" Nullable="false" />
+          <Property Name="MessageStateID" Type="Int32" Nullable="false" />
+          <Property Name="IsImportant" Type="Boolean" Nullable="false" />
+          <Property Name="Address" Type="String" MaxLength="250" Unicode="false" FixedLength="false" />
+          <Property Name="AlertLogID" Type="Int32" />
+          <NavigationProperty Name="AlertLog" Relationship="GeoGuardianCitiesModel.FK_Message_Alert" FromRole="Message" ToRole="AlertLog" />
+          <NavigationProperty Name="MessageState" Relationship="GeoGuardianCitiesModel.FK_Message_MessageState" FromRole="Message" ToRole="MessageState" />
+          <NavigationProperty Name="User" Relationship="GeoGuardianCitiesModel.FK_Message_User" FromRole="Message" ToRole="User" />
+          <NavigationProperty Name="MessageRecipient" Relationship="GeoGuardianCitiesModel.FK_MessageRecipient_Message" FromRole="Message" ToRole="MessageRecipient" />
+          <NavigationProperty Name="PushEvent" Relationship="GeoGuardianCitiesModel.FK_PushEvent_Message" FromRole="Message" ToRole="PushEvent" />
+        </EntityType>
+        <EntityType Name="MessageRecipient">
+          <Key>
+            <PropertyRef Name="MessageID" />
+            <PropertyRef Name="UserID" />
+          </Key>
+          <Property Name="MessageID" Type="Int32" Nullable="false" />
+          <Property Name="UserID" Type="Int32" Nullable="false" />
+          <Property Name="MessageStateID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Message" Relationship="GeoGuardianCitiesModel.FK_MessageRecipient_Message" FromRole="MessageRecipient" ToRole="Message" />
+          <NavigationProperty Name="MessageState" Relationship="GeoGuardianCitiesModel.FK_MessageRecipient_MessageState" FromRole="MessageRecipient" ToRole="MessageState" />
+          <NavigationProperty Name="User" Relationship="GeoGuardianCitiesModel.FK_MessageRecipient_User" FromRole="MessageRecipient" ToRole="User" />
+        </EntityType>
+        <EntityType Name="MessageState">
+          <Key>
+            <PropertyRef Name="MessageStateID" />
+          </Key>
+          <Property Name="MessageStateID" Type="Int32" Nullable="false" />
+          <Property Name="StateName" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="Message" Relationship="GeoGuardianCitiesModel.FK_Message_MessageState" FromRole="MessageState" ToRole="Message" />
+          <NavigationProperty Name="MessageRecipient" Relationship="GeoGuardianCitiesModel.FK_MessageRecipient_MessageState" FromRole="MessageState" ToRole="MessageRecipient" />
+        </EntityType>
+        <EntityType Name="Notification">
+          <Key>
+            <PropertyRef Name="NotificationID" />
+          </Key>
+          <Property Name="NotificationID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NotificationDateTime" Type="DateTime" Nullable="false" />
+          <Property Name="Title" Type="String" Nullable="false" MaxLength="150" Unicode="false" FixedLength="false" />
+          <Property Name="Text" Type="String" Nullable="false" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="CityID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="City" Relationship="GeoGuardianCitiesModel.FK_Notification_CityHall" FromRole="Notification" ToRole="City" />
+        </EntityType>
+        <EntityType Name="Package">
+          <Key>
+            <PropertyRef Name="PackageID" />
+          </Key>
+          <Property Name="PackageID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PackageName" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="User" Relationship="GeoGuardianCitiesModel.UserPackage" FromRole="Package" ToRole="User" />
+        </EntityType>
+        <EntityType Name="Parameter">
+          <Key>
+            <PropertyRef Name="ParameterID" />
+          </Key>
+          <Property Name="ParameterID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ParameterName" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="ParameterKey" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="ParameterValue" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="Description" Type="String" MaxLength="250" Unicode="false" FixedLength="false" />
+          <Property Name="IsMobile" Type="Boolean" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ParamsBlockAlert">
+          <Key>
+            <PropertyRef Name="AlertConditionID" />
+            <PropertyRef Name="CityID" />
+          </Key>
+          <Property Name="AlertConditionID" Type="Int32" Nullable="false" />
+          <Property Name="CityID" Type="Int32" Nullable="false" />
+          <Property Name="BlockTime" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="AlertCondition" Relationship="GeoGuardianCitiesModel.FK_ParamsBlockAlert_AlertCondition" FromRole="ParamsBlockAlert" ToRole="AlertCondition" />
+          <NavigationProperty Name="City" Relationship="GeoGuardianCitiesModel.FK_ParamsBlockAlert_City" FromRole="ParamsBlockAlert" ToRole="City" />
+        </EntityType>
+        <EntityType Name="PushEvent">
+          <Key>
+            <PropertyRef Name="PushEventID" />
+          </Key>
+          <Property Name="PushEventID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="EventDateTime" Type="DateTime" Nullable="false" />
+          <Property Name="PushEventTypeID" Type="Int32" Nullable="false" />
+          <Property Name="PushEventStateID" Type="Int32" Nullable="false" />
+          <Property Name="MessageID" Type="Int32" />
+          <NavigationProperty Name="Message" Relationship="GeoGuardianCitiesModel.FK_PushEvent_Message" FromRole="PushEvent" ToRole="Message" />
+          <NavigationProperty Name="PushEventState" Relationship="GeoGuardianCitiesModel.FK_PushEvent_PushEventState" FromRole="PushEvent" ToRole="PushEventState" />
+          <NavigationProperty Name="PushEventType" Relationship="GeoGuardianCitiesModel.FK_PushEvent_PushEventType" FromRole="PushEvent" ToRole="PushEventType" />
+          <NavigationProperty Name="PushEventUser" Relationship="GeoGuardianCitiesModel.FK_PushEventUser_PushEvent" FromRole="PushEvent" ToRole="PushEventUser" />
+        </EntityType>
+        <EntityType Name="PushEventState">
+          <Key>
+            <PropertyRef Name="PushEventStateID" />
+          </Key>
+          <Property Name="PushEventStateID" Type="Int32" Nullable="false" />
+          <Property Name="PushEventStateName" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="PushEvent" Relationship="GeoGuardianCitiesModel.FK_PushEvent_PushEventState" FromRole="PushEventState" ToRole="PushEvent" />
+        </EntityType>
+        <EntityType Name="PushEventType">
+          <Key>
+            <PropertyRef Name="PushEventTypeID" />
+          </Key>
+          <Property Name="PushEventTypeID" Type="Int32" Nullable="false" />
+          <Property Name="PushEventTypeName" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="PushEvent" Relationship="GeoGuardianCitiesModel.FK_PushEvent_PushEventType" FromRole="PushEventType" ToRole="PushEvent" />
+        </EntityType>
+        <EntityType Name="PushEventUser">
+          <Key>
+            <PropertyRef Name="PushEventID" />
+            <PropertyRef Name="UserID" />
+          </Key>
+          <Property Name="PushEventID" Type="Int32" Nullable="false" />
+          <Property Name="UserID" Type="Int32" Nullable="false" />
+          <Property Name="PushEventUserStateID" Type="Int32" Nullable="false" />
+          <Property Name="SendRetries" Type="Int32" Nullable="false" />
+          <Property Name="ProcessDateTime" Type="DateTime" Nullable="false" />
+          <NavigationProperty Name="PushEvent" Relationship="GeoGuardianCitiesModel.FK_PushEventUser_PushEvent" FromRole="PushEventUser" ToRole="PushEvent" />
+          <NavigationProperty Name="PushEventUserState" Relationship="GeoGuardianCitiesModel.FK_PushEventUser_PushEventUserState" FromRole="PushEventUser" ToRole="PushEventUserState" />
+          <NavigationProperty Name="User" Relationship="GeoGuardianCitiesModel.FK_PushEventUser_User" FromRole="PushEventUser" ToRole="User" />
+        </EntityType>
+        <EntityType Name="PushEventUserState">
+          <Key>
+            <PropertyRef Name="PushEventUserStateID" />
+          </Key>
+          <Property Name="PushEventUserStateID" Type="Int32" Nullable="false" />
+          <Property Name="PushEventUserStateName" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="PushEventUser" Relationship="GeoGuardianCitiesModel.FK_PushEventUser_PushEventUserState" FromRole="PushEventUserState" ToRole="PushEventUser" />
+        </EntityType>
+        <EntityType Name="Server">
+          <Key>
+            <PropertyRef Name="ServerID" />
+          </Key>
+          <Property Name="ServerID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ServerName" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Url" Type="String" Nullable="false" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="Availability" Type="Double" />
+          <Property Name="ProcessorTimeHistory" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="State">
+          <Key>
+            <PropertyRef Name="StateID" />
+          </Key>
+          <Property Name="StateID" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="CountryID" Type="Int32" Nullable="false" />
+          <Property Name="AliasNames" Type="String" Nullable="false" MaxLength="250" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="City" Relationship="GeoGuardianCitiesModel.FK_City_State" FromRole="State" ToRole="City" />
+          <NavigationProperty Name="Country" Relationship="GeoGuardianCitiesModel.FK_State_Country" FromRole="State" ToRole="Country" />
+        </EntityType>
+        <EntityType Name="TrackingInfo">
+          <Key>
+            <PropertyRef Name="TrackingInfoID" />
+          </Key>
+          <Property Name="TrackingInfoID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TrackingDateTime" Type="DateTime" Nullable="false" />
+          <Property Name="UserID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="User" Relationship="GeoGuardianCitiesModel.FK_TrackingInfo_User" FromRole="TrackingInfo" ToRole="User" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="UserID" />
+          </Key>
+          <Property Name="UserID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FirstName" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="LastName" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="UserName" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Password" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="Email" Type="String" Nullable="false" MaxLength="250" Unicode="false" FixedLength="false" />
+          <Property Name="PrefixMobilePhone" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="MobilePhone" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="LastLogin" Type="DateTime" />
+          <Property Name="GenderID" Type="Int32" Nullable="false" />
+          <Property Name="Birthday" Type="DateTime" />
+          <Property Name="IsActive" Type="Boolean" Nullable="false" />
+          <Property Name="CreationDate" Type="DateTime" Nullable="false" />
+          <Property Name="ProfilePicture" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="UserStatusID" Type="Int32" Nullable="false" />
+          <Property Name="Address" Type="String" MaxLength="250" Unicode="false" FixedLength="false" />
+          <Property Name="TrackingEnabled" Type="Boolean" Nullable="false" />
+          <Property Name="LastPositionDateTime" Type="DateTime" />
+          <Property Name="LastStatusChange" Type="DateTime" />
+          <Property Name="SignInTokenDate" Type="DateTime" />
+          <Property Name="ProfilePictureThumb" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="PendingConfirmation" Type="Boolean" Nullable="false" />
+          <Property Name="SignInToken" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="UserTypeID" Type="Int32" Nullable="false" />
+          <Property Name="CurrentSessionID" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="PictureLastUpdate" Type="DateTime" Nullable="false" />
+          <Property Name="CityID" Type="Int32" />
+          <Property Name="PushDeviceRegistrationID" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="LoginAttempts" Type="Int32" Nullable="false" />
+          <Property Name="GeoGuardianVersion" Type="String" MaxLength="7" Unicode="false" FixedLength="false" />
+          <Property Name="DeviceInfo" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="AndroidVersion" Type="String" MaxLength="7" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="AlertLog" Relationship="GeoGuardianCitiesModel.FK_AlertLog_User" FromRole="User" ToRole="AlertLog" />
+          <NavigationProperty Name="AlertLog1" Relationship="GeoGuardianCitiesModel.FK_AlertLog_User1" FromRole="User" ToRole="AlertLog" />
+          <NavigationProperty Name="AlertLogComment" Relationship="GeoGuardianCitiesModel.FK_AlertLogComment_User" FromRole="User" ToRole="AlertLogComment" />
+          <NavigationProperty Name="City" Relationship="GeoGuardianCitiesModel.FK_User_City" FromRole="User" ToRole="City" />
+          <NavigationProperty Name="Gender" Relationship="GeoGuardianCitiesModel.FK_User_Gender" FromRole="User" ToRole="Gender" />
+          <NavigationProperty Name="LoginAudit" Relationship="GeoGuardianCitiesModel.FK_LoginAudit_User" FromRole="User" ToRole="LoginAudit" />
+          <NavigationProperty Name="Message" Relationship="GeoGuardianCitiesModel.FK_Message_User" FromRole="User" ToRole="Message" />
+          <NavigationProperty Name="MessageRecipient" Relationship="GeoGuardianCitiesModel.FK_MessageRecipient_User" FromRole="User" ToRole="MessageRecipient" />
+          <NavigationProperty Name="PushEventUser" Relationship="GeoGuardianCitiesModel.FK_PushEventUser_User" FromRole="User" ToRole="PushEventUser" />
+          <NavigationProperty Name="TrackingInfo" Relationship="GeoGuardianCitiesModel.FK_TrackingInfo_User" FromRole="User" ToRole="TrackingInfo" />
+          <NavigationProperty Name="UserStatus" Relationship="GeoGuardianCitiesModel.FK_User_UserStatus" FromRole="User" ToRole="UserStatus" />
+          <NavigationProperty Name="UserType" Relationship="GeoGuardianCitiesModel.FK_User_UserType" FromRole="User" ToRole="UserType" />
+          <NavigationProperty Name="UserEmergencyNumber" Relationship="GeoGuardianCitiesModel.FK_UserEmergencyNumber_User" FromRole="User" ToRole="UserEmergencyNumber" />
+          <NavigationProperty Name="Package" Relationship="GeoGuardianCitiesModel.UserPackage" FromRole="User" ToRole="Package" />
+        </EntityType>
+        <EntityType Name="UserEmergencyNumber">
+          <Key>
+            <PropertyRef Name="UserID" />
+            <PropertyRef Name="Number" />
+          </Key>
+          <Property Name="UserID" Type="Int32" Nullable="false" />
+          <Property Name="Number" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Description" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="User" Relationship="GeoGuardianCitiesModel.FK_UserEmergencyNumber_User" FromRole="UserEmergencyNumber" ToRole="User" />
+        </EntityType>
+        <EntityType Name="UserStatus">
+          <Key>
+            <PropertyRef Name="UserStatusID" />
+          </Key>
+          <Property Name="UserStatusID" Type="Int32" Nullable="false" />
+          <Property Name="UserStatusName" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="User" Relationship="GeoGuardianCitiesModel.FK_User_UserStatus" FromRole="UserStatus" ToRole="User" />
+        </EntityType>
+        <EntityType Name="UserType">
+          <Key>
+            <PropertyRef Name="UserTypeID" />
+          </Key>
+          <Property Name="UserTypeID" Type="Int32" Nullable="false" />
+          <Property Name="UserTypeName" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="User" Relationship="GeoGuardianCitiesModel.FK_User_UserType" FromRole="UserType" ToRole="User" />
+          <NavigationProperty Name="MenuItem" Relationship="GeoGuardianCitiesModel.MenuItemUserType" FromRole="UserType" ToRole="MenuItem" />
+        </EntityType>
+        <Association Name="FK_Alert_AlertType">
+          <End Role="AlertType" Type="GeoGuardianCitiesModel.AlertType" Multiplicity="1" />
+          <End Role="Alert" Type="GeoGuardianCitiesModel.Alert" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AlertType">
+              <PropertyRef Name="AlertTypeID" />
+            </Principal>
+            <Dependent Role="Alert">
+              <PropertyRef Name="AlertTypeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Alert_CityHall">
+          <End Role="City" Type="GeoGuardianCitiesModel.City" Multiplicity="1" />
+          <End Role="Alert" Type="GeoGuardianCitiesModel.Alert" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="City">
+              <PropertyRef Name="CityID" />
+            </Principal>
+            <Dependent Role="Alert">
+              <PropertyRef Name="CityID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AlertLog_Alert">
+          <End Role="Alert" Type="GeoGuardianCitiesModel.Alert" Multiplicity="1" />
+          <End Role="AlertLog" Type="GeoGuardianCitiesModel.AlertLog" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Alert">
+              <PropertyRef Name="AlertID" />
+            </Principal>
+            <Dependent Role="AlertLog">
+              <PropertyRef Name="AlertID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AlertCondition_AlertCondition">
+          <End Role="AlertCondition" Type="GeoGuardianCitiesModel.AlertCondition" Multiplicity="1" />
+          <End Role="AlertCondition1" Type="GeoGuardianCitiesModel.AlertCondition" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="AlertCondition">
+              <PropertyRef Name="AlertConditionID" />
+            </Principal>
+            <Dependent Role="AlertCondition1">
+              <PropertyRef Name="AlertConditionID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AlertLog_AlertCondition">
+          <End Role="AlertCondition" Type="GeoGuardianCitiesModel.AlertCondition" Multiplicity="1" />
+          <End Role="AlertLog" Type="GeoGuardianCitiesModel.AlertLog" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AlertCondition">
+              <PropertyRef Name="AlertConditionID" />
+            </Principal>
+            <Dependent Role="AlertLog">
+              <PropertyRef Name="AlertConditionID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ParamsBlockAlert_AlertCondition">
+          <End Role="AlertCondition" Type="GeoGuardianCitiesModel.AlertCondition" Multiplicity="1" />
+          <End Role="ParamsBlockAlert" Type="GeoGuardianCitiesModel.ParamsBlockAlert" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AlertCondition">
+              <PropertyRef Name="AlertConditionID" />
+            </Principal>
+            <Dependent Role="ParamsBlockAlert">
+              <PropertyRef Name="AlertConditionID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AlertLog_AlertLogState">
+          <End Role="AlertLogState" Type="GeoGuardianCitiesModel.AlertLogState" Multiplicity="1" />
+          <End Role="AlertLog" Type="GeoGuardianCitiesModel.AlertLog" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AlertLogState">
+              <PropertyRef Name="AlertLogStateID" />
+            </Principal>
+            <Dependent Role="AlertLog">
+              <PropertyRef Name="AlertLogStateID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AlertLog_User">
+          <End Role="User" Type="GeoGuardianCitiesModel.User" Multiplicity="1" />
+          <End Role="AlertLog" Type="GeoGuardianCitiesModel.AlertLog" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="UserID" />
+            </Principal>
+            <Dependent Role="AlertLog">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AlertLog_User1">
+          <End Role="User" Type="GeoGuardianCitiesModel.User" Multiplicity="0..1" />
+          <End Role="AlertLog" Type="GeoGuardianCitiesModel.AlertLog" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="UserID" />
+            </Principal>
+            <Dependent Role="AlertLog">
+              <PropertyRef Name="BlockUserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AlertLogComment_AlertLog">
+          <End Role="AlertLog" Type="GeoGuardianCitiesModel.AlertLog" Multiplicity="1" />
+          <End Role="AlertLogComment" Type="GeoGuardianCitiesModel.AlertLogComment" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AlertLog">
+              <PropertyRef Name="AlertLogID" />
+            </Principal>
+            <Dependent Role="AlertLogComment">
+              <PropertyRef Name="AlertLogID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AlertLogSound_AlertLog">
+          <End Role="AlertLog" Type="GeoGuardianCitiesModel.AlertLog" Multiplicity="1" />
+          <End Role="AlertLogSound" Type="GeoGuardianCitiesModel.AlertLogSound" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AlertLog">
+              <PropertyRef Name="AlertLogID" />
+            </Principal>
+            <Dependent Role="AlertLogSound">
+              <PropertyRef Name="AlertLogID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Message_Alert">
+          <End Role="AlertLog" Type="GeoGuardianCitiesModel.AlertLog" Multiplicity="0..1" />
+          <End Role="Message" Type="GeoGuardianCitiesModel.Message" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AlertLog">
+              <PropertyRef Name="AlertLogID" />
+            </Principal>
+            <Dependent Role="Message">
+              <PropertyRef Name="AlertLogID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AlertLogComment_User">
+          <End Role="User" Type="GeoGuardianCitiesModel.User" Multiplicity="1" />
+          <End Role="AlertLogComment" Type="GeoGuardianCitiesModel.AlertLogComment" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="UserID" />
+            </Principal>
+            <Dependent Role="AlertLogComment">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_City_State">
+          <End Role="State" Type="GeoGuardianCitiesModel.State" Multiplicity="1" />
+          <End Role="City" Type="GeoGuardianCitiesModel.City" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="State">
+              <PropertyRef Name="StateID" />
+            </Principal>
+            <Dependent Role="City">
+              <PropertyRef Name="StateID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Notification_CityHall">
+          <End Role="City" Type="GeoGuardianCitiesModel.City" Multiplicity="1" />
+          <End Role="Notification" Type="GeoGuardianCitiesModel.Notification" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="City">
+              <PropertyRef Name="CityID" />
+            </Principal>
+            <Dependent Role="Notification">
+              <PropertyRef Name="CityID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ParamsBlockAlert_City">
+          <End Role="City" Type="GeoGuardianCitiesModel.City" Multiplicity="1" />
+          <End Role="ParamsBlockAlert" Type="GeoGuardianCitiesModel.ParamsBlockAlert" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="City">
+              <PropertyRef Name="CityID" />
+            </Principal>
+            <Dependent Role="ParamsBlockAlert">
+              <PropertyRef Name="CityID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_User_City">
+          <End Role="City" Type="GeoGuardianCitiesModel.City" Multiplicity="0..1" />
+          <End Role="User" Type="GeoGuardianCitiesModel.User" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="City">
+              <PropertyRef Name="CityID" />
+            </Principal>
+            <Dependent Role="User">
+              <PropertyRef Name="CityID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_State_Country">
+          <End Role="Country" Type="GeoGuardianCitiesModel.Country" Multiplicity="1" />
+          <End Role="State" Type="GeoGuardianCitiesModel.State" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Country">
+              <PropertyRef Name="CountryID" />
+            </Principal>
+            <Dependent Role="State">
+              <PropertyRef Name="CountryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_User_Gender">
+          <End Role="Gender" Type="GeoGuardianCitiesModel.Gender" Multiplicity="1" />
+          <End Role="User" Type="GeoGuardianCitiesModel.User" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Gender">
+              <PropertyRef Name="GenderID" />
+            </Principal>
+            <Dependent Role="User">
+              <PropertyRef Name="GenderID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_LoginAudit_User">
+          <End Role="User" Type="GeoGuardianCitiesModel.User" Multiplicity="1" />
+          <End Role="LoginAudit" Type="GeoGuardianCitiesModel.LoginAudit" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="UserID" />
+            </Principal>
+            <Dependent Role="LoginAudit">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MenuItem_MenuItem">
+          <End Role="MenuItem" Type="GeoGuardianCitiesModel.MenuItem" Multiplicity="0..1" />
+          <End Role="MenuItem1" Type="GeoGuardianCitiesModel.MenuItem" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MenuItem">
+              <PropertyRef Name="MenuItemID" />
+            </Principal>
+            <Dependent Role="MenuItem1">
+              <PropertyRef Name="ParentMenuItemID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Message_MessageState">
+          <End Role="MessageState" Type="GeoGuardianCitiesModel.MessageState" Multiplicity="1" />
+          <End Role="Message" Type="GeoGuardianCitiesModel.Message" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MessageState">
+              <PropertyRef Name="MessageStateID" />
+            </Principal>
+            <Dependent Role="Message">
+              <PropertyRef Name="MessageStateID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Message_User">
+          <End Role="User" Type="GeoGuardianCitiesModel.User" Multiplicity="1" />
+          <End Role="Message" Type="GeoGuardianCitiesModel.Message" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="UserID" />
+            </Principal>
+            <Dependent Role="Message">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MessageRecipient_Message">
+          <End Role="Message" Type="GeoGuardianCitiesModel.Message" Multiplicity="1" />
+          <End Role="MessageRecipient" Type="GeoGuardianCitiesModel.MessageRecipient" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Message">
+              <PropertyRef Name="MessageID" />
+            </Principal>
+            <Dependent Role="MessageRecipient">
+              <PropertyRef Name="MessageID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PushEvent_Message">
+          <End Role="Message" Type="GeoGuardianCitiesModel.Message" Multiplicity="0..1" />
+          <End Role="PushEvent" Type="GeoGuardianCitiesModel.PushEvent" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Message">
+              <PropertyRef Name="MessageID" />
+            </Principal>
+            <Dependent Role="PushEvent">
+              <PropertyRef Name="MessageID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MessageRecipient_MessageState">
+          <End Role="MessageState" Type="GeoGuardianCitiesModel.MessageState" Multiplicity="1" />
+          <End Role="MessageRecipient" Type="GeoGuardianCitiesModel.MessageRecipient" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MessageState">
+              <PropertyRef Name="MessageStateID" />
+            </Principal>
+            <Dependent Role="MessageRecipient">
+              <PropertyRef Name="MessageStateID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MessageRecipient_User">
+          <End Role="User" Type="GeoGuardianCitiesModel.User" Multiplicity="1" />
+          <End Role="MessageRecipient" Type="GeoGuardianCitiesModel.MessageRecipient" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="UserID" />
+            </Principal>
+            <Dependent Role="MessageRecipient">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PushEvent_PushEventState">
+          <End Role="PushEventState" Type="GeoGuardianCitiesModel.PushEventState" Multiplicity="1" />
+          <End Role="PushEvent" Type="GeoGuardianCitiesModel.PushEvent" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PushEventState">
+              <PropertyRef Name="PushEventStateID" />
+            </Principal>
+            <Dependent Role="PushEvent">
+              <PropertyRef Name="PushEventStateID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PushEvent_PushEventType">
+          <End Role="PushEventType" Type="GeoGuardianCitiesModel.PushEventType" Multiplicity="1" />
+          <End Role="PushEvent" Type="GeoGuardianCitiesModel.PushEvent" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PushEventType">
+              <PropertyRef Name="PushEventTypeID" />
+            </Principal>
+            <Dependent Role="PushEvent">
+              <PropertyRef Name="PushEventTypeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PushEventUser_PushEvent">
+          <End Role="PushEvent" Type="GeoGuardianCitiesModel.PushEvent" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="PushEventUser" Type="GeoGuardianCitiesModel.PushEventUser" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PushEvent">
+              <PropertyRef Name="PushEventID" />
+            </Principal>
+            <Dependent Role="PushEventUser">
+              <PropertyRef Name="PushEventID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PushEventUser_PushEventUserState">
+          <End Role="PushEventUserState" Type="GeoGuardianCitiesModel.PushEventUserState" Multiplicity="1" />
+          <End Role="PushEventUser" Type="GeoGuardianCitiesModel.PushEventUser" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PushEventUserState">
+              <PropertyRef Name="PushEventUserStateID" />
+            </Principal>
+            <Dependent Role="PushEventUser">
+              <PropertyRef Name="PushEventUserStateID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PushEventUser_User">
+          <End Role="User" Type="GeoGuardianCitiesModel.User" Multiplicity="1" />
+          <End Role="PushEventUser" Type="GeoGuardianCitiesModel.PushEventUser" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="UserID" />
+            </Principal>
+            <Dependent Role="PushEventUser">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TrackingInfo_User">
+          <End Role="User" Type="GeoGuardianCitiesModel.User" Multiplicity="1" />
+          <End Role="TrackingInfo" Type="GeoGuardianCitiesModel.TrackingInfo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="UserID" />
+            </Principal>
+            <Dependent Role="TrackingInfo">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_User_UserStatus">
+          <End Role="UserStatus" Type="GeoGuardianCitiesModel.UserStatus" Multiplicity="1" />
+          <End Role="User" Type="GeoGuardianCitiesModel.User" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UserStatus">
+              <PropertyRef Name="UserStatusID" />
+            </Principal>
+            <Dependent Role="User">
+              <PropertyRef Name="UserStatusID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_User_UserType">
+          <End Role="UserType" Type="GeoGuardianCitiesModel.UserType" Multiplicity="1" />
+          <End Role="User" Type="GeoGuardianCitiesModel.User" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UserType">
+              <PropertyRef Name="UserTypeID" />
+            </Principal>
+            <Dependent Role="User">
+              <PropertyRef Name="UserTypeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UserEmergencyNumber_User">
+          <End Role="User" Type="GeoGuardianCitiesModel.User" Multiplicity="1" />
+          <End Role="UserEmergencyNumber" Type="GeoGuardianCitiesModel.UserEmergencyNumber" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="UserID" />
+            </Principal>
+            <Dependent Role="UserEmergencyNumber">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="MenuItemUserType">
+          <End Role="MenuItem" Type="GeoGuardianCitiesModel.MenuItem" Multiplicity="*" />
+          <End Role="UserType" Type="GeoGuardianCitiesModel.UserType" Multiplicity="*" />
+        </Association>
+        <Association Name="UserPackage">
+          <End Role="Package" Type="GeoGuardianCitiesModel.Package" Multiplicity="*" />
+          <End Role="User" Type="GeoGuardianCitiesModel.User" Multiplicity="*" />
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="GeoGuardianCitiesModelStoreContainer" CdmEntityContainer="Entities">
+          <EntitySetMapping Name="Alert"><EntityTypeMapping TypeName="GeoGuardianCitiesModel.Alert"><MappingFragment StoreEntitySet="Alert">
+            <ScalarProperty Name="AlertID" ColumnName="AlertID" />
+            <ScalarProperty Name="AlertName" ColumnName="AlertName" />
+            <ScalarProperty Name="AlertTypeID" ColumnName="AlertTypeID" />
+            <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+            <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+            <ScalarProperty Name="UserIDCreation" ColumnName="UserIDCreation" />
+            <ScalarProperty Name="AlertDescription" ColumnName="AlertDescription" />
+            <ScalarProperty Name="CityID" ColumnName="CityID" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="AlertCondition"><EntityTypeMapping TypeName="GeoGuardianCitiesModel.AlertCondition"><MappingFragment StoreEntitySet="AlertCondition">
+            <ScalarProperty Name="AlertConditionID" ColumnName="AlertConditionID" />
+            <ScalarProperty Name="AlertConditionName" ColumnName="AlertConditionName" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="AlertLog"><EntityTypeMapping TypeName="GeoGuardianCitiesModel.AlertLog"><MappingFragment StoreEntitySet="AlertLog">
+            <ScalarProperty Name="AlertLogID" ColumnName="AlertLogID" />
+            <ScalarProperty Name="AlertID" ColumnName="AlertID" />
+            <ScalarProperty Name="AlertDateTime" ColumnName="AlertDateTime" />
+            <ScalarProperty Name="UserID" ColumnName="UserID" />
+            <ScalarProperty Name="AlertConditionID" ColumnName="AlertConditionID" />
+            <ScalarProperty Name="AddressPosition" ColumnName="AddressPosition" />
+            <ScalarProperty Name="AlertLogStateID" ColumnName="AlertLogStateID" />
+            <ScalarProperty Name="BlockUserID" ColumnName="BlockUserID" />
+            <ScalarProperty Name="BlockDateTime" ColumnName="BlockDateTime" />
+            <ScalarProperty Name="UserPositionAccuracy" ColumnName="UserPositionAccuracy" />
+            <ScalarProperty Name="Reported" ColumnName="Reported" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="AlertLogComment"><EntityTypeMapping TypeName="GeoGuardianCitiesModel.AlertLogComment"><MappingFragment StoreEntitySet="AlertLogComment">
+            <ScalarProperty Name="AlertLogCommentID" ColumnName="AlertLogCommentID" />
+            <ScalarProperty Name="CommentDateTime" ColumnName="CommentDateTime" />
+            <ScalarProperty Name="UserID" ColumnName="UserID" />
+            <ScalarProperty Name="AlertComment" ColumnName="AlertComment" />
+            <ScalarProperty Name="AlertLogID" ColumnName="AlertLogID" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="AlertLogSound"><EntityTypeMapping TypeName="GeoGuardianCitiesModel.AlertLogSound"><MappingFragment StoreEntitySet="AlertLogSound">
+            <ScalarProperty Name="AlertLogID" ColumnName="AlertLogID" />
+            <ScalarProperty Name="FileName" ColumnName="FileName" />
+            <ScalarProperty Name="DateTime" ColumnName="DateTime" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="AlertLogState"><EntityTypeMapping TypeName="GeoGuardianCitiesModel.AlertLogState"><MappingFragment StoreEntitySet="AlertLogState">
+            <ScalarProperty Name="AlertLogStateID" ColumnName="AlertLogStateID" />
+            <ScalarProperty Name="AlertLogStateName" ColumnName="AlertLogStateName" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="AlertType"><EntityTypeMapping TypeName="GeoGuardianCitiesModel.AlertType"><MappingFragment StoreEntitySet="AlertType">
+            <ScalarProperty Name="AlertTypeID" ColumnName="AlertTypeID" />
+            <ScalarProperty Name="AlertTypeName" ColumnName="AlertTypeName" />
+            <ScalarProperty Name="PriorityLevel" ColumnName="PriorityLevel" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="City"><EntityTypeMapping TypeName="GeoGuardianCitiesModel.City"><MappingFragment StoreEntitySet="City">
+            <ScalarProperty Name="CityID" ColumnName="CityID" />
+            <ScalarProperty Name="Name" ColumnName="Name" />
+            <ScalarProperty Name="StateID" ColumnName="StateID" />
+            <ScalarProperty Name="DefaultZoomLevel" ColumnName="DefaultZoomLevel" />
+            <ScalarProperty Name="MinZoomLevel" ColumnName="MinZoomLevel" />
+            <ScalarProperty Name="ZoomThreshold" ColumnName="ZoomThreshold" />
+            <ScalarProperty Name="ZipCode" ColumnName="ZipCode" />
+            <ScalarProperty Name="AliasNames" ColumnName="AliasNames" />
+            <ScalarProperty Name="Code" ColumnName="Code" />
+            <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+            <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+            <ScalarProperty Name="AboutUsText" ColumnName="AboutUsText" />
+            <ScalarProperty Name="WelcomeText" ColumnName="WelcomeText" />
+            <ScalarProperty Name="CertificateSerialNumber" ColumnName="CertificateSerialNumber" />
+            <ScalarProperty Name="ContactMail" ColumnName="ContactMail" />
+            <ScalarProperty Name="LastCheckedDateTime" ColumnName="LastCheckedDateTime" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Country"><EntityTypeMapping TypeName="GeoGuardianCitiesModel.Country"><MappingFragment StoreEntitySet="Country">
+            <ScalarProperty Name="CountryID" ColumnName="CountryID" />
+            <ScalarProperty Name="Name" ColumnName="Name" />
+            <ScalarProperty Name="Code" ColumnName="Code" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Gender"><EntityTypeMapping TypeName="GeoGuardianCitiesModel.Gender"><MappingFragment StoreEntitySet="Gender">
+            <ScalarProperty Name="GenderID" ColumnName="GenderID" />
+            <ScalarProperty Name="GenderName" ColumnName="GenderName" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="LoginAudit"><EntityTypeMapping TypeName="GeoGuardianCitiesModel.LoginAudit"><MappingFragment StoreEntitySet="LoginAudit">
+            <ScalarProperty Name="LoginAuditID" ColumnName="LoginAuditID" />
+            <ScalarProperty Name="LoginAuditDate" ColumnName="LoginAuditDate" />
+            <ScalarProperty Name="UserID" ColumnName="UserID" />
+            <ScalarProperty Name="IP" ColumnName="IP" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="MenuItem"><EntityTypeMapping TypeName="GeoGuardianCitiesModel.MenuItem"><MappingFragment StoreEntitySet="MenuItem">
+            <ScalarProperty Name="MenuItemID" ColumnName="MenuItemID" />
+            <ScalarProperty Name="ParentMenuItemID" ColumnName="ParentMenuItemID" />
+            <ScalarProperty Name="MenuItemName" ColumnName="MenuItemName" />
+            <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+            <ScalarProperty Name="Path" ColumnName="Path" />
+            <ScalarProperty Name="Alias" ColumnName="Alias" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Message"><EntityTypeMapping TypeName="GeoGuardianCitiesModel.Message"><MappingFragment StoreEntitySet="Message">
+            <ScalarProperty Name="MessageID" ColumnName="MessageID" />
+            <ScalarProperty Name="Subject" ColumnName="Subject" />
+            <ScalarProperty Name="Body" ColumnName="Body" />
+            <ScalarProperty Name="MessageDate" ColumnName="MessageDate" />
+            <ScalarProperty Name="UserID" ColumnName="UserID" />
+            <ScalarProperty Name="MessageStateID" ColumnName="MessageStateID" />
+            <ScalarProperty Name="IsImportant" ColumnName="IsImportant" />
+            <ScalarProperty Name="Address" ColumnName="Address" />
+            <ScalarProperty Name="AlertLogID" ColumnName="AlertLogID" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="MessageRecipient"><EntityTypeMapping TypeName="GeoGuardianCitiesModel.MessageRecipient"><MappingFragment StoreEntitySet="MessageRecipient">
+            <ScalarProperty Name="MessageID" ColumnName="MessageID" />
+            <ScalarProperty Name="UserID" ColumnName="UserID" />
+            <ScalarProperty Name="MessageStateID" ColumnName="MessageStateID" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="MessageState"><EntityTypeMapping TypeName="GeoGuardianCitiesModel.MessageState"><MappingFragment StoreEntitySet="MessageState">
+            <ScalarProperty Name="MessageStateID" ColumnName="MessageStateID" />
+            <ScalarProperty Name="StateName" ColumnName="StateName" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Notification"><EntityTypeMapping TypeName="GeoGuardianCitiesModel.Notification"><MappingFragment StoreEntitySet="Notification">
+            <ScalarProperty Name="NotificationID" ColumnName="NotificationID" />
+            <ScalarProperty Name="NotificationDateTime" ColumnName="NotificationDateTime" />
+            <ScalarProperty Name="Title" ColumnName="Title" />
+            <ScalarProperty Name="Text" ColumnName="Text" />
+            <ScalarProperty Name="CityID" ColumnName="CityID" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Package"><EntityTypeMapping TypeName="GeoGuardianCitiesModel.Package"><MappingFragment StoreEntitySet="Package">
+            <ScalarProperty Name="PackageID" ColumnName="PackageID" />
+            <ScalarProperty Name="PackageName" ColumnName="PackageName" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Parameter"><EntityTypeMapping TypeName="GeoGuardianCitiesModel.Parameter"><MappingFragment StoreEntitySet="Parameter">
+            <ScalarProperty Name="ParameterID" ColumnName="ParameterID" />
+            <ScalarProperty Name="ParameterName" ColumnName="ParameterName" />
+            <ScalarProperty Name="ParameterKey" ColumnName="ParameterKey" />
+            <ScalarProperty Name="ParameterValue" ColumnName="ParameterValue" />
+            <ScalarProperty Name="Description" ColumnName="Description" />
+            <ScalarProperty Name="IsMobile" ColumnName="IsMobile" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="ParamsBlockAlert"><EntityTypeMapping TypeName="GeoGuardianCitiesModel.ParamsBlockAlert"><MappingFragment StoreEntitySet="ParamsBlockAlert">
+            <ScalarProperty Name="AlertConditionID" ColumnName="AlertConditionID" />
+            <ScalarProperty Name="CityID" ColumnName="CityID" />
+            <ScalarProperty Name="BlockTime" ColumnName="BlockTime" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="PushEvent"><EntityTypeMapping TypeName="GeoGuardianCitiesModel.PushEvent"><MappingFragment StoreEntitySet="PushEvent">
+            <ScalarProperty Name="PushEventID" ColumnName="PushEventID" />
+            <ScalarProperty Name="EventDateTime" ColumnName="EventDateTime" />
+            <ScalarProperty Name="PushEventTypeID" ColumnName="PushEventTypeID" />
+            <ScalarProperty Name="PushEventStateID" ColumnName="PushEventStateID" />
+            <ScalarProperty Name="MessageID" ColumnName="MessageID" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="PushEventState"><EntityTypeMapping TypeName="GeoGuardianCitiesModel.PushEventState"><MappingFragment StoreEntitySet="PushEventState">
+            <ScalarProperty Name="PushEventStateID" ColumnName="PushEventStateID" />
+            <ScalarProperty Name="PushEventStateName" ColumnName="PushEventStateName" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="PushEventType"><EntityTypeMapping TypeName="GeoGuardianCitiesModel.PushEventType"><MappingFragment StoreEntitySet="PushEventType">
+            <ScalarProperty Name="PushEventTypeID" ColumnName="PushEventTypeID" />
+            <ScalarProperty Name="PushEventTypeName" ColumnName="PushEventTypeName" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="PushEventUser"><EntityTypeMapping TypeName="GeoGuardianCitiesModel.PushEventUser"><MappingFragment StoreEntitySet="PushEventUser">
+            <ScalarProperty Name="PushEventID" ColumnName="PushEventID" />
+            <ScalarProperty Name="UserID" ColumnName="UserID" />
+            <ScalarProperty Name="PushEventUserStateID" ColumnName="PushEventUserStateID" />
+            <ScalarProperty Name="SendRetries" ColumnName="SendRetries" />
+            <ScalarProperty Name="ProcessDateTime" ColumnName="ProcessDateTime" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="PushEventUserState"><EntityTypeMapping TypeName="GeoGuardianCitiesModel.PushEventUserState"><MappingFragment StoreEntitySet="PushEventUserState">
+            <ScalarProperty Name="PushEventUserStateID" ColumnName="PushEventUserStateID" />
+            <ScalarProperty Name="PushEventUserStateName" ColumnName="PushEventUserStateName" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Server"><EntityTypeMapping TypeName="GeoGuardianCitiesModel.Server"><MappingFragment StoreEntitySet="Server">
+            <ScalarProperty Name="ServerID" ColumnName="ServerID" />
+            <ScalarProperty Name="ServerName" ColumnName="ServerName" />
+            <ScalarProperty Name="Url" ColumnName="Url" />
+            <ScalarProperty Name="Availability" ColumnName="Availability" />
+            <ScalarProperty Name="ProcessorTimeHistory" ColumnName="ProcessorTimeHistory" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="State"><EntityTypeMapping TypeName="GeoGuardianCitiesModel.State"><MappingFragment StoreEntitySet="State">
+            <ScalarProperty Name="StateID" ColumnName="StateID" />
+            <ScalarProperty Name="Name" ColumnName="Name" />
+            <ScalarProperty Name="CountryID" ColumnName="CountryID" />
+            <ScalarProperty Name="AliasNames" ColumnName="AliasNames" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="TrackingInfo"><EntityTypeMapping TypeName="GeoGuardianCitiesModel.TrackingInfo"><MappingFragment StoreEntitySet="TrackingInfo">
+            <ScalarProperty Name="TrackingInfoID" ColumnName="TrackingInfoID" />
+            <ScalarProperty Name="TrackingDateTime" ColumnName="TrackingDateTime" />
+            <ScalarProperty Name="UserID" ColumnName="UserID" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="User"><EntityTypeMapping TypeName="GeoGuardianCitiesModel.User"><MappingFragment StoreEntitySet="User">
+            <ScalarProperty Name="UserID" ColumnName="UserID" />
+            <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+            <ScalarProperty Name="LastName" ColumnName="LastName" />
+            <ScalarProperty Name="UserName" ColumnName="UserName" />
+            <ScalarProperty Name="Password" ColumnName="Password" />
+            <ScalarProperty Name="Email" ColumnName="Email" />
+            <ScalarProperty Name="PrefixMobilePhone" ColumnName="PrefixMobilePhone" />
+            <ScalarProperty Name="MobilePhone" ColumnName="MobilePhone" />
+            <ScalarProperty Name="LastLogin" ColumnName="LastLogin" />
+            <ScalarProperty Name="GenderID" ColumnName="GenderID" />
+            <ScalarProperty Name="Birthday" ColumnName="Birthday" />
+            <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+            <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+            <ScalarProperty Name="ProfilePicture" ColumnName="ProfilePicture" />
+            <ScalarProperty Name="UserStatusID" ColumnName="UserStatusID" />
+            <ScalarProperty Name="Address" ColumnName="Address" />
+            <ScalarProperty Name="TrackingEnabled" ColumnName="TrackingEnabled" />
+            <ScalarProperty Name="LastPositionDateTime" ColumnName="LastPositionDateTime" />
+            <ScalarProperty Name="LastStatusChange" ColumnName="LastStatusChange" />
+            <ScalarProperty Name="SignInTokenDate" ColumnName="SignInTokenDate" />
+            <ScalarProperty Name="ProfilePictureThumb" ColumnName="ProfilePictureThumb" />
+            <ScalarProperty Name="PendingConfirmation" ColumnName="PendingConfirmation" />
+            <ScalarProperty Name="SignInToken" ColumnName="SignInToken" />
+            <ScalarProperty Name="UserTypeID" ColumnName="UserTypeID" />
+            <ScalarProperty Name="CurrentSessionID" ColumnName="CurrentSessionID" />
+            <ScalarProperty Name="PictureLastUpdate" ColumnName="PictureLastUpdate" />
+            <ScalarProperty Name="CityID" ColumnName="CityID" />
+            <ScalarProperty Name="PushDeviceRegistrationID" ColumnName="PushDeviceRegistrationID" />
+            <ScalarProperty Name="LoginAttempts" ColumnName="LoginAttempts" />
+            <ScalarProperty Name="GeoGuardianVersion" ColumnName="GeoGuardianVersion" />
+            <ScalarProperty Name="DeviceInfo" ColumnName="DeviceInfo" />
+            <ScalarProperty Name="AndroidVersion" ColumnName="AndroidVersion" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="UserEmergencyNumber"><EntityTypeMapping TypeName="GeoGuardianCitiesModel.UserEmergencyNumber"><MappingFragment StoreEntitySet="UserEmergencyNumber">
+            <ScalarProperty Name="UserID" ColumnName="UserID" />
+            <ScalarProperty Name="Number" ColumnName="Number" />
+            <ScalarProperty Name="Description" ColumnName="Description" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="UserStatus"><EntityTypeMapping TypeName="GeoGuardianCitiesModel.UserStatus"><MappingFragment StoreEntitySet="UserStatus">
+            <ScalarProperty Name="UserStatusID" ColumnName="UserStatusID" />
+            <ScalarProperty Name="UserStatusName" ColumnName="UserStatusName" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="UserType"><EntityTypeMapping TypeName="GeoGuardianCitiesModel.UserType"><MappingFragment StoreEntitySet="UserType">
+            <ScalarProperty Name="UserTypeID" ColumnName="UserTypeID" />
+            <ScalarProperty Name="UserTypeName" ColumnName="UserTypeName" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <AssociationSetMapping Name="MenuItemUserType" TypeName="GeoGuardianCitiesModel.MenuItemUserType" StoreEntitySet="MenuItemUserType">
+            <EndProperty Name="MenuItem">
+              <ScalarProperty Name="MenuItemID" ColumnName="MenuItemID" />
+            </EndProperty>
+            <EndProperty Name="UserType">
+              <ScalarProperty Name="UserTypeID" ColumnName="UserTypeID" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="UserPackage" TypeName="GeoGuardianCitiesModel.UserPackage" StoreEntitySet="UserPackage">
+            <EndProperty Name="Package">
+              <ScalarProperty Name="PackageID" ColumnName="PackageID" />
+            </EndProperty>
+            <EndProperty Name="User">
+              <ScalarProperty Name="UserID" ColumnName="UserID" />
+            </EndProperty>
+          </AssociationSetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="GeoGuardianCities" ZoomLevel="62">
+        <EntityTypeShape EntityType="GeoGuardianCitiesModel.Alert" Width="1.5" PointX="7.5" PointY="6.75" Height="3.1340950520833317" IsExpanded="true" />
+        <EntityTypeShape EntityType="GeoGuardianCitiesModel.AlertCondition" Width="1.5" PointX="16.25" PointY="3.625" Height="2.1725878906249996" IsExpanded="true" />
+        <EntityTypeShape EntityType="GeoGuardianCitiesModel.AlertLog" Width="1.5" PointX="18.5" PointY="8.75" Height="4.6725065104166674" IsExpanded="true" />
+        <EntityTypeShape EntityType="GeoGuardianCitiesModel.AlertLogComment" Width="1.5" PointX="20.75" PointY="10" Height="2.3648893229166674" IsExpanded="true" />
+        <EntityTypeShape EntityType="GeoGuardianCitiesModel.AlertLogSound" Width="1.5" PointX="20.75" PointY="13.375" Height="1.7879850260416674" IsExpanded="true" />
+        <EntityTypeShape EntityType="GeoGuardianCitiesModel.AlertLogState" Width="1.5" PointX="16.25" PointY="0.5" Height="1.5956835937499996" IsExpanded="true" />
+        <EntityTypeShape EntityType="GeoGuardianCitiesModel.AlertType" Width="1.5" PointX="7.5" PointY="2.625" Height="1.7879850260416674" IsExpanded="true" />
+        <EntityTypeShape EntityType="GeoGuardianCitiesModel.City" Width="1.5" PointX="5.125" PointY="5.5" Height="5.0571093749999978" IsExpanded="true" />
+        <EntityTypeShape EntityType="GeoGuardianCitiesModel.Country" Width="1.5" PointX="0.5" PointY="10.25" Height="1.7879850260416674" IsExpanded="true" />
+        <EntityTypeShape EntityType="GeoGuardianCitiesModel.Gender" Width="1.5" PointX="11" PointY="6.25" Height="1.5956835937499996" IsExpanded="true" />
+        <EntityTypeShape EntityType="GeoGuardianCitiesModel.LoginAudit" Width="1.5" PointX="15.5" PointY="7.625" Height="1.9802864583333353" IsExpanded="true" />
+        <EntityTypeShape EntityType="GeoGuardianCitiesModel.MenuItem" Width="1.5" PointX="7.375" PointY="12.5" Height="2.7494921875000031" IsExpanded="true" />
+        <EntityTypeShape EntityType="GeoGuardianCitiesModel.Message" Width="1.5" PointX="23.75" PointY="9.25" Height="3.7109993489583388" IsExpanded="true" />
+        <EntityTypeShape EntityType="GeoGuardianCitiesModel.MessageRecipient" Width="1.5" PointX="26" PointY="10" Height="2.1725878906250031" IsExpanded="true" />
+        <EntityTypeShape EntityType="GeoGuardianCitiesModel.MessageState" Width="1.5" PointX="21.5" PointY="7.25" Height="1.7879850260416674" IsExpanded="true" />
+        <EntityTypeShape EntityType="GeoGuardianCitiesModel.Notification" Width="1.5" PointX="5.125" PointY="11.625" Height="2.1725878906250031" IsExpanded="true" />
+        <EntityTypeShape EntityType="GeoGuardianCitiesModel.Package" Width="1.5" PointX="13.25" PointY="0.625" Height="1.5956835937500031" IsExpanded="true" />
+        <EntityTypeShape EntityType="GeoGuardianCitiesModel.Parameter" Width="1.5" PointX="0.75" PointY="0.75" Height="2.1725878906250031" IsExpanded="true" />
+        <EntityTypeShape EntityType="GeoGuardianCitiesModel.ParamsBlockAlert" Width="1.5" PointX="9.5" PointY="8.75" Height="1.9802864583333388" IsExpanded="true" />
+        <EntityTypeShape EntityType="GeoGuardianCitiesModel.PushEvent" Width="1.5" PointX="29" PointY="9.75" Height="2.7494921875000031" IsExpanded="true" />
+        <EntityTypeShape EntityType="GeoGuardianCitiesModel.PushEventState" Width="1.5" PointX="26.75" PointY="7.125" Height="1.5956835937500031" IsExpanded="true" />
+        <EntityTypeShape EntityType="GeoGuardianCitiesModel.PushEventType" Width="1.5" PointX="26.75" PointY="13.5" Height="1.595683593749996" IsExpanded="true" />
+        <EntityTypeShape EntityType="GeoGuardianCitiesModel.PushEventUser" Width="1.5" PointX="31.25" PointY="9.875" Height="2.5571907552083246" IsExpanded="true" />
+        <EntityTypeShape EntityType="GeoGuardianCitiesModel.PushEventUserState" Width="1.5" PointX="29" PointY="7.375" Height="1.595683593749996" IsExpanded="true" />
+        <EntityTypeShape EntityType="GeoGuardianCitiesModel.Server" Width="1.5" PointX="2.75" PointY="0.75" Height="1.9802864583333246" IsExpanded="true" />
+        <EntityTypeShape EntityType="GeoGuardianCitiesModel.State" Width="1.5" PointX="2.75" PointY="10" Height="2.1725878906250102" IsExpanded="true" />
+        <EntityTypeShape EntityType="GeoGuardianCitiesModel.TrackingInfo" Width="1.5" PointX="15.5" PointY="10.375" Height="1.7879850260416674" IsExpanded="true" />
+        <EntityTypeShape EntityType="GeoGuardianCitiesModel.User" Width="1.5" PointX="13.25" PointY="6.25" Height="9.8646451822916674" IsExpanded="true" />
+        <EntityTypeShape EntityType="GeoGuardianCitiesModel.UserEmergencyNumber" Width="1.5" PointX="15.5" PointY="12.875" Height="1.7879850260416674" IsExpanded="true" />
+        <EntityTypeShape EntityType="GeoGuardianCitiesModel.UserStatus" Width="1.5" PointX="11" PointY="11.375" Height="1.595683593749996" IsExpanded="true" />
+        <EntityTypeShape EntityType="GeoGuardianCitiesModel.UserType" Width="1.5" PointX="10.25" PointY="13.875" Height="1.7879850260416674" IsExpanded="true" />
+        <AssociationConnector Association="GeoGuardianCitiesModel.FK_Alert_AlertType" ManuallyRouted="false">
+          <ConnectorPoint PointX="8.25" PointY="4.4129850260416674" />
+          <ConnectorPoint PointX="8.25" PointY="6.75" />
+        </AssociationConnector>
+        <AssociationConnector Association="GeoGuardianCitiesModel.FK_Alert_CityHall" ManuallyRouted="false">
+          <ConnectorPoint PointX="6.625" PointY="8.3170475260416659" />
+          <ConnectorPoint PointX="7.5" PointY="8.3170475260416659" />
+        </AssociationConnector>
+        <AssociationConnector Association="GeoGuardianCitiesModel.FK_AlertLog_Alert" ManuallyRouted="false">
+          <ConnectorPoint PointX="9" PointY="8.297841796875" />
+          <ConnectorPoint PointX="10.166666666666666" PointY="8.297841796875" />
+          <ConnectorPoint PointX="10.333333333333334" PointY="8.297841796875" />
+          <ConnectorPoint PointX="13" PointY="8.297841796875" />
+          <ConnectorPoint PointX="13" PointY="6.047587890625" />
+          <ConnectorPoint PointX="13.510414166666665" PointY="6.0475878906249987" />
+          <ConnectorPoint PointX="13.677080833333333" PointY="6.047587890625" />
+          <ConnectorPoint PointX="13.916666666666666" PointY="6.0475878906249987" />
+          <ConnectorPoint PointX="14.083333333333334" PointY="6.047587890625" />
+          <ConnectorPoint PointX="16.698589743589743" PointY="6.0475878906249987" />
+          <ConnectorPoint PointX="16.865256410256407" PointY="6.047587890625" />
+          <ConnectorPoint PointX="17.145128205128206" PointY="6.0475878906249987" />
+          <ConnectorPoint PointX="17.31179487179487" PointY="6.047587890625" />
+          <ConnectorPoint PointX="17.437149935897438" PointY="6.0475878906249987" />
+          <ConnectorPoint PointX="17.603816602564102" PointY="6.047587890625" />
+          <ConnectorPoint PointX="18.760414166666667" PointY="6.0475878906249987" />
+          <ConnectorPoint PointX="18.927080833333331" PointY="6.047587890625" />
+          <ConnectorPoint PointX="19.453125749999998" PointY="6.047587890625" />
+          <ConnectorPoint PointX="19.453125749999998" PointY="8.75" />
+        </AssociationConnector>
+        <AssociationConnector Association="GeoGuardianCitiesModel.FK_AlertCondition_AlertCondition" ManuallyRouted="false">
+          <ConnectorPoint PointX="16.781923076923075" PointY="5.797587890625" />
+          <ConnectorPoint PointX="16.781923076923075" PointY="6.297587890625" />
+          <ConnectorPoint PointX="17.228461538461538" PointY="6.297587890625" />
+          <ConnectorPoint PointX="17.228461538461538" PointY="5.797587890625" />
+        </AssociationConnector>
+        <AssociationConnector Association="GeoGuardianCitiesModel.FK_AlertLog_AlertCondition" ManuallyRouted="false">
+          <ConnectorPoint PointX="17.52048326923077" PointY="5.797587890625" />
+          <ConnectorPoint PointX="17.52048326923077" PointY="9.9901432291666676" />
+          <ConnectorPoint PointX="18.5" PointY="9.9901432291666676" />
+        </AssociationConnector>
+        <AssociationConnector Association="GeoGuardianCitiesModel.FK_ParamsBlockAlert_AlertCondition" ManuallyRouted="false">
+          <ConnectorPoint PointX="16.25" PointY="4.699396972656249" />
+          <ConnectorPoint PointX="14.083333333333334" PointY="4.6993969726562481" />
+          <ConnectorPoint PointX="13.916666666666666" PointY="4.699396972656249" />
+          <ConnectorPoint PointX="10.25" PointY="4.699396972656249" />
+          <ConnectorPoint PointX="10.25" PointY="8.75" />
+        </AssociationConnector>
+        <AssociationConnector Association="GeoGuardianCitiesModel.FK_AlertLog_AlertLogState" ManuallyRouted="false">
+          <ConnectorPoint PointX="17.75" PointY="1.2978417968749998" />
+          <ConnectorPoint PointX="18.8437475" PointY="1.2978417968749998" />
+          <ConnectorPoint PointX="18.8437475" PointY="8.75" />
+        </AssociationConnector>
+        <AssociationConnector Association="GeoGuardianCitiesModel.FK_AlertLog_User" ManuallyRouted="false">
+          <ConnectorPoint PointX="14.75" PointY="12.518992513020834" />
+          <ConnectorPoint PointX="18.5" PointY="12.518992513020834" />
+        </AssociationConnector>
+        <AssociationConnector Association="GeoGuardianCitiesModel.FK_AlertLog_User1" ManuallyRouted="false">
+          <ConnectorPoint PointX="14.75" PointY="10.213821614583335" />
+          <ConnectorPoint PointX="18.5" PointY="10.213821614583335" />
+        </AssociationConnector>
+        <AssociationConnector Association="GeoGuardianCitiesModel.FK_AlertLogComment_AlertLog" ManuallyRouted="false">
+          <ConnectorPoint PointX="20" PointY="11.182444661458334" />
+          <ConnectorPoint PointX="20.75" PointY="11.182444661458334" />
+        </AssociationConnector>
+        <AssociationConnector Association="GeoGuardianCitiesModel.FK_AlertLogSound_AlertLog" ManuallyRouted="false">
+          <ConnectorPoint PointX="19.25" PointY="13.422506510416667" />
+          <ConnectorPoint PointX="19.25" PointY="14.292746268229166" />
+          <ConnectorPoint PointX="20.75" PointY="14.292746268229166" />
+        </AssociationConnector>
+        <AssociationConnector Association="GeoGuardianCitiesModel.FK_Message_Alert" ManuallyRouted="false">
+          <ConnectorPoint PointX="20" PointY="9.59375" />
+          <ConnectorPoint PointX="21.010416666666668" PointY="9.59375" />
+          <ConnectorPoint PointX="21.177083333333332" PointY="9.59375" />
+          <ConnectorPoint PointX="23.75" PointY="9.59375" />
+        </AssociationConnector>
+        <AssociationConnector Association="GeoGuardianCitiesModel.FK_AlertLogComment_User" ManuallyRouted="false">
+          <ConnectorPoint PointX="14.75" PointY="6.7425439453125" />
+          <ConnectorPoint PointX="17.437149935897438" PointY="6.7425439453124989" />
+          <ConnectorPoint PointX="17.603816602564102" PointY="6.7425439453125" />
+          <ConnectorPoint PointX="18.760414166666667" PointY="6.7425439453124989" />
+          <ConnectorPoint PointX="18.927080833333331" PointY="6.7425439453125" />
+          <ConnectorPoint PointX="19.369792416666666" PointY="6.7425439453124989" />
+          <ConnectorPoint PointX="19.53645908333333" PointY="6.7425439453125" />
+          <ConnectorPoint PointX="21.09375" PointY="6.7425439453125" />
+          <ConnectorPoint PointX="21.09375" PointY="10" />
+        </AssociationConnector>
+        <AssociationConnector Association="GeoGuardianCitiesModel.FK_City_State" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.25" PointY="10.278554687499998" />
+          <ConnectorPoint PointX="5.125" PointY="10.278554687499998" />
+        </AssociationConnector>
+        <AssociationConnector Association="GeoGuardianCitiesModel.FK_Notification_CityHall" ManuallyRouted="false">
+          <ConnectorPoint PointX="5.875" PointY="10.557109374999998" />
+          <ConnectorPoint PointX="5.875" PointY="11.625" />
+        </AssociationConnector>
+        <AssociationConnector Association="GeoGuardianCitiesModel.FK_ParamsBlockAlert_City" ManuallyRouted="false">
+          <ConnectorPoint PointX="6.625" PointY="10.251852213541664" />
+          <ConnectorPoint PointX="9.5" PointY="10.251852213541664" />
+        </AssociationConnector>
+        <AssociationConnector Association="GeoGuardianCitiesModel.FK_User_City" ManuallyRouted="false">
+          <ConnectorPoint PointX="6.625" PointY="5.7737939453125" />
+          <ConnectorPoint PointX="8.1666666666666661" PointY="5.7737939453124989" />
+          <ConnectorPoint PointX="8.1666666666666661" PointY="5.773793945312498" />
+          <ConnectorPoint PointX="8.3333333333333339" PointY="5.7737939453124989" />
+          <ConnectorPoint PointX="8.3333333333333339" PointY="5.7737939453125" />
+          <ConnectorPoint PointX="10.166666666666666" PointY="5.7737939453124989" />
+          <ConnectorPoint PointX="10.333333333333334" PointY="5.7737939453125" />
+          <ConnectorPoint PointX="10.666666666666666" PointY="5.7737939453124989" />
+          <ConnectorPoint PointX="10.833333333333334" PointY="5.7737939453125" />
+          <ConnectorPoint PointX="13.5937475" PointY="5.7737939453125" />
+          <ConnectorPoint PointX="13.5937475" PointY="6.25" />
+        </AssociationConnector>
+        <AssociationConnector Association="GeoGuardianCitiesModel.FK_State_Country" ManuallyRouted="false">
+          <ConnectorPoint PointX="2" PointY="11.143992513020834" />
+          <ConnectorPoint PointX="2.75" PointY="11.143992513020834" />
+        </AssociationConnector>
+        <AssociationConnector Association="GeoGuardianCitiesModel.FK_User_Gender" ManuallyRouted="false">
+          <ConnectorPoint PointX="12.5" PointY="7.047841796875" />
+          <ConnectorPoint PointX="12.916666666666666" PointY="7.0478417968749989" />
+          <ConnectorPoint PointX="13.083333333333334" PointY="7.047841796875" />
+          <ConnectorPoint PointX="13.25" PointY="7.047841796875" />
+        </AssociationConnector>
+        <AssociationConnector Association="GeoGuardianCitiesModel.FK_LoginAudit_User" ManuallyRouted="false">
+          <ConnectorPoint PointX="14.75" PointY="8.6151432291666676" />
+          <ConnectorPoint PointX="15.5" PointY="8.6151432291666676" />
+        </AssociationConnector>
+        <AssociationConnector Association="GeoGuardianCitiesModel.FK_MenuItem_MenuItem" ManuallyRouted="false">
+          <ConnectorPoint PointX="7.9069230769230776" PointY="15.249492187500003" />
+          <ConnectorPoint PointX="7.9069230769230776" PointY="15.499492187500003" />
+          <ConnectorPoint PointX="8.35346153846154" PointY="15.499492187500003" />
+          <ConnectorPoint PointX="8.35346153846154" PointY="15.249492187500003" />
+        </AssociationConnector>
+        <AssociationConnector Association="GeoGuardianCitiesModel.FK_Message_MessageState" ManuallyRouted="false">
+          <ConnectorPoint PointX="23" PointY="8.1439925130208337" />
+          <ConnectorPoint PointX="24.5" PointY="8.1439925130208337" />
+          <ConnectorPoint PointX="24.5" PointY="9.25" />
+        </AssociationConnector>
+        <AssociationConnector Association="GeoGuardianCitiesModel.FK_Message_User" ManuallyRouted="false">
+          <ConnectorPoint PointX="14.75" PointY="15.670065104166667" />
+          <ConnectorPoint PointX="24.5" PointY="15.670065104166667" />
+          <ConnectorPoint PointX="24.5" PointY="12.960999348958339" />
+        </AssociationConnector>
+        <AssociationConnector Association="GeoGuardianCitiesModel.FK_MessageRecipient_Message" ManuallyRouted="false">
+          <ConnectorPoint PointX="25.25" PointY="11.086293945312502" />
+          <ConnectorPoint PointX="26" PointY="11.086293945312502" />
+        </AssociationConnector>
+        <AssociationConnector Association="GeoGuardianCitiesModel.FK_PushEvent_Message" ManuallyRouted="false">
+          <ConnectorPoint PointX="25.25" PointY="12.367290039062503" />
+          <ConnectorPoint PointX="26.260416666666668" PointY="12.367290039062503" />
+          <ConnectorPoint PointX="26.427083333333332" PointY="12.367290039062503" />
+          <ConnectorPoint PointX="29" PointY="12.367290039062503" />
+        </AssociationConnector>
+        <AssociationConnector Association="GeoGuardianCitiesModel.FK_MessageRecipient_MessageState" ManuallyRouted="false">
+          <ConnectorPoint PointX="23" PointY="8.9105843098958353" />
+          <ConnectorPoint PointX="24.416666666666668" PointY="8.9105843098958353" />
+          <ConnectorPoint PointX="24.583333333333332" PointY="8.9105843098958353" />
+          <ConnectorPoint PointX="26.34375" PointY="8.9105843098958353" />
+          <ConnectorPoint PointX="26.34375" PointY="10" />
+        </AssociationConnector>
+        <AssociationConnector Association="GeoGuardianCitiesModel.FK_MessageRecipient_User" ManuallyRouted="false">
+          <ConnectorPoint PointX="14.75" PointY="15.416522565104174" />
+          <ConnectorPoint PointX="24.416666666666668" PointY="15.416522565104174" />
+          <ConnectorPoint PointX="24.583333333333332" PointY="15.416522565104174" />
+          <ConnectorPoint PointX="26.34375" PointY="15.416522565104174" />
+          <ConnectorPoint PointX="26.34375" PointY="12.172587890625003" />
+        </AssociationConnector>
+        <AssociationConnector Association="GeoGuardianCitiesModel.FK_PushEvent_PushEventState" ManuallyRouted="false">
+          <ConnectorPoint PointX="27.90625" PointY="8.7206835937500031" />
+          <ConnectorPoint PointX="27.90625" PointY="9.84375" />
+          <ConnectorPoint PointX="29" PointY="9.84375" />
+        </AssociationConnector>
+        <AssociationConnector Association="GeoGuardianCitiesModel.FK_PushEvent_PushEventType" ManuallyRouted="false">
+          <ConnectorPoint PointX="28.078125" PointY="13.5" />
+          <ConnectorPoint PointX="28.078125" PointY="12.464643613281247" />
+          <ConnectorPoint PointX="29" PointY="12.464643613281247" />
+        </AssociationConnector>
+        <AssociationConnector Association="GeoGuardianCitiesModel.FK_PushEventUser_PushEvent" ManuallyRouted="false">
+          <ConnectorPoint PointX="30.5" PointY="11.153595377604162" />
+          <ConnectorPoint PointX="31.25" PointY="11.153595377604162" />
+        </AssociationConnector>
+        <AssociationConnector Association="GeoGuardianCitiesModel.FK_PushEventUser_PushEventUserState" ManuallyRouted="false">
+          <ConnectorPoint PointX="30.5" PointY="8.172841796874998" />
+          <ConnectorPoint PointX="32" PointY="8.172841796874998" />
+          <ConnectorPoint PointX="32" PointY="9.875" />
+        </AssociationConnector>
+        <AssociationConnector Association="GeoGuardianCitiesModel.FK_PushEventUser_User" ManuallyRouted="false">
+          <ConnectorPoint PointX="14.75" PointY="15.923607643229161" />
+          <ConnectorPoint PointX="32" PointY="15.923607643229161" />
+          <ConnectorPoint PointX="32" PointY="12.432190755208325" />
+        </AssociationConnector>
+        <AssociationConnector Association="GeoGuardianCitiesModel.FK_TrackingInfo_User" ManuallyRouted="false">
+          <ConnectorPoint PointX="14.75" PointY="11.268992513020834" />
+          <ConnectorPoint PointX="15.5" PointY="11.268992513020834" />
+        </AssociationConnector>
+        <AssociationConnector Association="GeoGuardianCitiesModel.FK_User_UserStatus" ManuallyRouted="false">
+          <ConnectorPoint PointX="12.5" PointY="12.172841796874998" />
+          <ConnectorPoint PointX="13.25" PointY="12.172841796874998" />
+        </AssociationConnector>
+        <AssociationConnector Association="GeoGuardianCitiesModel.FK_User_UserType" ManuallyRouted="false">
+          <ConnectorPoint PointX="11.75" PointY="14.768992513020834" />
+          <ConnectorPoint PointX="13.25" PointY="14.768992513020834" />
+        </AssociationConnector>
+        <AssociationConnector Association="GeoGuardianCitiesModel.FK_UserEmergencyNumber_User" ManuallyRouted="false">
+          <ConnectorPoint PointX="14.75" PointY="13.768992513020834" />
+          <ConnectorPoint PointX="15.5" PointY="13.768992513020834" />
+        </AssociationConnector>
+        <AssociationConnector Association="GeoGuardianCitiesModel.MenuItemUserType" ManuallyRouted="false">
+          <ConnectorPoint PointX="8.875" PointY="14.562246093750002" />
+          <ConnectorPoint PointX="10.25" PointY="14.562246093750002" />
+        </AssociationConnector>
+        <AssociationConnector Association="GeoGuardianCitiesModel.UserPackage" ManuallyRouted="false">
+          <ConnectorPoint PointX="14" PointY="2.2206835937500031" />
+          <ConnectorPoint PointX="14" PointY="6.25" />
+        </AssociationConnector>
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

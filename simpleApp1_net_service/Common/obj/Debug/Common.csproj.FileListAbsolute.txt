@@ -1,0 +1,35 @@
+E:\Projects\OndaVerde - Etapa_3\OndaVerde\Common\bin\Debug\Common.dll
+E:\Projects\OndaVerde - Etapa_3\OndaVerde\Common\bin\Debug\Common.pdb
+E:\Projects\OndaVerde - Etapa_3\OndaVerde\Common\bin\Debug\Logger.dll
+E:\Projects\OndaVerde - Etapa_3\OndaVerde\Common\bin\Debug\Logger.pdb
+E:\Projects\OndaVerde - Etapa_3\OndaVerde\Common\obj\Debug\Common.csprojResolveAssemblyReference.cache
+E:\Projects\OndaVerde - Etapa_3\OndaVerde\Common\obj\Debug\Common.dll
+E:\Projects\OndaVerde - Etapa_3\OndaVerde\Common\obj\Debug\Common.pdb
+E:\Projects\TaxiGuardianSL\TaxiGuardian\Common\bin\Debug\Common.dll
+E:\Projects\TaxiGuardianSL\TaxiGuardian\Common\bin\Debug\Common.pdb
+E:\Projects\TaxiGuardianSL\TaxiGuardian\Common\bin\Debug\Logger.dll
+E:\Projects\TaxiGuardianSL\TaxiGuardian\Common\bin\Debug\Logger.pdb
+E:\Projects\TaxiGuardianSL\TaxiGuardian\Common\obj\Debug\Common.csprojResolveAssemblyReference.cache
+E:\Projects\TaxiGuardianSL\TaxiGuardian\Common\obj\Debug\Common.dll
+E:\Projects\TaxiGuardianSL\TaxiGuardian\Common\obj\Debug\Common.pdb
+E:\Projects\TaxiGuardian\TaxiGuardian\Common\bin\Debug\Common.dll
+E:\Projects\TaxiGuardian\TaxiGuardian\Common\bin\Debug\Common.pdb
+E:\Projects\TaxiGuardian\TaxiGuardian\Common\bin\Debug\Logger.dll
+E:\Projects\TaxiGuardian\TaxiGuardian\Common\bin\Debug\Logger.pdb
+E:\Projects\TaxiGuardian\TaxiGuardian\Common\obj\Debug\Common.csprojResolveAssemblyReference.cache
+E:\Projects\TaxiGuardian\TaxiGuardian\Common\obj\Debug\Common.dll
+E:\Projects\TaxiGuardian\TaxiGuardian\Common\obj\Debug\Common.pdb
+C:\proyectos\taxiguardian\TaxiGuardian\Common\bin\Debug\Common.dll
+C:\proyectos\taxiguardian\TaxiGuardian\Common\bin\Debug\Common.pdb
+C:\proyectos\taxiguardian\TaxiGuardian\Common\bin\Debug\Logger.dll
+C:\proyectos\taxiguardian\TaxiGuardian\Common\bin\Debug\Logger.pdb
+C:\proyectos\taxiguardian\TaxiGuardian\Common\obj\Debug\Common.csprojResolveAssemblyReference.cache
+C:\proyectos\taxiguardian\TaxiGuardian\Common\obj\Debug\Common.dll
+C:\proyectos\taxiguardian\TaxiGuardian\Common\obj\Debug\Common.pdb
+C:\proyectos\FrameworkMobile\AppMetrics_Service\Common\bin\Debug\Common.dll
+C:\proyectos\FrameworkMobile\AppMetrics_Service\Common\bin\Debug\Common.pdb
+C:\proyectos\FrameworkMobile\AppMetrics_Service\Common\bin\Debug\Logger.dll
+C:\proyectos\FrameworkMobile\AppMetrics_Service\Common\bin\Debug\Logger.pdb
+C:\proyectos\FrameworkMobile\AppMetrics_Service\Common\obj\Debug\Common.csprojResolveAssemblyReference.cache
+C:\proyectos\FrameworkMobile\AppMetrics_Service\Common\obj\Debug\Common.dll
+C:\proyectos\FrameworkMobile\AppMetrics_Service\Common\obj\Debug\Common.pdb

@@ -1,0 +1,95 @@
+E:\Projects\OndaVerde - Etapa_3\OndaVerde\Logic\bin\Debug\Logic.dll.config
+E:\Projects\OndaVerde - Etapa_3\OndaVerde\Logic\bin\Debug\Logic.dll
+E:\Projects\OndaVerde - Etapa_3\OndaVerde\Logic\bin\Debug\Logic.pdb
+E:\Projects\OndaVerde - Etapa_3\OndaVerde\Logic\bin\Debug\Common.dll
+E:\Projects\OndaVerde - Etapa_3\OndaVerde\Logic\bin\Debug\Compress.Zip.dll
+E:\Projects\OndaVerde - Etapa_3\OndaVerde\Logic\bin\Debug\DataAccess.dll
+E:\Projects\OndaVerde - Etapa_3\OndaVerde\Logic\bin\Debug\Logger.dll
+E:\Projects\OndaVerde - Etapa_3\OndaVerde\Logic\bin\Debug\Newtonsoft.Json.dll
+E:\Projects\OndaVerde - Etapa_3\OndaVerde\Logic\bin\Debug\zlib.net.dll
+E:\Projects\OndaVerde - Etapa_3\OndaVerde\Logic\bin\Debug\Compress.Zlib.dll
+E:\Projects\OndaVerde - Etapa_3\OndaVerde\Logic\bin\Debug\Common.pdb
+E:\Projects\OndaVerde - Etapa_3\OndaVerde\Logic\bin\Debug\DataAccess.pdb
+E:\Projects\OndaVerde - Etapa_3\OndaVerde\Logic\bin\Debug\Logger.pdb
+E:\Projects\OndaVerde - Etapa_3\OndaVerde\Logic\bin\Debug\Compress.Zip.pdb
+E:\Projects\OndaVerde - Etapa_3\OndaVerde\Logic\bin\Debug\Newtonsoft.Json.xml
+E:\Projects\OndaVerde - Etapa_3\OndaVerde\Logic\obj\Debug\Logic.csprojResolveAssemblyReference.cache
+E:\Projects\OndaVerde - Etapa_3\OndaVerde\Logic\obj\Debug\OndaVerde.Logic.Resources.Mails.resources
+E:\Projects\OndaVerde - Etapa_3\OndaVerde\Logic\obj\Debug\OndaVerde.Logic.Resources.Messages.resources
+E:\Projects\OndaVerde - Etapa_3\OndaVerde\Logic\obj\Debug\Logic.csproj.GenerateResource.Cache
+E:\Projects\OndaVerde - Etapa_3\OndaVerde\Logic\obj\Debug\Logic.dll
+E:\Projects\OndaVerde - Etapa_3\OndaVerde\Logic\obj\Debug\Logic.pdb
+E:\Projects\TaxiGuardianSL\TaxiGuardian\Logic\bin\Debug\Logic.dll.config
+E:\Projects\TaxiGuardianSL\TaxiGuardian\Logic\bin\Debug\Logic.dll
+E:\Projects\TaxiGuardianSL\TaxiGuardian\Logic\bin\Debug\Logic.pdb
+E:\Projects\TaxiGuardianSL\TaxiGuardian\Logic\bin\Debug\Common.dll
+E:\Projects\TaxiGuardianSL\TaxiGuardian\Logic\bin\Debug\Compress.Zip.dll
+E:\Projects\TaxiGuardianSL\TaxiGuardian\Logic\bin\Debug\DataAccess.dll
+E:\Projects\TaxiGuardianSL\TaxiGuardian\Logic\bin\Debug\Logger.dll
+E:\Projects\TaxiGuardianSL\TaxiGuardian\Logic\bin\Debug\Newtonsoft.Json.dll
+E:\Projects\TaxiGuardianSL\TaxiGuardian\Logic\bin\Debug\zlib.net.dll
+E:\Projects\TaxiGuardianSL\TaxiGuardian\Logic\bin\Debug\Compress.Zlib.dll
+E:\Projects\TaxiGuardianSL\TaxiGuardian\Logic\bin\Debug\Common.pdb
+E:\Projects\TaxiGuardianSL\TaxiGuardian\Logic\bin\Debug\DataAccess.pdb
+E:\Projects\TaxiGuardianSL\TaxiGuardian\Logic\bin\Debug\Logger.pdb
+E:\Projects\TaxiGuardianSL\TaxiGuardian\Logic\bin\Debug\Compress.Zip.pdb
+E:\Projects\TaxiGuardianSL\TaxiGuardian\Logic\bin\Debug\Newtonsoft.Json.xml
+E:\Projects\TaxiGuardianSL\TaxiGuardian\Logic\obj\Debug\Logic.csprojResolveAssemblyReference.cache
+E:\Projects\TaxiGuardianSL\TaxiGuardian\Logic\obj\Debug\Logic.csproj.GenerateResource.Cache
+E:\Projects\TaxiGuardianSL\TaxiGuardian\Logic\obj\Debug\Logic.dll
+E:\Projects\TaxiGuardianSL\TaxiGuardian\Logic\obj\Debug\Logic.pdb
+E:\Projects\TaxiGuardianSL\TaxiGuardian\Logic\obj\Debug\TaxiGuardian.Logic.Resources.Mails.resources
+E:\Projects\TaxiGuardianSL\TaxiGuardian\Logic\obj\Debug\TaxiGuardian.Logic.Resources.Messages.resources
+E:\Projects\TaxiGuardian\TaxiGuardian\Logic\bin\Debug\Logic.dll.config
+E:\Projects\TaxiGuardian\TaxiGuardian\Logic\bin\Debug\Logic.dll
+E:\Projects\TaxiGuardian\TaxiGuardian\Logic\bin\Debug\Logic.pdb
+E:\Projects\TaxiGuardian\TaxiGuardian\Logic\bin\Debug\Common.dll
+E:\Projects\TaxiGuardian\TaxiGuardian\Logic\bin\Debug\Compress.Zip.dll
+E:\Projects\TaxiGuardian\TaxiGuardian\Logic\bin\Debug\DataAccess.dll
+E:\Projects\TaxiGuardian\TaxiGuardian\Logic\bin\Debug\Logger.dll
+E:\Projects\TaxiGuardian\TaxiGuardian\Logic\bin\Debug\Newtonsoft.Json.dll
+E:\Projects\TaxiGuardian\TaxiGuardian\Logic\bin\Debug\zlib.net.dll
+E:\Projects\TaxiGuardian\TaxiGuardian\Logic\bin\Debug\Compress.Zlib.dll
+E:\Projects\TaxiGuardian\TaxiGuardian\Logic\bin\Debug\Common.pdb
+E:\Projects\TaxiGuardian\TaxiGuardian\Logic\bin\Debug\DataAccess.pdb
+E:\Projects\TaxiGuardian\TaxiGuardian\Logic\bin\Debug\Logger.pdb
+E:\Projects\TaxiGuardian\TaxiGuardian\Logic\bin\Debug\Compress.Zip.pdb
+E:\Projects\TaxiGuardian\TaxiGuardian\Logic\bin\Debug\Newtonsoft.Json.xml
+E:\Projects\TaxiGuardian\TaxiGuardian\Logic\obj\Debug\Logic.csprojResolveAssemblyReference.cache
+E:\Projects\TaxiGuardian\TaxiGuardian\Logic\obj\Debug\TaxiGuardian.Logic.Resources.Mails.resources
+E:\Projects\TaxiGuardian\TaxiGuardian\Logic\obj\Debug\TaxiGuardian.Logic.Resources.Messages.resources
+E:\Projects\TaxiGuardian\TaxiGuardian\Logic\obj\Debug\Logic.csproj.GenerateResource.Cache
+E:\Projects\TaxiGuardian\TaxiGuardian\Logic\obj\Debug\Logic.dll
+E:\Projects\TaxiGuardian\TaxiGuardian\Logic\obj\Debug\Logic.pdb
+C:\proyectos\taxiguardian\TaxiGuardian\Logic\bin\Debug\Logic.dll.config
+C:\proyectos\taxiguardian\TaxiGuardian\Logic\bin\Debug\Logic.dll
+C:\proyectos\taxiguardian\TaxiGuardian\Logic\bin\Debug\Logic.pdb
+C:\proyectos\taxiguardian\TaxiGuardian\Logic\bin\Debug\Common.dll
+C:\proyectos\taxiguardian\TaxiGuardian\Logic\bin\Debug\DataAccess.dll
+C:\proyectos\taxiguardian\TaxiGuardian\Logic\bin\Debug\Logger.dll
+C:\proyectos\taxiguardian\TaxiGuardian\Logic\bin\Debug\Common.pdb
+C:\proyectos\taxiguardian\TaxiGuardian\Logic\bin\Debug\DataAccess.pdb
+C:\proyectos\taxiguardian\TaxiGuardian\Logic\bin\Debug\Logger.pdb
+C:\proyectos\taxiguardian\TaxiGuardian\Logic\obj\Debug\Logic.csprojResolveAssemblyReference.cache
+C:\proyectos\taxiguardian\TaxiGuardian\Logic\obj\Debug\TaxiGuardian.Logic.Resources.Mails.resources
+C:\proyectos\taxiguardian\TaxiGuardian\Logic\obj\Debug\TaxiGuardian.Logic.Resources.Messages.resources
+C:\proyectos\taxiguardian\TaxiGuardian\Logic\obj\Debug\Logic.csproj.GenerateResource.Cache
+C:\proyectos\taxiguardian\TaxiGuardian\Logic\obj\Debug\Logic.dll
+C:\proyectos\taxiguardian\TaxiGuardian\Logic\obj\Debug\Logic.pdb
+C:\proyectos\FrameworkMobile\AppMetrics_Service\Logic\bin\Debug\Logic.dll.config
+C:\proyectos\FrameworkMobile\AppMetrics_Service\Logic\bin\Debug\Logic.dll
+C:\proyectos\FrameworkMobile\AppMetrics_Service\Logic\bin\Debug\Logic.pdb
+C:\proyectos\FrameworkMobile\AppMetrics_Service\Logic\bin\Debug\Common.dll
+C:\proyectos\FrameworkMobile\AppMetrics_Service\Logic\bin\Debug\DataAccess.dll
+C:\proyectos\FrameworkMobile\AppMetrics_Service\Logic\bin\Debug\Logger.dll
+C:\proyectos\FrameworkMobile\AppMetrics_Service\Logic\bin\Debug\Newtonsoft.Json.dll
+C:\proyectos\FrameworkMobile\AppMetrics_Service\Logic\bin\Debug\Common.pdb
+C:\proyectos\FrameworkMobile\AppMetrics_Service\Logic\bin\Debug\DataAccess.pdb
+C:\proyectos\FrameworkMobile\AppMetrics_Service\Logic\bin\Debug\Logger.pdb
+C:\proyectos\FrameworkMobile\AppMetrics_Service\Logic\bin\Debug\Newtonsoft.Json.xml
+C:\proyectos\FrameworkMobile\AppMetrics_Service\Logic\obj\Debug\Logic.csprojResolveAssemblyReference.cache
+C:\proyectos\FrameworkMobile\AppMetrics_Service\Logic\obj\Debug\AppMetrics.Logic.Resources.Mails.resources
+C:\proyectos\FrameworkMobile\AppMetrics_Service\Logic\obj\Debug\AppMetrics.Logic.Resources.Messages.resources
+C:\proyectos\FrameworkMobile\AppMetrics_Service\Logic\obj\Debug\Logic.csproj.GenerateResource.Cache
+C:\proyectos\FrameworkMobile\AppMetrics_Service\Logic\obj\Debug\Logic.dll
+C:\proyectos\FrameworkMobile\AppMetrics_Service\Logic\obj\Debug\Logic.pdb

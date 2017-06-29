@@ -1,0 +1,4 @@
+C:\proyectos\taxiguardian\TaxiGuardian\Logic\obj\x86\Debug\Logic.csprojResolveAssemblyReference.cache
+C:\proyectos\taxiguardian\TaxiGuardian\Logic\obj\x86\Debug\TaxiGuardian.Logic.Resources.Mails.resources
+C:\proyectos\taxiguardian\TaxiGuardian\Logic\obj\x86\Debug\TaxiGuardian.Logic.Resources.Messages.resources
+C:\proyectos\taxiguardian\TaxiGuardian\Logic\obj\x86\Debug\Logic.csproj.GenerateResource.Cache

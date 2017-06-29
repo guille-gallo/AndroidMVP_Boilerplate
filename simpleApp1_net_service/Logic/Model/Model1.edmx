@@ -1,0 +1,3138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="TaxiGuardianModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="TaxiGuardianModelStoreContainer">
+          <EntitySet Name="Alert" EntityType="TaxiGuardianModel.Store.Alert" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="AlertType" EntityType="TaxiGuardianModel.Store.AlertType" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="CalificationTrip" EntityType="TaxiGuardianModel.Store.CalificationTrip" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Car" EntityType="TaxiGuardianModel.Store.Car" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="CarSize" EntityType="TaxiGuardianModel.Store.CarSize" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="City" EntityType="TaxiGuardianModel.Store.City" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Company" EntityType="TaxiGuardianModel.Store.Company" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="CompanyPartnerCompany" EntityType="TaxiGuardianModel.Store.CompanyPartnerCompany" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Coordinate" EntityType="TaxiGuardianModel.Store.Coordinate" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Country" EntityType="TaxiGuardianModel.Store.Country" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Fleet" EntityType="TaxiGuardianModel.Store.Fleet" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Gender" EntityType="TaxiGuardianModel.Store.Gender" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="LoginAudit" EntityType="TaxiGuardianModel.Store.LoginAudit" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="MenuItem" EntityType="TaxiGuardianModel.Store.MenuItem" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="MenuItemUserType" EntityType="TaxiGuardianModel.Store.MenuItemUserType" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Message" EntityType="TaxiGuardianModel.Store.Message" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="MessageRecipient" EntityType="TaxiGuardianModel.Store.MessageRecipient" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="MessageState" EntityType="TaxiGuardianModel.Store.MessageState" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Parameter" EntityType="TaxiGuardianModel.Store.Parameter" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="PartnerCompany" EntityType="TaxiGuardianModel.Store.PartnerCompany" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="PushEvent" EntityType="TaxiGuardianModel.Store.PushEvent" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="PushEventState" EntityType="TaxiGuardianModel.Store.PushEventState" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="PushEventType" EntityType="TaxiGuardianModel.Store.PushEventType" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="PushEventUser" EntityType="TaxiGuardianModel.Store.PushEventUser" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="PushEventUserState" EntityType="TaxiGuardianModel.Store.PushEventUserState" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ReferencesPoint" EntityType="TaxiGuardianModel.Store.ReferencesPoint" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Server" EntityType="TaxiGuardianModel.Store.Server" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="State" EntityType="TaxiGuardianModel.Store.State" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="TaxiState" EntityType="TaxiGuardianModel.Store.TaxiState" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="TrackingInfo" EntityType="TaxiGuardianModel.Store.TrackingInfo" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Trip" EntityType="TaxiGuardianModel.Store.Trip" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="TripLog" EntityType="TaxiGuardianModel.Store.TripLog" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="TripState" EntityType="TaxiGuardianModel.Store.TripState" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="User" EntityType="TaxiGuardianModel.Store.User" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="UserCar" EntityType="TaxiGuardianModel.Store.UserCar" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="UserFleet" EntityType="TaxiGuardianModel.Store.UserFleet" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="UserPartnerCompany" EntityType="TaxiGuardianModel.Store.UserPartnerCompany" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="UserStatus" EntityType="TaxiGuardianModel.Store.UserStatus" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="UserType" EntityType="TaxiGuardianModel.Store.UserType" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Zone" EntityType="TaxiGuardianModel.Store.Zone" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK_Alert_AlertType" Association="TaxiGuardianModel.Store.FK_Alert_AlertType">
+            <End Role="AlertType" EntitySet="AlertType" />
+            <End Role="Alert" EntitySet="Alert" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AlertType_Company" Association="TaxiGuardianModel.Store.FK_AlertType_Company">
+            <End Role="Company" EntitySet="Company" />
+            <End Role="AlertType" EntitySet="AlertType" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Car_CarSize" Association="TaxiGuardianModel.Store.FK_Car_CarSize">
+            <End Role="CarSize" EntitySet="CarSize" />
+            <End Role="Car" EntitySet="Car" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CarSize_Car" Association="TaxiGuardianModel.Store.FK_CarSize_Car">
+            <End Role="CarSize" EntitySet="CarSize" />
+            <End Role="CarSize1" EntitySet="CarSize" />
+          </AssociationSet>
+          <AssociationSet Name="FK_City_State" Association="TaxiGuardianModel.Store.FK_City_State">
+            <End Role="State" EntitySet="State" />
+            <End Role="City" EntitySet="City" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Company_City" Association="TaxiGuardianModel.Store.FK_Company_City">
+            <End Role="City" EntitySet="City" />
+            <End Role="Company" EntitySet="Company" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CompanyPartnerCompany_Company" Association="TaxiGuardianModel.Store.FK_CompanyPartnerCompany_Company">
+            <End Role="Company" EntitySet="Company" />
+            <End Role="CompanyPartnerCompany" EntitySet="CompanyPartnerCompany" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CompanyPartnerCompany_PartnerCompany" Association="TaxiGuardianModel.Store.FK_CompanyPartnerCompany_PartnerCompany">
+            <End Role="PartnerCompany" EntitySet="PartnerCompany" />
+            <End Role="CompanyPartnerCompany" EntitySet="CompanyPartnerCompany" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Coordinate_Zone" Association="TaxiGuardianModel.Store.FK_Coordinate_Zone">
+            <End Role="Zone" EntitySet="Zone" />
+            <End Role="Coordinate" EntitySet="Coordinate" />
+          </AssociationSet>
+          <AssociationSet Name="FK_LoginAudit_User" Association="TaxiGuardianModel.Store.FK_LoginAudit_User">
+            <End Role="User" EntitySet="User" />
+            <End Role="LoginAudit" EntitySet="LoginAudit" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MenuItemUserType_MenuItem" Association="TaxiGuardianModel.Store.FK_MenuItemUserType_MenuItem">
+            <End Role="MenuItem" EntitySet="MenuItem" />
+            <End Role="MenuItemUserType" EntitySet="MenuItemUserType" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MenuItemUserType_UserType" Association="TaxiGuardianModel.Store.FK_MenuItemUserType_UserType">
+            <End Role="UserType" EntitySet="UserType" />
+            <End Role="MenuItemUserType" EntitySet="MenuItemUserType" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Message_MessageState" Association="TaxiGuardianModel.Store.FK_Message_MessageState">
+            <End Role="MessageState" EntitySet="MessageState" />
+            <End Role="Message" EntitySet="Message" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Message_User" Association="TaxiGuardianModel.Store.FK_Message_User">
+            <End Role="User" EntitySet="User" />
+            <End Role="Message" EntitySet="Message" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MessageRecipient_Message" Association="TaxiGuardianModel.Store.FK_MessageRecipient_Message">
+            <End Role="Message" EntitySet="Message" />
+            <End Role="MessageRecipient" EntitySet="MessageRecipient" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MessageRecipient_User" Association="TaxiGuardianModel.Store.FK_MessageRecipient_User">
+            <End Role="User" EntitySet="User" />
+            <End Role="MessageRecipient" EntitySet="MessageRecipient" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PushEvent_Message" Association="TaxiGuardianModel.Store.FK_PushEvent_Message">
+            <End Role="Message" EntitySet="Message" />
+            <End Role="PushEvent" EntitySet="PushEvent" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PushEvent_PushEventState" Association="TaxiGuardianModel.Store.FK_PushEvent_PushEventState">
+            <End Role="PushEventState" EntitySet="PushEventState" />
+            <End Role="PushEvent" EntitySet="PushEvent" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PushEvent_PushEventType" Association="TaxiGuardianModel.Store.FK_PushEvent_PushEventType">
+            <End Role="PushEventType" EntitySet="PushEventType" />
+            <End Role="PushEvent" EntitySet="PushEvent" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PushEvent_Trip" Association="TaxiGuardianModel.Store.FK_PushEvent_Trip">
+            <End Role="Trip" EntitySet="Trip" />
+            <End Role="PushEvent" EntitySet="PushEvent" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PushEventUser_PushEvent" Association="TaxiGuardianModel.Store.FK_PushEventUser_PushEvent">
+            <End Role="PushEvent" EntitySet="PushEvent" />
+            <End Role="PushEventUser" EntitySet="PushEventUser" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PushEventUser_PushEventUserState" Association="TaxiGuardianModel.Store.FK_PushEventUser_PushEventUserState">
+            <End Role="PushEventUserState" EntitySet="PushEventUserState" />
+            <End Role="PushEventUser" EntitySet="PushEventUser" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PushEventUser_User" Association="TaxiGuardianModel.Store.FK_PushEventUser_User">
+            <End Role="User" EntitySet="User" />
+            <End Role="PushEventUser" EntitySet="PushEventUser" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ReferencesPoint_Company" Association="TaxiGuardianModel.Store.FK_ReferencesPoint_Company">
+            <End Role="Company" EntitySet="Company" />
+            <End Role="ReferencesPoint" EntitySet="ReferencesPoint" />
+          </AssociationSet>
+          <AssociationSet Name="FK_State_Country" Association="TaxiGuardianModel.Store.FK_State_Country">
+            <End Role="Country" EntitySet="Country" />
+            <End Role="State" EntitySet="State" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TrackingInfo_User" Association="TaxiGuardianModel.Store.FK_TrackingInfo_User">
+            <End Role="User" EntitySet="User" />
+            <End Role="TrackingInfo" EntitySet="TrackingInfo" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Trip_CalificationTrip" Association="TaxiGuardianModel.Store.FK_Trip_CalificationTrip">
+            <End Role="CalificationTrip" EntitySet="CalificationTrip" />
+            <End Role="Trip" EntitySet="Trip" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Trip_Trip" Association="TaxiGuardianModel.Store.FK_Trip_Trip">
+            <End Role="Trip" EntitySet="Trip" />
+            <End Role="Trip1" EntitySet="Trip" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Trip_TripState" Association="TaxiGuardianModel.Store.FK_Trip_TripState">
+            <End Role="TripState" EntitySet="TripState" />
+            <End Role="Trip" EntitySet="Trip" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Trip_User" Association="TaxiGuardianModel.Store.FK_Trip_User">
+            <End Role="User" EntitySet="User" />
+            <End Role="Trip" EntitySet="Trip" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Trip_User1" Association="TaxiGuardianModel.Store.FK_Trip_User1">
+            <End Role="User" EntitySet="User" />
+            <End Role="Trip" EntitySet="Trip" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TripLog_Trip" Association="TaxiGuardianModel.Store.FK_TripLog_Trip">
+            <End Role="Trip" EntitySet="Trip" />
+            <End Role="TripLog" EntitySet="TripLog" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TripLog_TripState" Association="TaxiGuardianModel.Store.FK_TripLog_TripState">
+            <End Role="TripState" EntitySet="TripState" />
+            <End Role="TripLog" EntitySet="TripLog" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TripLog_User" Association="TaxiGuardianModel.Store.FK_TripLog_User">
+            <End Role="User" EntitySet="User" />
+            <End Role="TripLog" EntitySet="TripLog" />
+          </AssociationSet>
+          <AssociationSet Name="FK_User_Car" Association="TaxiGuardianModel.Store.FK_User_Car">
+            <End Role="Car" EntitySet="Car" />
+            <End Role="User" EntitySet="User" />
+          </AssociationSet>
+          <AssociationSet Name="FK_User_Company" Association="TaxiGuardianModel.Store.FK_User_Company">
+            <End Role="Company" EntitySet="Company" />
+            <End Role="User" EntitySet="User" />
+          </AssociationSet>
+          <AssociationSet Name="FK_User_Gender" Association="TaxiGuardianModel.Store.FK_User_Gender">
+            <End Role="Gender" EntitySet="Gender" />
+            <End Role="User" EntitySet="User" />
+          </AssociationSet>
+          <AssociationSet Name="FK_User_TaxiState" Association="TaxiGuardianModel.Store.FK_User_TaxiState">
+            <End Role="TaxiState" EntitySet="TaxiState" />
+            <End Role="User" EntitySet="User" />
+          </AssociationSet>
+          <AssociationSet Name="FK_User_UserStatus" Association="TaxiGuardianModel.Store.FK_User_UserStatus">
+            <End Role="UserStatus" EntitySet="UserStatus" />
+            <End Role="User" EntitySet="User" />
+          </AssociationSet>
+          <AssociationSet Name="FK_User_UserType" Association="TaxiGuardianModel.Store.FK_User_UserType">
+            <End Role="UserType" EntitySet="UserType" />
+            <End Role="User" EntitySet="User" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UserCar_Car" Association="TaxiGuardianModel.Store.FK_UserCar_Car">
+            <End Role="Car" EntitySet="Car" />
+            <End Role="UserCar" EntitySet="UserCar" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UserCar_User" Association="TaxiGuardianModel.Store.FK_UserCar_User">
+            <End Role="User" EntitySet="User" />
+            <End Role="UserCar" EntitySet="UserCar" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UserFleet_Fleet" Association="TaxiGuardianModel.Store.FK_UserFleet_Fleet">
+            <End Role="Fleet" EntitySet="Fleet" />
+            <End Role="UserFleet" EntitySet="UserFleet" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UserFleet_User" Association="TaxiGuardianModel.Store.FK_UserFleet_User">
+            <End Role="User" EntitySet="User" />
+            <End Role="UserFleet" EntitySet="UserFleet" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UserPartnerCompany_CompanyPartnerCompany" Association="TaxiGuardianModel.Store.FK_UserPartnerCompany_CompanyPartnerCompany">
+            <End Role="CompanyPartnerCompany" EntitySet="CompanyPartnerCompany" />
+            <End Role="UserPartnerCompany" EntitySet="UserPartnerCompany" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Zone_Zone" Association="TaxiGuardianModel.Store.FK_Zone_Zone">
+            <End Role="Company" EntitySet="Company" />
+            <End Role="Zone" EntitySet="Zone" />
+          </AssociationSet>
+        </EntityContainer>
+        <!--Errors Found During Generation:
+      warning 6005: The data type 'geography' is not supported; the column 'UserPosition' in table 'TaxiGuardian.dbo.Alert' was excluded.
+      -->
+        <EntityType Name="Alert">
+          <Key>
+            <PropertyRef Name="AlertID" />
+          </Key>
+          <Property Name="AlertID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="AlertName" Type="varchar" MaxLength="50" />
+          <Property Name="AlertTypeID" Type="int" Nullable="false" />
+          <Property Name="AlertDateTime" Type="datetime" Nullable="false" />
+          <Property Name="UserIDCreation" Type="int" Nullable="false" />
+          <Property Name="AlertDescription" Type="varchar" MaxLength="500" />
+          <Property Name="UserID" Type="int" Nullable="false" />
+          <Property Name="AddressPosition" Type="varchar" MaxLength="250" />
+          <Property Name="AlertState" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="AlertType">
+          <Key>
+            <PropertyRef Name="AlertTypeID" />
+          </Key>
+          <Property Name="AlertTypeID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="AlertTypeName" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="PriorityLevel" Type="int" Nullable="false" />
+          <Property Name="CompanyID" Type="int" />
+          <Property Name="Image" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="CalificationTrip">
+          <Key>
+            <PropertyRef Name="CalificationTripID" />
+          </Key>
+          <Property Name="CalificationTripID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Description" Type="varchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Car">
+          <Key>
+            <PropertyRef Name="CarID" />
+          </Key>
+          <Property Name="CarID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Brand" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Model" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Year" Type="int" Nullable="false" />
+          <Property Name="Color" Type="varchar" Nullable="false" MaxLength="7" />
+          <Property Name="LicencePlate" Type="varchar" Nullable="false" MaxLength="10" />
+          <Property Name="TaxiPermission" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="OwnerName" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="OwnerLastName" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="OwnerPhone" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="OwnerEmail" Type="varchar" Nullable="false" MaxLength="250" />
+          <Property Name="CompanyID" Type="int" Nullable="false" />
+          <Property Name="AirConditioner" Type="bit" Nullable="false" />
+          <Property Name="Trunk" Type="bit" Nullable="false" />
+          <Property Name="CarSizeID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="CarSize">
+          <Key>
+            <PropertyRef Name="CarSizeID" />
+          </Key>
+          <Property Name="CarSizeID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Description" Type="varchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6005: The data type 'geography' is not supported; the column 'Coordinate' in table 'TaxiGuardian.dbo.City' was excluded.
+      -->
+        <EntityType Name="City">
+          <Key>
+            <PropertyRef Name="CityID" />
+          </Key>
+          <Property Name="CityID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="StateID" Type="int" Nullable="false" />
+          <Property Name="DefaultZoomLevel" Type="int" Nullable="false" />
+          <Property Name="MinZoomLevel" Type="int" Nullable="false" />
+          <Property Name="ZoomThreshold" Type="int" Nullable="false" />
+          <Property Name="ZipCode" Type="varchar" MaxLength="50" />
+          <Property Name="AliasNames" Type="varchar" Nullable="false" MaxLength="250" />
+        </EntityType>
+        <EntityType Name="Company">
+          <Key>
+            <PropertyRef Name="CompanyID" />
+          </Key>
+          <Property Name="CompanyID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="CompanyName" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="CreationDate" Type="datetime" Nullable="false" />
+          <Property Name="IsActive" Type="bit" Nullable="false" />
+          <Property Name="CityID" Type="int" />
+          <Property Name="CompanyCode" Type="varchar" MaxLength="30" />
+          <Property Name="AboutUsText" Type="varchar" MaxLength="500" />
+          <Property Name="WelcomeText" Type="varchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="CompanyPartnerCompany">
+          <Key>
+            <PropertyRef Name="CompanyPartnerCompanyID" />
+          </Key>
+          <Property Name="CompanyPartnerCompanyID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="CompanyID" Type="int" Nullable="false" />
+          <Property Name="CompanyPartnerID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Coordinate">
+          <Key>
+            <PropertyRef Name="CoordinateID" />
+          </Key>
+          <Property Name="CoordinateID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Latitude" Type="float" Nullable="false" />
+          <Property Name="Longitude" Type="float" Nullable="false" />
+          <Property Name="ZoneID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Country">
+          <Key>
+            <PropertyRef Name="CountryID" />
+          </Key>
+          <Property Name="CountryID" Type="int" Nullable="false" />
+          <Property Name="Name" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="Code" Type="varchar" Nullable="false" MaxLength="2" />
+        </EntityType>
+        <EntityType Name="Fleet">
+          <Key>
+            <PropertyRef Name="FleetID" />
+          </Key>
+          <Property Name="FleetID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="FleetName" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="CreationDate" Type="datetime" Nullable="false" />
+          <Property Name="IsActive" Type="bit" Nullable="false" />
+          <Property Name="FleetColor" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="CompanyID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Gender">
+          <Key>
+            <PropertyRef Name="GenderID" />
+          </Key>
+          <Property Name="GenderID" Type="int" Nullable="false" />
+          <Property Name="GenderName" Type="varchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="LoginAudit">
+          <Key>
+            <PropertyRef Name="LoginAuditID" />
+          </Key>
+          <Property Name="LoginAuditID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="LoginAuditDate" Type="datetime" Nullable="false" />
+          <Property Name="UserID" Type="int" Nullable="false" />
+          <Property Name="IP" Type="varchar" Nullable="false" MaxLength="15" />
+        </EntityType>
+        <EntityType Name="MenuItem">
+          <Key>
+            <PropertyRef Name="MenuItemID" />
+          </Key>
+          <Property Name="MenuItemID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ParentMenuItemID" Type="int" />
+          <Property Name="MenuItemName" Type="varchar" Nullable="false" MaxLength="150" />
+          <Property Name="IsActive" Type="bit" Nullable="false" />
+          <Property Name="Path" Type="varchar" MaxLength="150" />
+          <Property Name="Alias" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="MenuItemUserType">
+          <Key>
+            <PropertyRef Name="MenuItemID" />
+            <PropertyRef Name="UserTypeID" />
+          </Key>
+          <Property Name="MenuItemID" Type="int" Nullable="false" />
+          <Property Name="UserTypeID" Type="int" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6005: The data type 'geography' is not supported; the column 'Coordinate' in table 'TaxiGuardian.dbo.Message' was excluded.
+      -->
+        <EntityType Name="Message">
+          <Key>
+            <PropertyRef Name="MessageID" />
+          </Key>
+          <Property Name="MessageID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Subject" Type="varchar" MaxLength="500" />
+          <Property Name="Body" Type="varchar(max)" Nullable="false" />
+          <Property Name="MessageDate" Type="datetime" Nullable="false" />
+          <Property Name="UserID" Type="int" Nullable="false" />
+          <Property Name="MessageStateID" Type="int" Nullable="false" />
+          <Property Name="IsImportant" Type="bit" Nullable="false" />
+          <Property Name="Address" Type="varchar" MaxLength="250" />
+        </EntityType>
+        <EntityType Name="MessageRecipient">
+          <Key>
+            <PropertyRef Name="MessageID" />
+            <PropertyRef Name="UserID" />
+          </Key>
+          <Property Name="MessageID" Type="int" Nullable="false" />
+          <Property Name="UserID" Type="int" Nullable="false" />
+          <Property Name="MessageStateID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="MessageState">
+          <Key>
+            <PropertyRef Name="MessageStateID" />
+          </Key>
+          <Property Name="MessageStateID" Type="int" Nullable="false" />
+          <Property Name="StateName" Type="varchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Parameter">
+          <Key>
+            <PropertyRef Name="ParameterID" />
+          </Key>
+          <Property Name="ParameterID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ParameterName" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="ParameterKey" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="ParameterValue" Type="varchar(max)" />
+          <Property Name="Description" Type="varchar" MaxLength="250" />
+          <Property Name="IsMobile" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PartnerCompany">
+          <Key>
+            <PropertyRef Name="PartnerCompanyID" />
+          </Key>
+          <Property Name="PartnerCompanyID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="PartnerCompanyName" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="Cuit" Type="nvarchar" Nullable="false" MaxLength="11" />
+          <Property Name="CreationDate" Type="datetime" Nullable="false" />
+          <Property Name="Address" Type="varchar" MaxLength="100" />
+          <Property Name="Phone" Type="varchar" MaxLength="50" />
+          <Property Name="IsActive" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PushEvent">
+          <Key>
+            <PropertyRef Name="PushEventID" />
+          </Key>
+          <Property Name="PushEventID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="EventDateTime" Type="datetime" Nullable="false" />
+          <Property Name="PushEventTypeID" Type="int" Nullable="false" />
+          <Property Name="PushEventStateID" Type="int" Nullable="false" />
+          <Property Name="MessageID" Type="int" />
+          <Property Name="TripID" Type="int" />
+          <Property Name="TripClientID" Type="int" />
+        </EntityType>
+        <EntityType Name="PushEventState">
+          <Key>
+            <PropertyRef Name="PushEventStateID" />
+          </Key>
+          <Property Name="PushEventStateID" Type="int" Nullable="false" />
+          <Property Name="PushEventStateName" Type="varchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="PushEventType">
+          <Key>
+            <PropertyRef Name="PushEventTypeID" />
+          </Key>
+          <Property Name="PushEventTypeID" Type="int" Nullable="false" />
+          <Property Name="PushEventTypeName" Type="varchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="PushEventUser">
+          <Key>
+            <PropertyRef Name="PushEventID" />
+            <PropertyRef Name="UserID" />
+          </Key>
+          <Property Name="PushEventID" Type="int" Nullable="false" />
+          <Property Name="UserID" Type="int" Nullable="false" />
+          <Property Name="PushEventUserStateID" Type="int" Nullable="false" />
+          <Property Name="SendRetries" Type="int" Nullable="false" />
+          <Property Name="ProcessDateTime" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PushEventUserState">
+          <Key>
+            <PropertyRef Name="PushEventUserStateID" />
+          </Key>
+          <Property Name="PushEventUserStateID" Type="int" Nullable="false" />
+          <Property Name="PushEventUserStateName" Type="varchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="ReferencesPoint">
+          <Key>
+            <PropertyRef Name="PointID" />
+          </Key>
+          <Property Name="PointID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="PointName" Type="varchar" Nullable="false" MaxLength="250" />
+          <Property Name="Address" Type="varchar" MaxLength="250" />
+          <Property Name="Longitude" Type="float" Nullable="false" />
+          <Property Name="Latitude" Type="float" Nullable="false" />
+          <Property Name="CompanyID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Server">
+          <Key>
+            <PropertyRef Name="ServerID" />
+          </Key>
+          <Property Name="ServerID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ServerName" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Url" Type="varchar" Nullable="false" MaxLength="500" />
+          <Property Name="Availability" Type="float" />
+          <Property Name="ProcessorTimeHistory" Type="varchar(max)" />
+        </EntityType>
+        <EntityType Name="State">
+          <Key>
+            <PropertyRef Name="StateID" />
+          </Key>
+          <Property Name="StateID" Type="int" Nullable="false" />
+          <Property Name="Name" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="CountryID" Type="int" Nullable="false" />
+          <Property Name="AliasNames" Type="nvarchar" Nullable="false" MaxLength="250" />
+        </EntityType>
+        <EntityType Name="TaxiState">
+          <Key>
+            <PropertyRef Name="TaxiStateID" />
+          </Key>
+          <Property Name="TaxiStateID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="TaxiName" Type="varchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6005: The data type 'geography' is not supported; the column 'Coordinate' in table 'TaxiGuardian.dbo.TrackingInfo' was excluded.
+      -->
+        <EntityType Name="TrackingInfo">
+          <Key>
+            <PropertyRef Name="TrackingInfoID" />
+          </Key>
+          <Property Name="TrackingInfoID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="TrackingDateTime" Type="datetime" Nullable="false" />
+          <Property Name="UserID" Type="int" Nullable="false" />
+          <Property Name="Speed" Type="float" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6005: The data type 'geography' is not supported; the column 'TripFromLocation' in table 'TaxiGuardian.dbo.Trip' was excluded.
+      warning 6005: The data type 'geography' is not supported; the column 'TripToLocation' in table 'TaxiGuardian.dbo.Trip' was excluded.
+      -->
+        <EntityType Name="Trip">
+          <Key>
+            <PropertyRef Name="TripID" />
+          </Key>
+          <Property Name="TripID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="TripCreation" Type="datetime" Nullable="false" />
+          <Property Name="TripFromAddress" Type="varchar" MaxLength="200" />
+          <Property Name="TripToAddress" Type="varchar" MaxLength="200" />
+          <Property Name="ClientUserID" Type="int" Nullable="false" />
+          <Property Name="TaxiUserID" Type="int" />
+          <Property Name="TripStateID" Type="int" Nullable="false" />
+          <Property Name="CalificationTripID" Type="int" />
+          <Property Name="CompanyPartnerID" Type="int" />
+        </EntityType>
+        <EntityType Name="TripLog">
+          <Key>
+            <PropertyRef Name="TripLogID" />
+          </Key>
+          <Property Name="TripLogID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="TripID" Type="int" Nullable="false" />
+          <Property Name="TripLogDateTime" Type="datetime" Nullable="false" />
+          <Property Name="CancelUserID" Type="int" />
+          <Property Name="CancelDescription" Type="varchar" MaxLength="100" />
+          <Property Name="TripStateID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TripState">
+          <Key>
+            <PropertyRef Name="TripStateID" />
+          </Key>
+          <Property Name="TripStateID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="TripStateName" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6005: The data type 'geography' is not supported; the column 'LastPosition' in table 'TaxiGuardian.dbo.User' was excluded.
+      -->
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="UserID" />
+          </Key>
+          <Property Name="UserID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="FirstName" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="LastName" Type="varchar" MaxLength="100" />
+          <Property Name="UserName" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Password" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="Email" Type="varchar" Nullable="false" MaxLength="250" />
+          <Property Name="PrefixMobilePhone" Type="varchar" MaxLength="10" />
+          <Property Name="MobilePhone" Type="varchar" MaxLength="20" />
+          <Property Name="Dni" Type="varchar" MaxLength="8" />
+          <Property Name="LastLogin" Type="datetime" />
+          <Property Name="GenderID" Type="int" Nullable="false" />
+          <Property Name="IsActive" Type="bit" Nullable="false" />
+          <Property Name="CreationDate" Type="datetime" Nullable="false" />
+          <Property Name="ProfilePicture" Type="varbinary(max)" />
+          <Property Name="UserStatusID" Type="int" Nullable="false" />
+          <Property Name="Address" Type="varchar" MaxLength="250" />
+          <Property Name="FollowMe" Type="bit" Nullable="false" />
+          <Property Name="LastPositionDateTime" Type="datetime" />
+          <Property Name="LastSpeed" Type="int" />
+          <Property Name="LastStatusChange" Type="datetime" />
+          <Property Name="ProfilePictureThumb" Type="varbinary(max)" />
+          <Property Name="UserTypeID" Type="int" Nullable="false" />
+          <Property Name="CurrentSessionID" Type="varchar" MaxLength="50" />
+          <Property Name="CompanyID" Type="int" />
+          <Property Name="LastCarID" Type="int" />
+          <Property Name="TaxiStateID" Type="int" />
+          <Property Name="Comments" Type="varchar" MaxLength="200" />
+          <Property Name="PushDeviceRegistrationID" Type="varchar" MaxLength="500" />
+          <Property Name="TaxiGuardianVersion" Type="varchar" MaxLength="7" />
+          <Property Name="DeviceInfo" Type="varchar" MaxLength="50" />
+          <Property Name="AndroidVersion" Type="varchar" MaxLength="7" />
+          <Property Name="SignInToken" Type="varchar" MaxLength="100" />
+          <Property Name="SignInTokenDate" Type="datetime" />
+          <Property Name="ContactName" Type="varchar" MaxLength="50" />
+          <Property Name="ContactNumber" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="UserCar">
+          <Key>
+            <PropertyRef Name="UserCarID" />
+          </Key>
+          <Property Name="UserCarID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="UserID" Type="int" Nullable="false" />
+          <Property Name="CarID" Type="int" Nullable="false" />
+          <Property Name="UserCarDatetime" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="UserFleet">
+          <Key>
+            <PropertyRef Name="FleetID" />
+            <PropertyRef Name="UserID" />
+          </Key>
+          <Property Name="FleetID" Type="int" Nullable="false" />
+          <Property Name="UserID" Type="int" Nullable="false" />
+          <Property Name="AssignmentDate" Type="datetime" Nullable="false" />
+          <Property Name="IsActive" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="UserPartnerCompany">
+          <Key>
+            <PropertyRef Name="CompanyPartnerCompanyID" />
+            <PropertyRef Name="Dni" />
+          </Key>
+          <Property Name="CompanyPartnerCompanyID" Type="int" Nullable="false" />
+          <Property Name="Dni" Type="varchar" Nullable="false" MaxLength="8" />
+          <Property Name="IsActive" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="UserStatus">
+          <Key>
+            <PropertyRef Name="UserStatusID" />
+          </Key>
+          <Property Name="UserStatusID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="UserStatusName" Type="varchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="UserType">
+          <Key>
+            <PropertyRef Name="UserTypeID" />
+          </Key>
+          <Property Name="UserTypeID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="UserTypeName" Type="varchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Zone">
+          <Key>
+            <PropertyRef Name="ZoneID" />
+          </Key>
+          <Property Name="ZoneID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ZoneName" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="CompanyID" Type="int" Nullable="false" />
+          <Property Name="Color" Type="varchar" Nullable="false" MaxLength="7" />
+        </EntityType>
+        <Association Name="FK_Alert_AlertType">
+          <End Role="AlertType" Type="TaxiGuardianModel.Store.AlertType" Multiplicity="1" />
+          <End Role="Alert" Type="TaxiGuardianModel.Store.Alert" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AlertType">
+              <PropertyRef Name="AlertTypeID" />
+            </Principal>
+            <Dependent Role="Alert">
+              <PropertyRef Name="AlertTypeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AlertType_Company">
+          <End Role="Company" Type="TaxiGuardianModel.Store.Company" Multiplicity="0..1" />
+          <End Role="AlertType" Type="TaxiGuardianModel.Store.AlertType" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Company">
+              <PropertyRef Name="CompanyID" />
+            </Principal>
+            <Dependent Role="AlertType">
+              <PropertyRef Name="CompanyID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Car_CarSize">
+          <End Role="CarSize" Type="TaxiGuardianModel.Store.CarSize" Multiplicity="1" />
+          <End Role="Car" Type="TaxiGuardianModel.Store.Car" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CarSize">
+              <PropertyRef Name="CarSizeID" />
+            </Principal>
+            <Dependent Role="Car">
+              <PropertyRef Name="CarSizeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CarSize_Car">
+          <End Role="CarSize" Type="TaxiGuardianModel.Store.CarSize" Multiplicity="1" />
+          <End Role="CarSize1" Type="TaxiGuardianModel.Store.CarSize" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="CarSize">
+              <PropertyRef Name="CarSizeID" />
+            </Principal>
+            <Dependent Role="CarSize1">
+              <PropertyRef Name="CarSizeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_City_State">
+          <End Role="State" Type="TaxiGuardianModel.Store.State" Multiplicity="1" />
+          <End Role="City" Type="TaxiGuardianModel.Store.City" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="State">
+              <PropertyRef Name="StateID" />
+            </Principal>
+            <Dependent Role="City">
+              <PropertyRef Name="StateID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Company_City">
+          <End Role="City" Type="TaxiGuardianModel.Store.City" Multiplicity="0..1" />
+          <End Role="Company" Type="TaxiGuardianModel.Store.Company" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="City">
+              <PropertyRef Name="CityID" />
+            </Principal>
+            <Dependent Role="Company">
+              <PropertyRef Name="CityID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CompanyPartnerCompany_Company">
+          <End Role="Company" Type="TaxiGuardianModel.Store.Company" Multiplicity="1" />
+          <End Role="CompanyPartnerCompany" Type="TaxiGuardianModel.Store.CompanyPartnerCompany" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Company">
+              <PropertyRef Name="CompanyID" />
+            </Principal>
+            <Dependent Role="CompanyPartnerCompany">
+              <PropertyRef Name="CompanyID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CompanyPartnerCompany_PartnerCompany">
+          <End Role="PartnerCompany" Type="TaxiGuardianModel.Store.PartnerCompany" Multiplicity="1" />
+          <End Role="CompanyPartnerCompany" Type="TaxiGuardianModel.Store.CompanyPartnerCompany" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PartnerCompany">
+              <PropertyRef Name="PartnerCompanyID" />
+            </Principal>
+            <Dependent Role="CompanyPartnerCompany">
+              <PropertyRef Name="CompanyPartnerID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Coordinate_Zone">
+          <End Role="Zone" Type="TaxiGuardianModel.Store.Zone" Multiplicity="1" />
+          <End Role="Coordinate" Type="TaxiGuardianModel.Store.Coordinate" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Zone">
+              <PropertyRef Name="ZoneID" />
+            </Principal>
+            <Dependent Role="Coordinate">
+              <PropertyRef Name="ZoneID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_LoginAudit_User">
+          <End Role="User" Type="TaxiGuardianModel.Store.User" Multiplicity="1" />
+          <End Role="LoginAudit" Type="TaxiGuardianModel.Store.LoginAudit" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="UserID" />
+            </Principal>
+            <Dependent Role="LoginAudit">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MenuItemUserType_MenuItem">
+          <End Role="MenuItem" Type="TaxiGuardianModel.Store.MenuItem" Multiplicity="1" />
+          <End Role="MenuItemUserType" Type="TaxiGuardianModel.Store.MenuItemUserType" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MenuItem">
+              <PropertyRef Name="MenuItemID" />
+            </Principal>
+            <Dependent Role="MenuItemUserType">
+              <PropertyRef Name="MenuItemID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MenuItemUserType_UserType">
+          <End Role="UserType" Type="TaxiGuardianModel.Store.UserType" Multiplicity="1" />
+          <End Role="MenuItemUserType" Type="TaxiGuardianModel.Store.MenuItemUserType" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UserType">
+              <PropertyRef Name="UserTypeID" />
+            </Principal>
+            <Dependent Role="MenuItemUserType">
+              <PropertyRef Name="UserTypeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Message_MessageState">
+          <End Role="MessageState" Type="TaxiGuardianModel.Store.MessageState" Multiplicity="1" />
+          <End Role="Message" Type="TaxiGuardianModel.Store.Message" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MessageState">
+              <PropertyRef Name="MessageStateID" />
+            </Principal>
+            <Dependent Role="Message">
+              <PropertyRef Name="MessageStateID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Message_User">
+          <End Role="User" Type="TaxiGuardianModel.Store.User" Multiplicity="1" />
+          <End Role="Message" Type="TaxiGuardianModel.Store.Message" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="UserID" />
+            </Principal>
+            <Dependent Role="Message">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MessageRecipient_Message">
+          <End Role="Message" Type="TaxiGuardianModel.Store.Message" Multiplicity="1" />
+          <End Role="MessageRecipient" Type="TaxiGuardianModel.Store.MessageRecipient" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Message">
+              <PropertyRef Name="MessageID" />
+            </Principal>
+            <Dependent Role="MessageRecipient">
+              <PropertyRef Name="MessageID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MessageRecipient_User">
+          <End Role="User" Type="TaxiGuardianModel.Store.User" Multiplicity="1" />
+          <End Role="MessageRecipient" Type="TaxiGuardianModel.Store.MessageRecipient" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="UserID" />
+            </Principal>
+            <Dependent Role="MessageRecipient">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PushEvent_Message">
+          <End Role="Message" Type="TaxiGuardianModel.Store.Message" Multiplicity="0..1" />
+          <End Role="PushEvent" Type="TaxiGuardianModel.Store.PushEvent" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Message">
+              <PropertyRef Name="MessageID" />
+            </Principal>
+            <Dependent Role="PushEvent">
+              <PropertyRef Name="MessageID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PushEvent_PushEventState">
+          <End Role="PushEventState" Type="TaxiGuardianModel.Store.PushEventState" Multiplicity="1" />
+          <End Role="PushEvent" Type="TaxiGuardianModel.Store.PushEvent" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PushEventState">
+              <PropertyRef Name="PushEventStateID" />
+            </Principal>
+            <Dependent Role="PushEvent">
+              <PropertyRef Name="PushEventStateID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PushEvent_PushEventType">
+          <End Role="PushEventType" Type="TaxiGuardianModel.Store.PushEventType" Multiplicity="1" />
+          <End Role="PushEvent" Type="TaxiGuardianModel.Store.PushEvent" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PushEventType">
+              <PropertyRef Name="PushEventTypeID" />
+            </Principal>
+            <Dependent Role="PushEvent">
+              <PropertyRef Name="PushEventTypeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PushEvent_Trip">
+          <End Role="Trip" Type="TaxiGuardianModel.Store.Trip" Multiplicity="0..1" />
+          <End Role="PushEvent" Type="TaxiGuardianModel.Store.PushEvent" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Trip">
+              <PropertyRef Name="TripID" />
+            </Principal>
+            <Dependent Role="PushEvent">
+              <PropertyRef Name="TripID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PushEventUser_PushEvent">
+          <End Role="PushEvent" Type="TaxiGuardianModel.Store.PushEvent" Multiplicity="1" />
+          <End Role="PushEventUser" Type="TaxiGuardianModel.Store.PushEventUser" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PushEvent">
+              <PropertyRef Name="PushEventID" />
+            </Principal>
+            <Dependent Role="PushEventUser">
+              <PropertyRef Name="PushEventID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PushEventUser_PushEventUserState">
+          <End Role="PushEventUserState" Type="TaxiGuardianModel.Store.PushEventUserState" Multiplicity="1" />
+          <End Role="PushEventUser" Type="TaxiGuardianModel.Store.PushEventUser" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PushEventUserState">
+              <PropertyRef Name="PushEventUserStateID" />
+            </Principal>
+            <Dependent Role="PushEventUser">
+              <PropertyRef Name="PushEventUserStateID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PushEventUser_User">
+          <End Role="User" Type="TaxiGuardianModel.Store.User" Multiplicity="1" />
+          <End Role="PushEventUser" Type="TaxiGuardianModel.Store.PushEventUser" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="UserID" />
+            </Principal>
+            <Dependent Role="PushEventUser">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ReferencesPoint_Company">
+          <End Role="Company" Type="TaxiGuardianModel.Store.Company" Multiplicity="1" />
+          <End Role="ReferencesPoint" Type="TaxiGuardianModel.Store.ReferencesPoint" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Company">
+              <PropertyRef Name="CompanyID" />
+            </Principal>
+            <Dependent Role="ReferencesPoint">
+              <PropertyRef Name="CompanyID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_State_Country">
+          <End Role="Country" Type="TaxiGuardianModel.Store.Country" Multiplicity="1" />
+          <End Role="State" Type="TaxiGuardianModel.Store.State" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Country">
+              <PropertyRef Name="CountryID" />
+            </Principal>
+            <Dependent Role="State">
+              <PropertyRef Name="CountryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TrackingInfo_User">
+          <End Role="User" Type="TaxiGuardianModel.Store.User" Multiplicity="1" />
+          <End Role="TrackingInfo" Type="TaxiGuardianModel.Store.TrackingInfo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="UserID" />
+            </Principal>
+            <Dependent Role="TrackingInfo">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Trip_CalificationTrip">
+          <End Role="CalificationTrip" Type="TaxiGuardianModel.Store.CalificationTrip" Multiplicity="0..1" />
+          <End Role="Trip" Type="TaxiGuardianModel.Store.Trip" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CalificationTrip">
+              <PropertyRef Name="CalificationTripID" />
+            </Principal>
+            <Dependent Role="Trip">
+              <PropertyRef Name="CalificationTripID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Trip_Trip">
+          <End Role="Trip" Type="TaxiGuardianModel.Store.Trip" Multiplicity="1" />
+          <End Role="Trip1" Type="TaxiGuardianModel.Store.Trip" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Trip">
+              <PropertyRef Name="TripID" />
+            </Principal>
+            <Dependent Role="Trip1">
+              <PropertyRef Name="TripID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Trip_TripState">
+          <End Role="TripState" Type="TaxiGuardianModel.Store.TripState" Multiplicity="1" />
+          <End Role="Trip" Type="TaxiGuardianModel.Store.Trip" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TripState">
+              <PropertyRef Name="TripStateID" />
+            </Principal>
+            <Dependent Role="Trip">
+              <PropertyRef Name="TripStateID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Trip_User">
+          <End Role="User" Type="TaxiGuardianModel.Store.User" Multiplicity="0..1" />
+          <End Role="Trip" Type="TaxiGuardianModel.Store.Trip" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="UserID" />
+            </Principal>
+            <Dependent Role="Trip">
+              <PropertyRef Name="TaxiUserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Trip_User1">
+          <End Role="User" Type="TaxiGuardianModel.Store.User" Multiplicity="1" />
+          <End Role="Trip" Type="TaxiGuardianModel.Store.Trip" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="UserID" />
+            </Principal>
+            <Dependent Role="Trip">
+              <PropertyRef Name="ClientUserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TripLog_Trip">
+          <End Role="Trip" Type="TaxiGuardianModel.Store.Trip" Multiplicity="1" />
+          <End Role="TripLog" Type="TaxiGuardianModel.Store.TripLog" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Trip">
+              <PropertyRef Name="TripID" />
+            </Principal>
+            <Dependent Role="TripLog">
+              <PropertyRef Name="TripID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TripLog_TripState">
+          <End Role="TripState" Type="TaxiGuardianModel.Store.TripState" Multiplicity="1" />
+          <End Role="TripLog" Type="TaxiGuardianModel.Store.TripLog" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TripState">
+              <PropertyRef Name="TripStateID" />
+            </Principal>
+            <Dependent Role="TripLog">
+              <PropertyRef Name="TripStateID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TripLog_User">
+          <End Role="User" Type="TaxiGuardianModel.Store.User" Multiplicity="0..1" />
+          <End Role="TripLog" Type="TaxiGuardianModel.Store.TripLog" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="UserID" />
+            </Principal>
+            <Dependent Role="TripLog">
+              <PropertyRef Name="CancelUserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_User_Car">
+          <End Role="Car" Type="TaxiGuardianModel.Store.Car" Multiplicity="0..1" />
+          <End Role="User" Type="TaxiGuardianModel.Store.User" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Car">
+              <PropertyRef Name="CarID" />
+            </Principal>
+            <Dependent Role="User">
+              <PropertyRef Name="LastCarID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_User_Company">
+          <End Role="Company" Type="TaxiGuardianModel.Store.Company" Multiplicity="0..1" />
+          <End Role="User" Type="TaxiGuardianModel.Store.User" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Company">
+              <PropertyRef Name="CompanyID" />
+            </Principal>
+            <Dependent Role="User">
+              <PropertyRef Name="CompanyID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_User_Gender">
+          <End Role="Gender" Type="TaxiGuardianModel.Store.Gender" Multiplicity="1" />
+          <End Role="User" Type="TaxiGuardianModel.Store.User" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Gender">
+              <PropertyRef Name="GenderID" />
+            </Principal>
+            <Dependent Role="User">
+              <PropertyRef Name="GenderID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_User_TaxiState">
+          <End Role="TaxiState" Type="TaxiGuardianModel.Store.TaxiState" Multiplicity="0..1" />
+          <End Role="User" Type="TaxiGuardianModel.Store.User" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TaxiState">
+              <PropertyRef Name="TaxiStateID" />
+            </Principal>
+            <Dependent Role="User">
+              <PropertyRef Name="TaxiStateID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_User_UserStatus">
+          <End Role="UserStatus" Type="TaxiGuardianModel.Store.UserStatus" Multiplicity="1" />
+          <End Role="User" Type="TaxiGuardianModel.Store.User" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UserStatus">
+              <PropertyRef Name="UserStatusID" />
+            </Principal>
+            <Dependent Role="User">
+              <PropertyRef Name="UserStatusID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_User_UserType">
+          <End Role="UserType" Type="TaxiGuardianModel.Store.UserType" Multiplicity="1" />
+          <End Role="User" Type="TaxiGuardianModel.Store.User" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UserType">
+              <PropertyRef Name="UserTypeID" />
+            </Principal>
+            <Dependent Role="User">
+              <PropertyRef Name="UserTypeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UserCar_Car">
+          <End Role="Car" Type="TaxiGuardianModel.Store.Car" Multiplicity="1" />
+          <End Role="UserCar" Type="TaxiGuardianModel.Store.UserCar" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Car">
+              <PropertyRef Name="CarID" />
+            </Principal>
+            <Dependent Role="UserCar">
+              <PropertyRef Name="CarID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UserCar_User">
+          <End Role="User" Type="TaxiGuardianModel.Store.User" Multiplicity="1" />
+          <End Role="UserCar" Type="TaxiGuardianModel.Store.UserCar" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="UserID" />
+            </Principal>
+            <Dependent Role="UserCar">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UserFleet_Fleet">
+          <End Role="Fleet" Type="TaxiGuardianModel.Store.Fleet" Multiplicity="1" />
+          <End Role="UserFleet" Type="TaxiGuardianModel.Store.UserFleet" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Fleet">
+              <PropertyRef Name="FleetID" />
+            </Principal>
+            <Dependent Role="UserFleet">
+              <PropertyRef Name="FleetID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UserFleet_User">
+          <End Role="User" Type="TaxiGuardianModel.Store.User" Multiplicity="1" />
+          <End Role="UserFleet" Type="TaxiGuardianModel.Store.UserFleet" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="UserID" />
+            </Principal>
+            <Dependent Role="UserFleet">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UserPartnerCompany_CompanyPartnerCompany">
+          <End Role="CompanyPartnerCompany" Type="TaxiGuardianModel.Store.CompanyPartnerCompany" Multiplicity="1" />
+          <End Role="UserPartnerCompany" Type="TaxiGuardianModel.Store.UserPartnerCompany" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CompanyPartnerCompany">
+              <PropertyRef Name="CompanyPartnerCompanyID" />
+            </Principal>
+            <Dependent Role="UserPartnerCompany">
+              <PropertyRef Name="CompanyPartnerCompanyID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Zone_Zone">
+          <End Role="Company" Type="TaxiGuardianModel.Store.Company" Multiplicity="1" />
+          <End Role="Zone" Type="TaxiGuardianModel.Store.Zone" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Company">
+              <PropertyRef Name="CompanyID" />
+            </Principal>
+            <Dependent Role="Zone">
+              <PropertyRef Name="CompanyID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="TaxiGuardianModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Alert" EntityType="TaxiGuardianModel.Alert" />
+          <EntitySet Name="AlertType" EntityType="TaxiGuardianModel.AlertType" />
+          <EntitySet Name="CalificationTrip" EntityType="TaxiGuardianModel.CalificationTrip" />
+          <EntitySet Name="Car" EntityType="TaxiGuardianModel.Car" />
+          <EntitySet Name="CarSize" EntityType="TaxiGuardianModel.CarSize" />
+          <EntitySet Name="City" EntityType="TaxiGuardianModel.City" />
+          <EntitySet Name="Company" EntityType="TaxiGuardianModel.Company" />
+          <EntitySet Name="CompanyPartnerCompany" EntityType="TaxiGuardianModel.CompanyPartnerCompany" />
+          <EntitySet Name="Coordinate" EntityType="TaxiGuardianModel.Coordinate" />
+          <EntitySet Name="Country" EntityType="TaxiGuardianModel.Country" />
+          <EntitySet Name="Fleet" EntityType="TaxiGuardianModel.Fleet" />
+          <EntitySet Name="Gender" EntityType="TaxiGuardianModel.Gender" />
+          <EntitySet Name="LoginAudit" EntityType="TaxiGuardianModel.LoginAudit" />
+          <EntitySet Name="MenuItem" EntityType="TaxiGuardianModel.MenuItem" />
+          <EntitySet Name="Message" EntityType="TaxiGuardianModel.Message" />
+          <EntitySet Name="MessageRecipient" EntityType="TaxiGuardianModel.MessageRecipient" />
+          <EntitySet Name="MessageState" EntityType="TaxiGuardianModel.MessageState" />
+          <EntitySet Name="Parameter" EntityType="TaxiGuardianModel.Parameter" />
+          <EntitySet Name="PartnerCompany" EntityType="TaxiGuardianModel.PartnerCompany" />
+          <EntitySet Name="PushEvent" EntityType="TaxiGuardianModel.PushEvent" />
+          <EntitySet Name="PushEventState" EntityType="TaxiGuardianModel.PushEventState" />
+          <EntitySet Name="PushEventType" EntityType="TaxiGuardianModel.PushEventType" />
+          <EntitySet Name="PushEventUser" EntityType="TaxiGuardianModel.PushEventUser" />
+          <EntitySet Name="PushEventUserState" EntityType="TaxiGuardianModel.PushEventUserState" />
+          <EntitySet Name="ReferencesPoint" EntityType="TaxiGuardianModel.ReferencesPoint" />
+          <EntitySet Name="Server" EntityType="TaxiGuardianModel.Server" />
+          <EntitySet Name="State" EntityType="TaxiGuardianModel.State" />
+          <EntitySet Name="TaxiState" EntityType="TaxiGuardianModel.TaxiState" />
+          <EntitySet Name="TrackingInfo" EntityType="TaxiGuardianModel.TrackingInfo" />
+          <EntitySet Name="Trip" EntityType="TaxiGuardianModel.Trip" />
+          <EntitySet Name="TripLog" EntityType="TaxiGuardianModel.TripLog" />
+          <EntitySet Name="TripState" EntityType="TaxiGuardianModel.TripState" />
+          <EntitySet Name="User" EntityType="TaxiGuardianModel.User" />
+          <EntitySet Name="UserCar" EntityType="TaxiGuardianModel.UserCar" />
+          <EntitySet Name="UserFleet" EntityType="TaxiGuardianModel.UserFleet" />
+          <EntitySet Name="UserPartnerCompany" EntityType="TaxiGuardianModel.UserPartnerCompany" />
+          <EntitySet Name="UserStatus" EntityType="TaxiGuardianModel.UserStatus" />
+          <EntitySet Name="UserType" EntityType="TaxiGuardianModel.UserType" />
+          <EntitySet Name="Zone" EntityType="TaxiGuardianModel.Zone" />
+          <AssociationSet Name="FK_Alert_AlertType" Association="TaxiGuardianModel.FK_Alert_AlertType">
+            <End Role="AlertType" EntitySet="AlertType" />
+            <End Role="Alert" EntitySet="Alert" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AlertType_Company" Association="TaxiGuardianModel.FK_AlertType_Company">
+            <End Role="Company" EntitySet="Company" />
+            <End Role="AlertType" EntitySet="AlertType" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Trip_CalificationTrip" Association="TaxiGuardianModel.FK_Trip_CalificationTrip">
+            <End Role="CalificationTrip" EntitySet="CalificationTrip" />
+            <End Role="Trip" EntitySet="Trip" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Car_CarSize" Association="TaxiGuardianModel.FK_Car_CarSize">
+            <End Role="CarSize" EntitySet="CarSize" />
+            <End Role="Car" EntitySet="Car" />
+          </AssociationSet>
+          <AssociationSet Name="FK_User_Car" Association="TaxiGuardianModel.FK_User_Car">
+            <End Role="Car" EntitySet="Car" />
+            <End Role="User" EntitySet="User" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UserCar_Car" Association="TaxiGuardianModel.FK_UserCar_Car">
+            <End Role="Car" EntitySet="Car" />
+            <End Role="UserCar" EntitySet="UserCar" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CarSize_Car" Association="TaxiGuardianModel.FK_CarSize_Car">
+            <End Role="CarSize" EntitySet="CarSize" />
+            <End Role="CarSize1" EntitySet="CarSize" />
+          </AssociationSet>
+          <AssociationSet Name="FK_City_State" Association="TaxiGuardianModel.FK_City_State">
+            <End Role="State" EntitySet="State" />
+            <End Role="City" EntitySet="City" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Company_City" Association="TaxiGuardianModel.FK_Company_City">
+            <End Role="City" EntitySet="City" />
+            <End Role="Company" EntitySet="Company" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CompanyPartnerCompany_Company" Association="TaxiGuardianModel.FK_CompanyPartnerCompany_Company">
+            <End Role="Company" EntitySet="Company" />
+            <End Role="CompanyPartnerCompany" EntitySet="CompanyPartnerCompany" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ReferencesPoint_Company" Association="TaxiGuardianModel.FK_ReferencesPoint_Company">
+            <End Role="Company" EntitySet="Company" />
+            <End Role="ReferencesPoint" EntitySet="ReferencesPoint" />
+          </AssociationSet>
+          <AssociationSet Name="FK_User_Company" Association="TaxiGuardianModel.FK_User_Company">
+            <End Role="Company" EntitySet="Company" />
+            <End Role="User" EntitySet="User" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Zone_Zone" Association="TaxiGuardianModel.FK_Zone_Zone">
+            <End Role="Company" EntitySet="Company" />
+            <End Role="Zone" EntitySet="Zone" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CompanyPartnerCompany_PartnerCompany" Association="TaxiGuardianModel.FK_CompanyPartnerCompany_PartnerCompany">
+            <End Role="PartnerCompany" EntitySet="PartnerCompany" />
+            <End Role="CompanyPartnerCompany" EntitySet="CompanyPartnerCompany" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UserPartnerCompany_CompanyPartnerCompany" Association="TaxiGuardianModel.FK_UserPartnerCompany_CompanyPartnerCompany">
+            <End Role="CompanyPartnerCompany" EntitySet="CompanyPartnerCompany" />
+            <End Role="UserPartnerCompany" EntitySet="UserPartnerCompany" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Coordinate_Zone" Association="TaxiGuardianModel.FK_Coordinate_Zone">
+            <End Role="Zone" EntitySet="Zone" />
+            <End Role="Coordinate" EntitySet="Coordinate" />
+          </AssociationSet>
+          <AssociationSet Name="FK_State_Country" Association="TaxiGuardianModel.FK_State_Country">
+            <End Role="Country" EntitySet="Country" />
+            <End Role="State" EntitySet="State" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UserFleet_Fleet" Association="TaxiGuardianModel.FK_UserFleet_Fleet">
+            <End Role="Fleet" EntitySet="Fleet" />
+            <End Role="UserFleet" EntitySet="UserFleet" />
+          </AssociationSet>
+          <AssociationSet Name="FK_User_Gender" Association="TaxiGuardianModel.FK_User_Gender">
+            <End Role="Gender" EntitySet="Gender" />
+            <End Role="User" EntitySet="User" />
+          </AssociationSet>
+          <AssociationSet Name="FK_LoginAudit_User" Association="TaxiGuardianModel.FK_LoginAudit_User">
+            <End Role="User" EntitySet="User" />
+            <End Role="LoginAudit" EntitySet="LoginAudit" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Message_MessageState" Association="TaxiGuardianModel.FK_Message_MessageState">
+            <End Role="MessageState" EntitySet="MessageState" />
+            <End Role="Message" EntitySet="Message" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Message_User" Association="TaxiGuardianModel.FK_Message_User">
+            <End Role="User" EntitySet="User" />
+            <End Role="Message" EntitySet="Message" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MessageRecipient_Message" Association="TaxiGuardianModel.FK_MessageRecipient_Message">
+            <End Role="Message" EntitySet="Message" />
+            <End Role="MessageRecipient" EntitySet="MessageRecipient" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PushEvent_Message" Association="TaxiGuardianModel.FK_PushEvent_Message">
+            <End Role="Message" EntitySet="Message" />
+            <End Role="PushEvent" EntitySet="PushEvent" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MessageRecipient_User" Association="TaxiGuardianModel.FK_MessageRecipient_User">
+            <End Role="User" EntitySet="User" />
+            <End Role="MessageRecipient" EntitySet="MessageRecipient" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PushEvent_PushEventState" Association="TaxiGuardianModel.FK_PushEvent_PushEventState">
+            <End Role="PushEventState" EntitySet="PushEventState" />
+            <End Role="PushEvent" EntitySet="PushEvent" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PushEvent_PushEventType" Association="TaxiGuardianModel.FK_PushEvent_PushEventType">
+            <End Role="PushEventType" EntitySet="PushEventType" />
+            <End Role="PushEvent" EntitySet="PushEvent" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PushEvent_Trip" Association="TaxiGuardianModel.FK_PushEvent_Trip">
+            <End Role="Trip" EntitySet="Trip" />
+            <End Role="PushEvent" EntitySet="PushEvent" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PushEventUser_PushEvent" Association="TaxiGuardianModel.FK_PushEventUser_PushEvent">
+            <End Role="PushEvent" EntitySet="PushEvent" />
+            <End Role="PushEventUser" EntitySet="PushEventUser" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PushEventUser_PushEventUserState" Association="TaxiGuardianModel.FK_PushEventUser_PushEventUserState">
+            <End Role="PushEventUserState" EntitySet="PushEventUserState" />
+            <End Role="PushEventUser" EntitySet="PushEventUser" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PushEventUser_User" Association="TaxiGuardianModel.FK_PushEventUser_User">
+            <End Role="User" EntitySet="User" />
+            <End Role="PushEventUser" EntitySet="PushEventUser" />
+          </AssociationSet>
+          <AssociationSet Name="FK_User_TaxiState" Association="TaxiGuardianModel.FK_User_TaxiState">
+            <End Role="TaxiState" EntitySet="TaxiState" />
+            <End Role="User" EntitySet="User" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TrackingInfo_User" Association="TaxiGuardianModel.FK_TrackingInfo_User">
+            <End Role="User" EntitySet="User" />
+            <End Role="TrackingInfo" EntitySet="TrackingInfo" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Trip_Trip" Association="TaxiGuardianModel.FK_Trip_Trip">
+            <End Role="Trip" EntitySet="Trip" />
+            <End Role="Trip1" EntitySet="Trip" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Trip_TripState" Association="TaxiGuardianModel.FK_Trip_TripState">
+            <End Role="TripState" EntitySet="TripState" />
+            <End Role="Trip" EntitySet="Trip" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Trip_User" Association="TaxiGuardianModel.FK_Trip_User">
+            <End Role="User" EntitySet="User" />
+            <End Role="Trip" EntitySet="Trip" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Trip_User1" Association="TaxiGuardianModel.FK_Trip_User1">
+            <End Role="User" EntitySet="User" />
+            <End Role="Trip" EntitySet="Trip" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TripLog_Trip" Association="TaxiGuardianModel.FK_TripLog_Trip">
+            <End Role="Trip" EntitySet="Trip" />
+            <End Role="TripLog" EntitySet="TripLog" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TripLog_TripState" Association="TaxiGuardianModel.FK_TripLog_TripState">
+            <End Role="TripState" EntitySet="TripState" />
+            <End Role="TripLog" EntitySet="TripLog" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TripLog_User" Association="TaxiGuardianModel.FK_TripLog_User">
+            <End Role="User" EntitySet="User" />
+            <End Role="TripLog" EntitySet="TripLog" />
+          </AssociationSet>
+          <AssociationSet Name="FK_User_UserStatus" Association="TaxiGuardianModel.FK_User_UserStatus">
+            <End Role="UserStatus" EntitySet="UserStatus" />
+            <End Role="User" EntitySet="User" />
+          </AssociationSet>
+          <AssociationSet Name="FK_User_UserType" Association="TaxiGuardianModel.FK_User_UserType">
+            <End Role="UserType" EntitySet="UserType" />
+            <End Role="User" EntitySet="User" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UserCar_User" Association="TaxiGuardianModel.FK_UserCar_User">
+            <End Role="User" EntitySet="User" />
+            <End Role="UserCar" EntitySet="UserCar" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UserFleet_User" Association="TaxiGuardianModel.FK_UserFleet_User">
+            <End Role="User" EntitySet="User" />
+            <End Role="UserFleet" EntitySet="UserFleet" />
+          </AssociationSet>
+          <AssociationSet Name="MenuItemUserType" Association="TaxiGuardianModel.MenuItemUserType">
+            <End Role="MenuItem" EntitySet="MenuItem" />
+            <End Role="UserType" EntitySet="UserType" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Alert">
+          <Key>
+            <PropertyRef Name="AlertID" />
+          </Key>
+          <Property Name="AlertID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="AlertName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="AlertTypeID" Type="Int32" Nullable="false" />
+          <Property Name="AlertDateTime" Type="DateTime" Nullable="false" />
+          <Property Name="UserIDCreation" Type="Int32" Nullable="false" />
+          <Property Name="AlertDescription" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="UserID" Type="Int32" Nullable="false" />
+          <Property Name="AddressPosition" Type="String" MaxLength="250" Unicode="false" FixedLength="false" />
+          <Property Name="AlertState" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="AlertType" Relationship="TaxiGuardianModel.FK_Alert_AlertType" FromRole="Alert" ToRole="AlertType" />
+        </EntityType>
+        <EntityType Name="AlertType">
+          <Key>
+            <PropertyRef Name="AlertTypeID" />
+          </Key>
+          <Property Name="AlertTypeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="AlertTypeName" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="PriorityLevel" Type="Int32" Nullable="false" />
+          <Property Name="CompanyID" Type="Int32" />
+          <Property Name="Image" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="Alert" Relationship="TaxiGuardianModel.FK_Alert_AlertType" FromRole="AlertType" ToRole="Alert" />
+          <NavigationProperty Name="Company" Relationship="TaxiGuardianModel.FK_AlertType_Company" FromRole="AlertType" ToRole="Company" />
+        </EntityType>
+        <EntityType Name="CalificationTrip">
+          <Key>
+            <PropertyRef Name="CalificationTripID" />
+          </Key>
+          <Property Name="CalificationTripID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Description" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="Trip" Relationship="TaxiGuardianModel.FK_Trip_CalificationTrip" FromRole="CalificationTrip" ToRole="Trip" />
+        </EntityType>
+        <EntityType Name="Car">
+          <Key>
+            <PropertyRef Name="CarID" />
+          </Key>
+          <Property Name="CarID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Brand" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Model" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Year" Type="Int32" Nullable="false" />
+          <Property Name="Color" Type="String" Nullable="false" MaxLength="7" Unicode="false" FixedLength="false" />
+          <Property Name="LicencePlate" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="TaxiPermission" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="OwnerName" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="OwnerLastName" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="OwnerPhone" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="OwnerEmail" Type="String" Nullable="false" MaxLength="250" Unicode="false" FixedLength="false" />
+          <Property Name="CompanyID" Type="Int32" Nullable="false" />
+          <Property Name="AirConditioner" Type="Boolean" Nullable="false" />
+          <Property Name="Trunk" Type="Boolean" Nullable="false" />
+          <Property Name="CarSizeID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="CarSize" Relationship="TaxiGuardianModel.FK_Car_CarSize" FromRole="Car" ToRole="CarSize" />
+          <NavigationProperty Name="User" Relationship="TaxiGuardianModel.FK_User_Car" FromRole="Car" ToRole="User" />
+          <NavigationProperty Name="UserCar" Relationship="TaxiGuardianModel.FK_UserCar_Car" FromRole="Car" ToRole="UserCar" />
+        </EntityType>
+        <EntityType Name="CarSize">
+          <Key>
+            <PropertyRef Name="CarSizeID" />
+          </Key>
+          <Property Name="CarSizeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Description" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="Car" Relationship="TaxiGuardianModel.FK_Car_CarSize" FromRole="CarSize" ToRole="Car" />
+          <NavigationProperty Name="CarSize1" Relationship="TaxiGuardianModel.FK_CarSize_Car" FromRole="CarSize" ToRole="CarSize1" />
+          <NavigationProperty Name="CarSize2" Relationship="TaxiGuardianModel.FK_CarSize_Car" FromRole="CarSize1" ToRole="CarSize" />
+        </EntityType>
+        <EntityType Name="City">
+          <Key>
+            <PropertyRef Name="CityID" />
+          </Key>
+          <Property Name="CityID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="StateID" Type="Int32" Nullable="false" />
+          <Property Name="DefaultZoomLevel" Type="Int32" Nullable="false" />
+          <Property Name="MinZoomLevel" Type="Int32" Nullable="false" />
+          <Property Name="ZoomThreshold" Type="Int32" Nullable="false" />
+          <Property Name="ZipCode" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="AliasNames" Type="String" Nullable="false" MaxLength="250" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="State" Relationship="TaxiGuardianModel.FK_City_State" FromRole="City" ToRole="State" />
+          <NavigationProperty Name="Company" Relationship="TaxiGuardianModel.FK_Company_City" FromRole="City" ToRole="Company" />
+        </EntityType>
+        <EntityType Name="Company">
+          <Key>
+            <PropertyRef Name="CompanyID" />
+          </Key>
+          <Property Name="CompanyID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CompanyName" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="CreationDate" Type="DateTime" Nullable="false" />
+          <Property Name="IsActive" Type="Boolean" Nullable="false" />
+          <Property Name="CityID" Type="Int32" />
+          <Property Name="CompanyCode" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+          <Property Name="AboutUsText" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="WelcomeText" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="AlertType" Relationship="TaxiGuardianModel.FK_AlertType_Company" FromRole="Company" ToRole="AlertType" />
+          <NavigationProperty Name="City" Relationship="TaxiGuardianModel.FK_Company_City" FromRole="Company" ToRole="City" />
+          <NavigationProperty Name="CompanyPartnerCompany" Relationship="TaxiGuardianModel.FK_CompanyPartnerCompany_Company" FromRole="Company" ToRole="CompanyPartnerCompany" />
+          <NavigationProperty Name="ReferencesPoint" Relationship="TaxiGuardianModel.FK_ReferencesPoint_Company" FromRole="Company" ToRole="ReferencesPoint" />
+          <NavigationProperty Name="User" Relationship="TaxiGuardianModel.FK_User_Company" FromRole="Company" ToRole="User" />
+          <NavigationProperty Name="Zone" Relationship="TaxiGuardianModel.FK_Zone_Zone" FromRole="Company" ToRole="Zone" />
+        </EntityType>
+        <EntityType Name="CompanyPartnerCompany">
+          <Key>
+            <PropertyRef Name="CompanyPartnerCompanyID" />
+          </Key>
+          <Property Name="CompanyPartnerCompanyID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CompanyID" Type="Int32" Nullable="false" />
+          <Property Name="CompanyPartnerID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Company" Relationship="TaxiGuardianModel.FK_CompanyPartnerCompany_Company" FromRole="CompanyPartnerCompany" ToRole="Company" />
+          <NavigationProperty Name="PartnerCompany" Relationship="TaxiGuardianModel.FK_CompanyPartnerCompany_PartnerCompany" FromRole="CompanyPartnerCompany" ToRole="PartnerCompany" />
+          <NavigationProperty Name="UserPartnerCompany" Relationship="TaxiGuardianModel.FK_UserPartnerCompany_CompanyPartnerCompany" FromRole="CompanyPartnerCompany" ToRole="UserPartnerCompany" />
+        </EntityType>
+        <EntityType Name="Coordinate">
+          <Key>
+            <PropertyRef Name="CoordinateID" />
+          </Key>
+          <Property Name="CoordinateID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Latitude" Type="Double" Nullable="false" />
+          <Property Name="Longitude" Type="Double" Nullable="false" />
+          <Property Name="ZoneID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Zone" Relationship="TaxiGuardianModel.FK_Coordinate_Zone" FromRole="Coordinate" ToRole="Zone" />
+        </EntityType>
+        <EntityType Name="Country">
+          <Key>
+            <PropertyRef Name="CountryID" />
+          </Key>
+          <Property Name="CountryID" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="Code" Type="String" Nullable="false" MaxLength="2" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="State" Relationship="TaxiGuardianModel.FK_State_Country" FromRole="Country" ToRole="State" />
+        </EntityType>
+        <EntityType Name="Fleet">
+          <Key>
+            <PropertyRef Name="FleetID" />
+          </Key>
+          <Property Name="FleetID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FleetName" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="CreationDate" Type="DateTime" Nullable="false" />
+          <Property Name="IsActive" Type="Boolean" Nullable="false" />
+          <Property Name="FleetColor" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="CompanyID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="UserFleet" Relationship="TaxiGuardianModel.FK_UserFleet_Fleet" FromRole="Fleet" ToRole="UserFleet" />
+        </EntityType>
+        <EntityType Name="Gender">
+          <Key>
+            <PropertyRef Name="GenderID" />
+          </Key>
+          <Property Name="GenderID" Type="Int32" Nullable="false" />
+          <Property Name="GenderName" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="User" Relationship="TaxiGuardianModel.FK_User_Gender" FromRole="Gender" ToRole="User" />
+        </EntityType>
+        <EntityType Name="LoginAudit">
+          <Key>
+            <PropertyRef Name="LoginAuditID" />
+          </Key>
+          <Property Name="LoginAuditID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="LoginAuditDate" Type="DateTime" Nullable="false" />
+          <Property Name="UserID" Type="Int32" Nullable="false" />
+          <Property Name="IP" Type="String" Nullable="false" MaxLength="15" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="User" Relationship="TaxiGuardianModel.FK_LoginAudit_User" FromRole="LoginAudit" ToRole="User" />
+        </EntityType>
+        <EntityType Name="MenuItem">
+          <Key>
+            <PropertyRef Name="MenuItemID" />
+          </Key>
+          <Property Name="MenuItemID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ParentMenuItemID" Type="Int32" />
+          <Property Name="MenuItemName" Type="String" Nullable="false" MaxLength="150" Unicode="false" FixedLength="false" />
+          <Property Name="IsActive" Type="Boolean" Nullable="false" />
+          <Property Name="Path" Type="String" MaxLength="150" Unicode="false" FixedLength="false" />
+          <Property Name="Alias" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="UserType" Relationship="TaxiGuardianModel.MenuItemUserType" FromRole="MenuItem" ToRole="UserType" />
+        </EntityType>
+        <EntityType Name="Message">
+          <Key>
+            <PropertyRef Name="MessageID" />
+          </Key>
+          <Property Name="MessageID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Subject" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="Body" Type="String" Nullable="false" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="MessageDate" Type="DateTime" Nullable="false" />
+          <Property Name="UserID" Type="Int32" Nullable="false" />
+          <Property Name="MessageStateID" Type="Int32" Nullable="false" />
+          <Property Name="IsImportant" Type="Boolean" Nullable="false" />
+          <Property Name="Address" Type="String" MaxLength="250" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="MessageState" Relationship="TaxiGuardianModel.FK_Message_MessageState" FromRole="Message" ToRole="MessageState" />
+          <NavigationProperty Name="User" Relationship="TaxiGuardianModel.FK_Message_User" FromRole="Message" ToRole="User" />
+          <NavigationProperty Name="MessageRecipient" Relationship="TaxiGuardianModel.FK_MessageRecipient_Message" FromRole="Message" ToRole="MessageRecipient" />
+          <NavigationProperty Name="PushEvent" Relationship="TaxiGuardianModel.FK_PushEvent_Message" FromRole="Message" ToRole="PushEvent" />
+        </EntityType>
+        <EntityType Name="MessageRecipient">
+          <Key>
+            <PropertyRef Name="MessageID" />
+            <PropertyRef Name="UserID" />
+          </Key>
+          <Property Name="MessageID" Type="Int32" Nullable="false" />
+          <Property Name="UserID" Type="Int32" Nullable="false" />
+          <Property Name="MessageStateID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Message" Relationship="TaxiGuardianModel.FK_MessageRecipient_Message" FromRole="MessageRecipient" ToRole="Message" />
+          <NavigationProperty Name="User" Relationship="TaxiGuardianModel.FK_MessageRecipient_User" FromRole="MessageRecipient" ToRole="User" />
+        </EntityType>
+        <EntityType Name="MessageState">
+          <Key>
+            <PropertyRef Name="MessageStateID" />
+          </Key>
+          <Property Name="MessageStateID" Type="Int32" Nullable="false" />
+          <Property Name="StateName" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="Message" Relationship="TaxiGuardianModel.FK_Message_MessageState" FromRole="MessageState" ToRole="Message" />
+        </EntityType>
+        <EntityType Name="Parameter">
+          <Key>
+            <PropertyRef Name="ParameterID" />
+          </Key>
+          <Property Name="ParameterID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ParameterName" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="ParameterKey" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="ParameterValue" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="Description" Type="String" MaxLength="250" Unicode="false" FixedLength="false" />
+          <Property Name="IsMobile" Type="Boolean" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PartnerCompany">
+          <Key>
+            <PropertyRef Name="PartnerCompanyID" />
+          </Key>
+          <Property Name="PartnerCompanyID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PartnerCompanyName" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="Cuit" Type="String" Nullable="false" MaxLength="11" Unicode="true" FixedLength="false" />
+          <Property Name="CreationDate" Type="DateTime" Nullable="false" />
+          <Property Name="Address" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="Phone" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="IsActive" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="CompanyPartnerCompany" Relationship="TaxiGuardianModel.FK_CompanyPartnerCompany_PartnerCompany" FromRole="PartnerCompany" ToRole="CompanyPartnerCompany" />
+        </EntityType>
+        <EntityType Name="PushEvent">
+          <Key>
+            <PropertyRef Name="PushEventID" />
+          </Key>
+          <Property Name="PushEventID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="EventDateTime" Type="DateTime" Nullable="false" />
+          <Property Name="PushEventTypeID" Type="Int32" Nullable="false" />
+          <Property Name="PushEventStateID" Type="Int32" Nullable="false" />
+          <Property Name="MessageID" Type="Int32" />
+          <Property Name="TripID" Type="Int32" />
+          <Property Name="TripClientID" Type="Int32" />
+          <NavigationProperty Name="Message" Relationship="TaxiGuardianModel.FK_PushEvent_Message" FromRole="PushEvent" ToRole="Message" />
+          <NavigationProperty Name="PushEventState" Relationship="TaxiGuardianModel.FK_PushEvent_PushEventState" FromRole="PushEvent" ToRole="PushEventState" />
+          <NavigationProperty Name="PushEventType" Relationship="TaxiGuardianModel.FK_PushEvent_PushEventType" FromRole="PushEvent" ToRole="PushEventType" />
+          <NavigationProperty Name="Trip" Relationship="TaxiGuardianModel.FK_PushEvent_Trip" FromRole="PushEvent" ToRole="Trip" />
+          <NavigationProperty Name="PushEventUser" Relationship="TaxiGuardianModel.FK_PushEventUser_PushEvent" FromRole="PushEvent" ToRole="PushEventUser" />
+        </EntityType>
+        <EntityType Name="PushEventState">
+          <Key>
+            <PropertyRef Name="PushEventStateID" />
+          </Key>
+          <Property Name="PushEventStateID" Type="Int32" Nullable="false" />
+          <Property Name="PushEventStateName" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="PushEvent" Relationship="TaxiGuardianModel.FK_PushEvent_PushEventState" FromRole="PushEventState" ToRole="PushEvent" />
+        </EntityType>
+        <EntityType Name="PushEventType">
+          <Key>
+            <PropertyRef Name="PushEventTypeID" />
+          </Key>
+          <Property Name="PushEventTypeID" Type="Int32" Nullable="false" />
+          <Property Name="PushEventTypeName" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="PushEvent" Relationship="TaxiGuardianModel.FK_PushEvent_PushEventType" FromRole="PushEventType" ToRole="PushEvent" />
+        </EntityType>
+        <EntityType Name="PushEventUser">
+          <Key>
+            <PropertyRef Name="PushEventID" />
+            <PropertyRef Name="UserID" />
+          </Key>
+          <Property Name="PushEventID" Type="Int32" Nullable="false" />
+          <Property Name="UserID" Type="Int32" Nullable="false" />
+          <Property Name="PushEventUserStateID" Type="Int32" Nullable="false" />
+          <Property Name="SendRetries" Type="Int32" Nullable="false" />
+          <Property Name="ProcessDateTime" Type="DateTime" Nullable="false" />
+          <NavigationProperty Name="PushEvent" Relationship="TaxiGuardianModel.FK_PushEventUser_PushEvent" FromRole="PushEventUser" ToRole="PushEvent" />
+          <NavigationProperty Name="PushEventUserState" Relationship="TaxiGuardianModel.FK_PushEventUser_PushEventUserState" FromRole="PushEventUser" ToRole="PushEventUserState" />
+          <NavigationProperty Name="User" Relationship="TaxiGuardianModel.FK_PushEventUser_User" FromRole="PushEventUser" ToRole="User" />
+        </EntityType>
+        <EntityType Name="PushEventUserState">
+          <Key>
+            <PropertyRef Name="PushEventUserStateID" />
+          </Key>
+          <Property Name="PushEventUserStateID" Type="Int32" Nullable="false" />
+          <Property Name="PushEventUserStateName" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="PushEventUser" Relationship="TaxiGuardianModel.FK_PushEventUser_PushEventUserState" FromRole="PushEventUserState" ToRole="PushEventUser" />
+        </EntityType>
+        <EntityType Name="ReferencesPoint">
+          <Key>
+            <PropertyRef Name="PointID" />
+          </Key>
+          <Property Name="PointID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PointName" Type="String" Nullable="false" MaxLength="250" Unicode="false" FixedLength="false" />
+          <Property Name="Address" Type="String" MaxLength="250" Unicode="false" FixedLength="false" />
+          <Property Name="Longitude" Type="Double" Nullable="false" />
+          <Property Name="Latitude" Type="Double" Nullable="false" />
+          <Property Name="CompanyID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Company" Relationship="TaxiGuardianModel.FK_ReferencesPoint_Company" FromRole="ReferencesPoint" ToRole="Company" />
+        </EntityType>
+        <EntityType Name="Server">
+          <Key>
+            <PropertyRef Name="ServerID" />
+          </Key>
+          <Property Name="ServerID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ServerName" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Url" Type="String" Nullable="false" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="Availability" Type="Double" />
+          <Property Name="ProcessorTimeHistory" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="State">
+          <Key>
+            <PropertyRef Name="StateID" />
+          </Key>
+          <Property Name="StateID" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="CountryID" Type="Int32" Nullable="false" />
+          <Property Name="AliasNames" Type="String" Nullable="false" MaxLength="250" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="City" Relationship="TaxiGuardianModel.FK_City_State" FromRole="State" ToRole="City" />
+          <NavigationProperty Name="Country" Relationship="TaxiGuardianModel.FK_State_Country" FromRole="State" ToRole="Country" />
+        </EntityType>
+        <EntityType Name="TaxiState">
+          <Key>
+            <PropertyRef Name="TaxiStateID" />
+          </Key>
+          <Property Name="TaxiStateID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TaxiName" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="User" Relationship="TaxiGuardianModel.FK_User_TaxiState" FromRole="TaxiState" ToRole="User" />
+        </EntityType>
+        <EntityType Name="TrackingInfo">
+          <Key>
+            <PropertyRef Name="TrackingInfoID" />
+          </Key>
+          <Property Name="TrackingInfoID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TrackingDateTime" Type="DateTime" Nullable="false" />
+          <Property Name="UserID" Type="Int32" Nullable="false" />
+          <Property Name="Speed" Type="Double" Nullable="false" />
+          <NavigationProperty Name="User" Relationship="TaxiGuardianModel.FK_TrackingInfo_User" FromRole="TrackingInfo" ToRole="User" />
+        </EntityType>
+        <EntityType Name="Trip">
+          <Key>
+            <PropertyRef Name="TripID" />
+          </Key>
+          <Property Name="TripID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TripCreation" Type="DateTime" Nullable="false" />
+          <Property Name="TripFromAddress" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="TripToAddress" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="ClientUserID" Type="Int32" Nullable="false" />
+          <Property Name="TaxiUserID" Type="Int32" />
+          <Property Name="TripStateID" Type="Int32" Nullable="false" />
+          <Property Name="CalificationTripID" Type="Int32" />
+          <Property Name="CompanyPartnerID" Type="Int32" />
+          <NavigationProperty Name="CalificationTrip" Relationship="TaxiGuardianModel.FK_Trip_CalificationTrip" FromRole="Trip" ToRole="CalificationTrip" />
+          <NavigationProperty Name="PushEvent" Relationship="TaxiGuardianModel.FK_PushEvent_Trip" FromRole="Trip" ToRole="PushEvent" />
+          <NavigationProperty Name="Trip1" Relationship="TaxiGuardianModel.FK_Trip_Trip" FromRole="Trip" ToRole="Trip1" />
+          <NavigationProperty Name="Trip2" Relationship="TaxiGuardianModel.FK_Trip_Trip" FromRole="Trip1" ToRole="Trip" />
+          <NavigationProperty Name="TripState" Relationship="TaxiGuardianModel.FK_Trip_TripState" FromRole="Trip" ToRole="TripState" />
+          <NavigationProperty Name="User" Relationship="TaxiGuardianModel.FK_Trip_User" FromRole="Trip" ToRole="User" />
+          <NavigationProperty Name="User1" Relationship="TaxiGuardianModel.FK_Trip_User1" FromRole="Trip" ToRole="User" />
+          <NavigationProperty Name="TripLog" Relationship="TaxiGuardianModel.FK_TripLog_Trip" FromRole="Trip" ToRole="TripLog" />
+        </EntityType>
+        <EntityType Name="TripLog">
+          <Key>
+            <PropertyRef Name="TripLogID" />
+          </Key>
+          <Property Name="TripLogID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TripID" Type="Int32" Nullable="false" />
+          <Property Name="TripLogDateTime" Type="DateTime" Nullable="false" />
+          <Property Name="CancelUserID" Type="Int32" />
+          <Property Name="CancelDescription" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="TripStateID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Trip" Relationship="TaxiGuardianModel.FK_TripLog_Trip" FromRole="TripLog" ToRole="Trip" />
+          <NavigationProperty Name="TripState" Relationship="TaxiGuardianModel.FK_TripLog_TripState" FromRole="TripLog" ToRole="TripState" />
+          <NavigationProperty Name="User" Relationship="TaxiGuardianModel.FK_TripLog_User" FromRole="TripLog" ToRole="User" />
+        </EntityType>
+        <EntityType Name="TripState">
+          <Key>
+            <PropertyRef Name="TripStateID" />
+          </Key>
+          <Property Name="TripStateID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TripStateName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="Trip" Relationship="TaxiGuardianModel.FK_Trip_TripState" FromRole="TripState" ToRole="Trip" />
+          <NavigationProperty Name="TripLog" Relationship="TaxiGuardianModel.FK_TripLog_TripState" FromRole="TripState" ToRole="TripLog" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="UserID" />
+          </Key>
+          <Property Name="UserID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FirstName" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="LastName" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="UserName" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Password" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="Email" Type="String" Nullable="false" MaxLength="250" Unicode="false" FixedLength="false" />
+          <Property Name="PrefixMobilePhone" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="MobilePhone" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Dni" Type="String" MaxLength="8" Unicode="false" FixedLength="false" />
+          <Property Name="LastLogin" Type="DateTime" />
+          <Property Name="GenderID" Type="Int32" Nullable="false" />
+          <Property Name="IsActive" Type="Boolean" Nullable="false" />
+          <Property Name="CreationDate" Type="DateTime" Nullable="false" />
+          <Property Name="ProfilePicture" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="UserStatusID" Type="Int32" Nullable="false" />
+          <Property Name="Address" Type="String" MaxLength="250" Unicode="false" FixedLength="false" />
+          <Property Name="FollowMe" Type="Boolean" Nullable="false" />
+          <Property Name="LastPositionDateTime" Type="DateTime" />
+          <Property Name="LastSpeed" Type="Int32" />
+          <Property Name="LastStatusChange" Type="DateTime" />
+          <Property Name="ProfilePictureThumb" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="UserTypeID" Type="Int32" Nullable="false" />
+          <Property Name="CurrentSessionID" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="CompanyID" Type="Int32" />
+          <Property Name="LastCarID" Type="Int32" />
+          <Property Name="TaxiStateID" Type="Int32" />
+          <Property Name="Comments" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="PushDeviceRegistrationID" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="TaxiGuardianVersion" Type="String" MaxLength="7" Unicode="false" FixedLength="false" />
+          <Property Name="DeviceInfo" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="AndroidVersion" Type="String" MaxLength="7" Unicode="false" FixedLength="false" />
+          <Property Name="SignInToken" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="SignInTokenDate" Type="DateTime" />
+          <Property Name="ContactName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="ContactNumber" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="Car" Relationship="TaxiGuardianModel.FK_User_Car" FromRole="User" ToRole="Car" />
+          <NavigationProperty Name="Company" Relationship="TaxiGuardianModel.FK_User_Company" FromRole="User" ToRole="Company" />
+          <NavigationProperty Name="Gender" Relationship="TaxiGuardianModel.FK_User_Gender" FromRole="User" ToRole="Gender" />
+          <NavigationProperty Name="LoginAudit" Relationship="TaxiGuardianModel.FK_LoginAudit_User" FromRole="User" ToRole="LoginAudit" />
+          <NavigationProperty Name="Message" Relationship="TaxiGuardianModel.FK_Message_User" FromRole="User" ToRole="Message" />
+          <NavigationProperty Name="MessageRecipient" Relationship="TaxiGuardianModel.FK_MessageRecipient_User" FromRole="User" ToRole="MessageRecipient" />
+          <NavigationProperty Name="PushEventUser" Relationship="TaxiGuardianModel.FK_PushEventUser_User" FromRole="User" ToRole="PushEventUser" />
+          <NavigationProperty Name="TaxiState" Relationship="TaxiGuardianModel.FK_User_TaxiState" FromRole="User" ToRole="TaxiState" />
+          <NavigationProperty Name="TrackingInfo" Relationship="TaxiGuardianModel.FK_TrackingInfo_User" FromRole="User" ToRole="TrackingInfo" />
+          <NavigationProperty Name="Trip" Relationship="TaxiGuardianModel.FK_Trip_User" FromRole="User" ToRole="Trip" />
+          <NavigationProperty Name="Trip1" Relationship="TaxiGuardianModel.FK_Trip_User1" FromRole="User" ToRole="Trip" />
+          <NavigationProperty Name="TripLog" Relationship="TaxiGuardianModel.FK_TripLog_User" FromRole="User" ToRole="TripLog" />
+          <NavigationProperty Name="UserStatus" Relationship="TaxiGuardianModel.FK_User_UserStatus" FromRole="User" ToRole="UserStatus" />
+          <NavigationProperty Name="UserType" Relationship="TaxiGuardianModel.FK_User_UserType" FromRole="User" ToRole="UserType" />
+          <NavigationProperty Name="UserCar" Relationship="TaxiGuardianModel.FK_UserCar_User" FromRole="User" ToRole="UserCar" />
+          <NavigationProperty Name="UserFleet" Relationship="TaxiGuardianModel.FK_UserFleet_User" FromRole="User" ToRole="UserFleet" />
+        </EntityType>
+        <EntityType Name="UserCar">
+          <Key>
+            <PropertyRef Name="UserCarID" />
+          </Key>
+          <Property Name="UserCarID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserID" Type="Int32" Nullable="false" />
+          <Property Name="CarID" Type="Int32" Nullable="false" />
+          <Property Name="UserCarDatetime" Type="DateTime" Nullable="false" />
+          <NavigationProperty Name="Car" Relationship="TaxiGuardianModel.FK_UserCar_Car" FromRole="UserCar" ToRole="Car" />
+          <NavigationProperty Name="User" Relationship="TaxiGuardianModel.FK_UserCar_User" FromRole="UserCar" ToRole="User" />
+        </EntityType>
+        <EntityType Name="UserFleet">
+          <Key>
+            <PropertyRef Name="FleetID" />
+            <PropertyRef Name="UserID" />
+          </Key>
+          <Property Name="FleetID" Type="Int32" Nullable="false" />
+          <Property Name="UserID" Type="Int32" Nullable="false" />
+          <Property Name="AssignmentDate" Type="DateTime" Nullable="false" />
+          <Property Name="IsActive" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="Fleet" Relationship="TaxiGuardianModel.FK_UserFleet_Fleet" FromRole="UserFleet" ToRole="Fleet" />
+          <NavigationProperty Name="User" Relationship="TaxiGuardianModel.FK_UserFleet_User" FromRole="UserFleet" ToRole="User" />
+        </EntityType>
+        <EntityType Name="UserPartnerCompany">
+          <Key>
+            <PropertyRef Name="CompanyPartnerCompanyID" />
+            <PropertyRef Name="Dni" />
+          </Key>
+          <Property Name="CompanyPartnerCompanyID" Type="Int32" Nullable="false" />
+          <Property Name="Dni" Type="String" Nullable="false" MaxLength="8" Unicode="false" FixedLength="false" />
+          <Property Name="IsActive" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="CompanyPartnerCompany" Relationship="TaxiGuardianModel.FK_UserPartnerCompany_CompanyPartnerCompany" FromRole="UserPartnerCompany" ToRole="CompanyPartnerCompany" />
+        </EntityType>
+        <EntityType Name="UserStatus">
+          <Key>
+            <PropertyRef Name="UserStatusID" />
+          </Key>
+          <Property Name="UserStatusID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserStatusName" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="User" Relationship="TaxiGuardianModel.FK_User_UserStatus" FromRole="UserStatus" ToRole="User" />
+        </EntityType>
+        <EntityType Name="UserType">
+          <Key>
+            <PropertyRef Name="UserTypeID" />
+          </Key>
+          <Property Name="UserTypeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserTypeName" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="User" Relationship="TaxiGuardianModel.FK_User_UserType" FromRole="UserType" ToRole="User" />
+          <NavigationProperty Name="MenuItem" Relationship="TaxiGuardianModel.MenuItemUserType" FromRole="UserType" ToRole="MenuItem" />
+        </EntityType>
+        <EntityType Name="Zone">
+          <Key>
+            <PropertyRef Name="ZoneID" />
+          </Key>
+          <Property Name="ZoneID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ZoneName" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="CompanyID" Type="Int32" Nullable="false" />
+          <Property Name="Color" Type="String" Nullable="false" MaxLength="7" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="Company" Relationship="TaxiGuardianModel.FK_Zone_Zone" FromRole="Zone" ToRole="Company" />
+          <NavigationProperty Name="Coordinate" Relationship="TaxiGuardianModel.FK_Coordinate_Zone" FromRole="Zone" ToRole="Coordinate" />
+        </EntityType>
+        <Association Name="FK_Alert_AlertType">
+          <End Role="AlertType" Type="TaxiGuardianModel.AlertType" Multiplicity="1" />
+          <End Role="Alert" Type="TaxiGuardianModel.Alert" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AlertType">
+              <PropertyRef Name="AlertTypeID" />
+            </Principal>
+            <Dependent Role="Alert">
+              <PropertyRef Name="AlertTypeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AlertType_Company">
+          <End Role="Company" Type="TaxiGuardianModel.Company" Multiplicity="0..1" />
+          <End Role="AlertType" Type="TaxiGuardianModel.AlertType" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Company">
+              <PropertyRef Name="CompanyID" />
+            </Principal>
+            <Dependent Role="AlertType">
+              <PropertyRef Name="CompanyID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Trip_CalificationTrip">
+          <End Role="CalificationTrip" Type="TaxiGuardianModel.CalificationTrip" Multiplicity="0..1" />
+          <End Role="Trip" Type="TaxiGuardianModel.Trip" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CalificationTrip">
+              <PropertyRef Name="CalificationTripID" />
+            </Principal>
+            <Dependent Role="Trip">
+              <PropertyRef Name="CalificationTripID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Car_CarSize">
+          <End Role="CarSize" Type="TaxiGuardianModel.CarSize" Multiplicity="1" />
+          <End Role="Car" Type="TaxiGuardianModel.Car" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CarSize">
+              <PropertyRef Name="CarSizeID" />
+            </Principal>
+            <Dependent Role="Car">
+              <PropertyRef Name="CarSizeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_User_Car">
+          <End Role="Car" Type="TaxiGuardianModel.Car" Multiplicity="0..1" />
+          <End Role="User" Type="TaxiGuardianModel.User" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Car">
+              <PropertyRef Name="CarID" />
+            </Principal>
+            <Dependent Role="User">
+              <PropertyRef Name="LastCarID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UserCar_Car">
+          <End Role="Car" Type="TaxiGuardianModel.Car" Multiplicity="1" />
+          <End Role="UserCar" Type="TaxiGuardianModel.UserCar" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Car">
+              <PropertyRef Name="CarID" />
+            </Principal>
+            <Dependent Role="UserCar">
+              <PropertyRef Name="CarID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CarSize_Car">
+          <End Role="CarSize" Type="TaxiGuardianModel.CarSize" Multiplicity="1" />
+          <End Role="CarSize1" Type="TaxiGuardianModel.CarSize" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="CarSize">
+              <PropertyRef Name="CarSizeID" />
+            </Principal>
+            <Dependent Role="CarSize1">
+              <PropertyRef Name="CarSizeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_City_State">
+          <End Role="State" Type="TaxiGuardianModel.State" Multiplicity="1" />
+          <End Role="City" Type="TaxiGuardianModel.City" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="State">
+              <PropertyRef Name="StateID" />
+            </Principal>
+            <Dependent Role="City">
+              <PropertyRef Name="StateID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Company_City">
+          <End Role="City" Type="TaxiGuardianModel.City" Multiplicity="0..1" />
+          <End Role="Company" Type="TaxiGuardianModel.Company" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="City">
+              <PropertyRef Name="CityID" />
+            </Principal>
+            <Dependent Role="Company">
+              <PropertyRef Name="CityID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CompanyPartnerCompany_Company">
+          <End Role="Company" Type="TaxiGuardianModel.Company" Multiplicity="1" />
+          <End Role="CompanyPartnerCompany" Type="TaxiGuardianModel.CompanyPartnerCompany" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Company">
+              <PropertyRef Name="CompanyID" />
+            </Principal>
+            <Dependent Role="CompanyPartnerCompany">
+              <PropertyRef Name="CompanyID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ReferencesPoint_Company">
+          <End Role="Company" Type="TaxiGuardianModel.Company" Multiplicity="1" />
+          <End Role="ReferencesPoint" Type="TaxiGuardianModel.ReferencesPoint" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Company">
+              <PropertyRef Name="CompanyID" />
+            </Principal>
+            <Dependent Role="ReferencesPoint">
+              <PropertyRef Name="CompanyID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_User_Company">
+          <End Role="Company" Type="TaxiGuardianModel.Company" Multiplicity="0..1" />
+          <End Role="User" Type="TaxiGuardianModel.User" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Company">
+              <PropertyRef Name="CompanyID" />
+            </Principal>
+            <Dependent Role="User">
+              <PropertyRef Name="CompanyID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Zone_Zone">
+          <End Role="Company" Type="TaxiGuardianModel.Company" Multiplicity="1" />
+          <End Role="Zone" Type="TaxiGuardianModel.Zone" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Company">
+              <PropertyRef Name="CompanyID" />
+            </Principal>
+            <Dependent Role="Zone">
+              <PropertyRef Name="CompanyID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CompanyPartnerCompany_PartnerCompany">
+          <End Role="PartnerCompany" Type="TaxiGuardianModel.PartnerCompany" Multiplicity="1" />
+          <End Role="CompanyPartnerCompany" Type="TaxiGuardianModel.CompanyPartnerCompany" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PartnerCompany">
+              <PropertyRef Name="PartnerCompanyID" />
+            </Principal>
+            <Dependent Role="CompanyPartnerCompany">
+              <PropertyRef Name="CompanyPartnerID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UserPartnerCompany_CompanyPartnerCompany">
+          <End Role="CompanyPartnerCompany" Type="TaxiGuardianModel.CompanyPartnerCompany" Multiplicity="1" />
+          <End Role="UserPartnerCompany" Type="TaxiGuardianModel.UserPartnerCompany" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CompanyPartnerCompany">
+              <PropertyRef Name="CompanyPartnerCompanyID" />
+            </Principal>
+            <Dependent Role="UserPartnerCompany">
+              <PropertyRef Name="CompanyPartnerCompanyID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Coordinate_Zone">
+          <End Role="Zone" Type="TaxiGuardianModel.Zone" Multiplicity="1" />
+          <End Role="Coordinate" Type="TaxiGuardianModel.Coordinate" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Zone">
+              <PropertyRef Name="ZoneID" />
+            </Principal>
+            <Dependent Role="Coordinate">
+              <PropertyRef Name="ZoneID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_State_Country">
+          <End Role="Country" Type="TaxiGuardianModel.Country" Multiplicity="1" />
+          <End Role="State" Type="TaxiGuardianModel.State" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Country">
+              <PropertyRef Name="CountryID" />
+            </Principal>
+            <Dependent Role="State">
+              <PropertyRef Name="CountryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UserFleet_Fleet">
+          <End Role="Fleet" Type="TaxiGuardianModel.Fleet" Multiplicity="1" />
+          <End Role="UserFleet" Type="TaxiGuardianModel.UserFleet" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Fleet">
+              <PropertyRef Name="FleetID" />
+            </Principal>
+            <Dependent Role="UserFleet">
+              <PropertyRef Name="FleetID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_User_Gender">
+          <End Role="Gender" Type="TaxiGuardianModel.Gender" Multiplicity="1" />
+          <End Role="User" Type="TaxiGuardianModel.User" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Gender">
+              <PropertyRef Name="GenderID" />
+            </Principal>
+            <Dependent Role="User">
+              <PropertyRef Name="GenderID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_LoginAudit_User">
+          <End Role="User" Type="TaxiGuardianModel.User" Multiplicity="1" />
+          <End Role="LoginAudit" Type="TaxiGuardianModel.LoginAudit" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="UserID" />
+            </Principal>
+            <Dependent Role="LoginAudit">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Message_MessageState">
+          <End Role="MessageState" Type="TaxiGuardianModel.MessageState" Multiplicity="1" />
+          <End Role="Message" Type="TaxiGuardianModel.Message" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MessageState">
+              <PropertyRef Name="MessageStateID" />
+            </Principal>
+            <Dependent Role="Message">
+              <PropertyRef Name="MessageStateID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Message_User">
+          <End Role="User" Type="TaxiGuardianModel.User" Multiplicity="1" />
+          <End Role="Message" Type="TaxiGuardianModel.Message" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="UserID" />
+            </Principal>
+            <Dependent Role="Message">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MessageRecipient_Message">
+          <End Role="Message" Type="TaxiGuardianModel.Message" Multiplicity="1" />
+          <End Role="MessageRecipient" Type="TaxiGuardianModel.MessageRecipient" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Message">
+              <PropertyRef Name="MessageID" />
+            </Principal>
+            <Dependent Role="MessageRecipient">
+              <PropertyRef Name="MessageID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PushEvent_Message">
+          <End Role="Message" Type="TaxiGuardianModel.Message" Multiplicity="0..1" />
+          <End Role="PushEvent" Type="TaxiGuardianModel.PushEvent" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Message">
+              <PropertyRef Name="MessageID" />
+            </Principal>
+            <Dependent Role="PushEvent">
+              <PropertyRef Name="MessageID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MessageRecipient_User">
+          <End Role="User" Type="TaxiGuardianModel.User" Multiplicity="1" />
+          <End Role="MessageRecipient" Type="TaxiGuardianModel.MessageRecipient" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="UserID" />
+            </Principal>
+            <Dependent Role="MessageRecipient">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PushEvent_PushEventState">
+          <End Role="PushEventState" Type="TaxiGuardianModel.PushEventState" Multiplicity="1" />
+          <End Role="PushEvent" Type="TaxiGuardianModel.PushEvent" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PushEventState">
+              <PropertyRef Name="PushEventStateID" />
+            </Principal>
+            <Dependent Role="PushEvent">
+              <PropertyRef Name="PushEventStateID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PushEvent_PushEventType">
+          <End Role="PushEventType" Type="TaxiGuardianModel.PushEventType" Multiplicity="1" />
+          <End Role="PushEvent" Type="TaxiGuardianModel.PushEvent" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PushEventType">
+              <PropertyRef Name="PushEventTypeID" />
+            </Principal>
+            <Dependent Role="PushEvent">
+              <PropertyRef Name="PushEventTypeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PushEvent_Trip">
+          <End Role="Trip" Type="TaxiGuardianModel.Trip" Multiplicity="0..1" />
+          <End Role="PushEvent" Type="TaxiGuardianModel.PushEvent" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Trip">
+              <PropertyRef Name="TripID" />
+            </Principal>
+            <Dependent Role="PushEvent">
+              <PropertyRef Name="TripID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PushEventUser_PushEvent">
+          <End Role="PushEvent" Type="TaxiGuardianModel.PushEvent" Multiplicity="1" />
+          <End Role="PushEventUser" Type="TaxiGuardianModel.PushEventUser" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PushEvent">
+              <PropertyRef Name="PushEventID" />
+            </Principal>
+            <Dependent Role="PushEventUser">
+              <PropertyRef Name="PushEventID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PushEventUser_PushEventUserState">
+          <End Role="PushEventUserState" Type="TaxiGuardianModel.PushEventUserState" Multiplicity="1" />
+          <End Role="PushEventUser" Type="TaxiGuardianModel.PushEventUser" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PushEventUserState">
+              <PropertyRef Name="PushEventUserStateID" />
+            </Principal>
+            <Dependent Role="PushEventUser">
+              <PropertyRef Name="PushEventUserStateID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PushEventUser_User">
+          <End Role="User" Type="TaxiGuardianModel.User" Multiplicity="1" />
+          <End Role="PushEventUser" Type="TaxiGuardianModel.PushEventUser" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="UserID" />
+            </Principal>
+            <Dependent Role="PushEventUser">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_User_TaxiState">
+          <End Role="TaxiState" Type="TaxiGuardianModel.TaxiState" Multiplicity="0..1" />
+          <End Role="User" Type="TaxiGuardianModel.User" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TaxiState">
+              <PropertyRef Name="TaxiStateID" />
+            </Principal>
+            <Dependent Role="User">
+              <PropertyRef Name="TaxiStateID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TrackingInfo_User">
+          <End Role="User" Type="TaxiGuardianModel.User" Multiplicity="1" />
+          <End Role="TrackingInfo" Type="TaxiGuardianModel.TrackingInfo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="UserID" />
+            </Principal>
+            <Dependent Role="TrackingInfo">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Trip_Trip">
+          <End Role="Trip" Type="TaxiGuardianModel.Trip" Multiplicity="1" />
+          <End Role="Trip1" Type="TaxiGuardianModel.Trip" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Trip">
+              <PropertyRef Name="TripID" />
+            </Principal>
+            <Dependent Role="Trip1">
+              <PropertyRef Name="TripID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Trip_TripState">
+          <End Role="TripState" Type="TaxiGuardianModel.TripState" Multiplicity="1" />
+          <End Role="Trip" Type="TaxiGuardianModel.Trip" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TripState">
+              <PropertyRef Name="TripStateID" />
+            </Principal>
+            <Dependent Role="Trip">
+              <PropertyRef Name="TripStateID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Trip_User">
+          <End Role="User" Type="TaxiGuardianModel.User" Multiplicity="0..1" />
+          <End Role="Trip" Type="TaxiGuardianModel.Trip" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="UserID" />
+            </Principal>
+            <Dependent Role="Trip">
+              <PropertyRef Name="TaxiUserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Trip_User1">
+          <End Role="User" Type="TaxiGuardianModel.User" Multiplicity="1" />
+          <End Role="Trip" Type="TaxiGuardianModel.Trip" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="UserID" />
+            </Principal>
+            <Dependent Role="Trip">
+              <PropertyRef Name="ClientUserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TripLog_Trip">
+          <End Role="Trip" Type="TaxiGuardianModel.Trip" Multiplicity="1" />
+          <End Role="TripLog" Type="TaxiGuardianModel.TripLog" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Trip">
+              <PropertyRef Name="TripID" />
+            </Principal>
+            <Dependent Role="TripLog">
+              <PropertyRef Name="TripID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TripLog_TripState">
+          <End Role="TripState" Type="TaxiGuardianModel.TripState" Multiplicity="1" />
+          <End Role="TripLog" Type="TaxiGuardianModel.TripLog" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TripState">
+              <PropertyRef Name="TripStateID" />
+            </Principal>
+            <Dependent Role="TripLog">
+              <PropertyRef Name="TripStateID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TripLog_User">
+          <End Role="User" Type="TaxiGuardianModel.User" Multiplicity="0..1" />
+          <End Role="TripLog" Type="TaxiGuardianModel.TripLog" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="UserID" />
+            </Principal>
+            <Dependent Role="TripLog">
+              <PropertyRef Name="CancelUserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_User_UserStatus">
+          <End Role="UserStatus" Type="TaxiGuardianModel.UserStatus" Multiplicity="1" />
+          <End Role="User" Type="TaxiGuardianModel.User" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UserStatus">
+              <PropertyRef Name="UserStatusID" />
+            </Principal>
+            <Dependent Role="User">
+              <PropertyRef Name="UserStatusID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_User_UserType">
+          <End Role="UserType" Type="TaxiGuardianModel.UserType" Multiplicity="1" />
+          <End Role="User" Type="TaxiGuardianModel.User" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UserType">
+              <PropertyRef Name="UserTypeID" />
+            </Principal>
+            <Dependent Role="User">
+              <PropertyRef Name="UserTypeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UserCar_User">
+          <End Role="User" Type="TaxiGuardianModel.User" Multiplicity="1" />
+          <End Role="UserCar" Type="TaxiGuardianModel.UserCar" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="UserID" />
+            </Principal>
+            <Dependent Role="UserCar">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UserFleet_User">
+          <End Role="User" Type="TaxiGuardianModel.User" Multiplicity="1" />
+          <End Role="UserFleet" Type="TaxiGuardianModel.UserFleet" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="UserID" />
+            </Principal>
+            <Dependent Role="UserFleet">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="MenuItemUserType">
+          <End Role="MenuItem" Type="TaxiGuardianModel.MenuItem" Multiplicity="*" />
+          <End Role="UserType" Type="TaxiGuardianModel.UserType" Multiplicity="*" />
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="TaxiGuardianModelStoreContainer" CdmEntityContainer="Entities">
+          <EntitySetMapping Name="Alert"><EntityTypeMapping TypeName="TaxiGuardianModel.Alert"><MappingFragment StoreEntitySet="Alert">
+            <ScalarProperty Name="AlertID" ColumnName="AlertID" />
+            <ScalarProperty Name="AlertName" ColumnName="AlertName" />
+            <ScalarProperty Name="AlertTypeID" ColumnName="AlertTypeID" />
+            <ScalarProperty Name="AlertDateTime" ColumnName="AlertDateTime" />
+            <ScalarProperty Name="UserIDCreation" ColumnName="UserIDCreation" />
+            <ScalarProperty Name="AlertDescription" ColumnName="AlertDescription" />
+            <ScalarProperty Name="UserID" ColumnName="UserID" />
+            <ScalarProperty Name="AddressPosition" ColumnName="AddressPosition" />
+            <ScalarProperty Name="AlertState" ColumnName="AlertState" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="AlertType"><EntityTypeMapping TypeName="TaxiGuardianModel.AlertType"><MappingFragment StoreEntitySet="AlertType">
+            <ScalarProperty Name="AlertTypeID" ColumnName="AlertTypeID" />
+            <ScalarProperty Name="AlertTypeName" ColumnName="AlertTypeName" />
+            <ScalarProperty Name="PriorityLevel" ColumnName="PriorityLevel" />
+            <ScalarProperty Name="CompanyID" ColumnName="CompanyID" />
+            <ScalarProperty Name="Image" ColumnName="Image" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="CalificationTrip"><EntityTypeMapping TypeName="TaxiGuardianModel.CalificationTrip"><MappingFragment StoreEntitySet="CalificationTrip">
+            <ScalarProperty Name="CalificationTripID" ColumnName="CalificationTripID" />
+            <ScalarProperty Name="Description" ColumnName="Description" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Car"><EntityTypeMapping TypeName="TaxiGuardianModel.Car"><MappingFragment StoreEntitySet="Car">
+            <ScalarProperty Name="CarID" ColumnName="CarID" />
+            <ScalarProperty Name="Brand" ColumnName="Brand" />
+            <ScalarProperty Name="Model" ColumnName="Model" />
+            <ScalarProperty Name="Year" ColumnName="Year" />
+            <ScalarProperty Name="Color" ColumnName="Color" />
+            <ScalarProperty Name="LicencePlate" ColumnName="LicencePlate" />
+            <ScalarProperty Name="TaxiPermission" ColumnName="TaxiPermission" />
+            <ScalarProperty Name="OwnerName" ColumnName="OwnerName" />
+            <ScalarProperty Name="OwnerLastName" ColumnName="OwnerLastName" />
+            <ScalarProperty Name="OwnerPhone" ColumnName="OwnerPhone" />
+            <ScalarProperty Name="OwnerEmail" ColumnName="OwnerEmail" />
+            <ScalarProperty Name="CompanyID" ColumnName="CompanyID" />
+            <ScalarProperty Name="AirConditioner" ColumnName="AirConditioner" />
+            <ScalarProperty Name="Trunk" ColumnName="Trunk" />
+            <ScalarProperty Name="CarSizeID" ColumnName="CarSizeID" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="CarSize"><EntityTypeMapping TypeName="TaxiGuardianModel.CarSize"><MappingFragment StoreEntitySet="CarSize">
+            <ScalarProperty Name="CarSizeID" ColumnName="CarSizeID" />
+            <ScalarProperty Name="Description" ColumnName="Description" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="City"><EntityTypeMapping TypeName="TaxiGuardianModel.City"><MappingFragment StoreEntitySet="City">
+            <ScalarProperty Name="CityID" ColumnName="CityID" />
+            <ScalarProperty Name="Name" ColumnName="Name" />
+            <ScalarProperty Name="StateID" ColumnName="StateID" />
+            <ScalarProperty Name="DefaultZoomLevel" ColumnName="DefaultZoomLevel" />
+            <ScalarProperty Name="MinZoomLevel" ColumnName="MinZoomLevel" />
+            <ScalarProperty Name="ZoomThreshold" ColumnName="ZoomThreshold" />
+            <ScalarProperty Name="ZipCode" ColumnName="ZipCode" />
+            <ScalarProperty Name="AliasNames" ColumnName="AliasNames" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Company"><EntityTypeMapping TypeName="TaxiGuardianModel.Company"><MappingFragment StoreEntitySet="Company">
+            <ScalarProperty Name="CompanyID" ColumnName="CompanyID" />
+            <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+            <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+            <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+            <ScalarProperty Name="CityID" ColumnName="CityID" />
+            <ScalarProperty Name="CompanyCode" ColumnName="CompanyCode" />
+            <ScalarProperty Name="AboutUsText" ColumnName="AboutUsText" />
+            <ScalarProperty Name="WelcomeText" ColumnName="WelcomeText" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="CompanyPartnerCompany"><EntityTypeMapping TypeName="TaxiGuardianModel.CompanyPartnerCompany"><MappingFragment StoreEntitySet="CompanyPartnerCompany">
+            <ScalarProperty Name="CompanyPartnerCompanyID" ColumnName="CompanyPartnerCompanyID" />
+            <ScalarProperty Name="CompanyID" ColumnName="CompanyID" />
+            <ScalarProperty Name="CompanyPartnerID" ColumnName="CompanyPartnerID" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Coordinate"><EntityTypeMapping TypeName="TaxiGuardianModel.Coordinate"><MappingFragment StoreEntitySet="Coordinate">
+            <ScalarProperty Name="CoordinateID" ColumnName="CoordinateID" />
+            <ScalarProperty Name="Latitude" ColumnName="Latitude" />
+            <ScalarProperty Name="Longitude" ColumnName="Longitude" />
+            <ScalarProperty Name="ZoneID" ColumnName="ZoneID" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Country"><EntityTypeMapping TypeName="TaxiGuardianModel.Country"><MappingFragment StoreEntitySet="Country">
+            <ScalarProperty Name="CountryID" ColumnName="CountryID" />
+            <ScalarProperty Name="Name" ColumnName="Name" />
+            <ScalarProperty Name="Code" ColumnName="Code" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Fleet"><EntityTypeMapping TypeName="TaxiGuardianModel.Fleet"><MappingFragment StoreEntitySet="Fleet">
+            <ScalarProperty Name="FleetID" ColumnName="FleetID" />
+            <ScalarProperty Name="FleetName" ColumnName="FleetName" />
+            <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+            <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+            <ScalarProperty Name="FleetColor" ColumnName="FleetColor" />
+            <ScalarProperty Name="CompanyID" ColumnName="CompanyID" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Gender"><EntityTypeMapping TypeName="TaxiGuardianModel.Gender"><MappingFragment StoreEntitySet="Gender">
+            <ScalarProperty Name="GenderID" ColumnName="GenderID" />
+            <ScalarProperty Name="GenderName" ColumnName="GenderName" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="LoginAudit"><EntityTypeMapping TypeName="TaxiGuardianModel.LoginAudit"><MappingFragment StoreEntitySet="LoginAudit">
+            <ScalarProperty Name="LoginAuditID" ColumnName="LoginAuditID" />
+            <ScalarProperty Name="LoginAuditDate" ColumnName="LoginAuditDate" />
+            <ScalarProperty Name="UserID" ColumnName="UserID" />
+            <ScalarProperty Name="IP" ColumnName="IP" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="MenuItem"><EntityTypeMapping TypeName="TaxiGuardianModel.MenuItem"><MappingFragment StoreEntitySet="MenuItem">
+            <ScalarProperty Name="MenuItemID" ColumnName="MenuItemID" />
+            <ScalarProperty Name="ParentMenuItemID" ColumnName="ParentMenuItemID" />
+            <ScalarProperty Name="MenuItemName" ColumnName="MenuItemName" />
+            <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+            <ScalarProperty Name="Path" ColumnName="Path" />
+            <ScalarProperty Name="Alias" ColumnName="Alias" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Message"><EntityTypeMapping TypeName="TaxiGuardianModel.Message"><MappingFragment StoreEntitySet="Message">
+            <ScalarProperty Name="MessageID" ColumnName="MessageID" />
+            <ScalarProperty Name="Subject" ColumnName="Subject" />
+            <ScalarProperty Name="Body" ColumnName="Body" />
+            <ScalarProperty Name="MessageDate" ColumnName="MessageDate" />
+            <ScalarProperty Name="UserID" ColumnName="UserID" />
+            <ScalarProperty Name="MessageStateID" ColumnName="MessageStateID" />
+            <ScalarProperty Name="IsImportant" ColumnName="IsImportant" />
+            <ScalarProperty Name="Address" ColumnName="Address" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="MessageRecipient"><EntityTypeMapping TypeName="TaxiGuardianModel.MessageRecipient"><MappingFragment StoreEntitySet="MessageRecipient">
+            <ScalarProperty Name="MessageID" ColumnName="MessageID" />
+            <ScalarProperty Name="UserID" ColumnName="UserID" />
+            <ScalarProperty Name="MessageStateID" ColumnName="MessageStateID" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="MessageState"><EntityTypeMapping TypeName="TaxiGuardianModel.MessageState"><MappingFragment StoreEntitySet="MessageState">
+            <ScalarProperty Name="MessageStateID" ColumnName="MessageStateID" />
+            <ScalarProperty Name="StateName" ColumnName="StateName" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Parameter"><EntityTypeMapping TypeName="TaxiGuardianModel.Parameter"><MappingFragment StoreEntitySet="Parameter">
+            <ScalarProperty Name="ParameterID" ColumnName="ParameterID" />
+            <ScalarProperty Name="ParameterName" ColumnName="ParameterName" />
+            <ScalarProperty Name="ParameterKey" ColumnName="ParameterKey" />
+            <ScalarProperty Name="ParameterValue" ColumnName="ParameterValue" />
+            <ScalarProperty Name="Description" ColumnName="Description" />
+            <ScalarProperty Name="IsMobile" ColumnName="IsMobile" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="PartnerCompany"><EntityTypeMapping TypeName="TaxiGuardianModel.PartnerCompany"><MappingFragment StoreEntitySet="PartnerCompany">
+            <ScalarProperty Name="PartnerCompanyID" ColumnName="PartnerCompanyID" />
+            <ScalarProperty Name="PartnerCompanyName" ColumnName="PartnerCompanyName" />
+            <ScalarProperty Name="Cuit" ColumnName="Cuit" />
+            <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+            <ScalarProperty Name="Address" ColumnName="Address" />
+            <ScalarProperty Name="Phone" ColumnName="Phone" />
+            <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="PushEvent"><EntityTypeMapping TypeName="TaxiGuardianModel.PushEvent"><MappingFragment StoreEntitySet="PushEvent">
+            <ScalarProperty Name="PushEventID" ColumnName="PushEventID" />
+            <ScalarProperty Name="EventDateTime" ColumnName="EventDateTime" />
+            <ScalarProperty Name="PushEventTypeID" ColumnName="PushEventTypeID" />
+            <ScalarProperty Name="PushEventStateID" ColumnName="PushEventStateID" />
+            <ScalarProperty Name="MessageID" ColumnName="MessageID" />
+            <ScalarProperty Name="TripID" ColumnName="TripID" />
+            <ScalarProperty Name="TripClientID" ColumnName="TripClientID" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="PushEventState"><EntityTypeMapping TypeName="TaxiGuardianModel.PushEventState"><MappingFragment StoreEntitySet="PushEventState">
+            <ScalarProperty Name="PushEventStateID" ColumnName="PushEventStateID" />
+            <ScalarProperty Name="PushEventStateName" ColumnName="PushEventStateName" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="PushEventType"><EntityTypeMapping TypeName="TaxiGuardianModel.PushEventType"><MappingFragment StoreEntitySet="PushEventType">
+            <ScalarProperty Name="PushEventTypeID" ColumnName="PushEventTypeID" />
+            <ScalarProperty Name="PushEventTypeName" ColumnName="PushEventTypeName" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="PushEventUser"><EntityTypeMapping TypeName="TaxiGuardianModel.PushEventUser"><MappingFragment StoreEntitySet="PushEventUser">
+            <ScalarProperty Name="PushEventID" ColumnName="PushEventID" />
+            <ScalarProperty Name="UserID" ColumnName="UserID" />
+            <ScalarProperty Name="PushEventUserStateID" ColumnName="PushEventUserStateID" />
+            <ScalarProperty Name="SendRetries" ColumnName="SendRetries" />
+            <ScalarProperty Name="ProcessDateTime" ColumnName="ProcessDateTime" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="PushEventUserState"><EntityTypeMapping TypeName="TaxiGuardianModel.PushEventUserState"><MappingFragment StoreEntitySet="PushEventUserState">
+            <ScalarProperty Name="PushEventUserStateID" ColumnName="PushEventUserStateID" />
+            <ScalarProperty Name="PushEventUserStateName" ColumnName="PushEventUserStateName" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="ReferencesPoint"><EntityTypeMapping TypeName="TaxiGuardianModel.ReferencesPoint"><MappingFragment StoreEntitySet="ReferencesPoint">
+            <ScalarProperty Name="PointID" ColumnName="PointID" />
+            <ScalarProperty Name="PointName" ColumnName="PointName" />
+            <ScalarProperty Name="Address" ColumnName="Address" />
+            <ScalarProperty Name="Longitude" ColumnName="Longitude" />
+            <ScalarProperty Name="Latitude" ColumnName="Latitude" />
+            <ScalarProperty Name="CompanyID" ColumnName="CompanyID" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Server"><EntityTypeMapping TypeName="TaxiGuardianModel.Server"><MappingFragment StoreEntitySet="Server">
+            <ScalarProperty Name="ServerID" ColumnName="ServerID" />
+            <ScalarProperty Name="ServerName" ColumnName="ServerName" />
+            <ScalarProperty Name="Url" ColumnName="Url" />
+            <ScalarProperty Name="Availability" ColumnName="Availability" />
+            <ScalarProperty Name="ProcessorTimeHistory" ColumnName="ProcessorTimeHistory" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="State"><EntityTypeMapping TypeName="TaxiGuardianModel.State"><MappingFragment StoreEntitySet="State">
+            <ScalarProperty Name="StateID" ColumnName="StateID" />
+            <ScalarProperty Name="Name" ColumnName="Name" />
+            <ScalarProperty Name="CountryID" ColumnName="CountryID" />
+            <ScalarProperty Name="AliasNames" ColumnName="AliasNames" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="TaxiState"><EntityTypeMapping TypeName="TaxiGuardianModel.TaxiState"><MappingFragment StoreEntitySet="TaxiState">
+            <ScalarProperty Name="TaxiStateID" ColumnName="TaxiStateID" />
+            <ScalarProperty Name="TaxiName" ColumnName="TaxiName" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="TrackingInfo"><EntityTypeMapping TypeName="TaxiGuardianModel.TrackingInfo"><MappingFragment StoreEntitySet="TrackingInfo">
+            <ScalarProperty Name="TrackingInfoID" ColumnName="TrackingInfoID" />
+            <ScalarProperty Name="TrackingDateTime" ColumnName="TrackingDateTime" />
+            <ScalarProperty Name="UserID" ColumnName="UserID" />
+            <ScalarProperty Name="Speed" ColumnName="Speed" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Trip"><EntityTypeMapping TypeName="TaxiGuardianModel.Trip"><MappingFragment StoreEntitySet="Trip">
+            <ScalarProperty Name="TripID" ColumnName="TripID" />
+            <ScalarProperty Name="TripCreation" ColumnName="TripCreation" />
+            <ScalarProperty Name="TripFromAddress" ColumnName="TripFromAddress" />
+            <ScalarProperty Name="TripToAddress" ColumnName="TripToAddress" />
+            <ScalarProperty Name="ClientUserID" ColumnName="ClientUserID" />
+            <ScalarProperty Name="TaxiUserID" ColumnName="TaxiUserID" />
+            <ScalarProperty Name="TripStateID" ColumnName="TripStateID" />
+            <ScalarProperty Name="CalificationTripID" ColumnName="CalificationTripID" />
+            <ScalarProperty Name="CompanyPartnerID" ColumnName="CompanyPartnerID" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="TripLog"><EntityTypeMapping TypeName="TaxiGuardianModel.TripLog"><MappingFragment StoreEntitySet="TripLog">
+            <ScalarProperty Name="TripLogID" ColumnName="TripLogID" />
+            <ScalarProperty Name="TripID" ColumnName="TripID" />
+            <ScalarProperty Name="TripLogDateTime" ColumnName="TripLogDateTime" />
+            <ScalarProperty Name="CancelUserID" ColumnName="CancelUserID" />
+            <ScalarProperty Name="CancelDescription" ColumnName="CancelDescription" />
+            <ScalarProperty Name="TripStateID" ColumnName="TripStateID" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="TripState"><EntityTypeMapping TypeName="TaxiGuardianModel.TripState"><MappingFragment StoreEntitySet="TripState">
+            <ScalarProperty Name="TripStateID" ColumnName="TripStateID" />
+            <ScalarProperty Name="TripStateName" ColumnName="TripStateName" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="User"><EntityTypeMapping TypeName="TaxiGuardianModel.User"><MappingFragment StoreEntitySet="User">
+            <ScalarProperty Name="UserID" ColumnName="UserID" />
+            <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+            <ScalarProperty Name="LastName" ColumnName="LastName" />
+            <ScalarProperty Name="UserName" ColumnName="UserName" />
+            <ScalarProperty Name="Password" ColumnName="Password" />
+            <ScalarProperty Name="Email" ColumnName="Email" />
+            <ScalarProperty Name="PrefixMobilePhone" ColumnName="PrefixMobilePhone" />
+            <ScalarProperty Name="MobilePhone" ColumnName="MobilePhone" />
+            <ScalarProperty Name="Dni" ColumnName="Dni" />
+            <ScalarProperty Name="LastLogin" ColumnName="LastLogin" />
+            <ScalarProperty Name="GenderID" ColumnName="GenderID" />
+            <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+            <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+            <ScalarProperty Name="ProfilePicture" ColumnName="ProfilePicture" />
+            <ScalarProperty Name="UserStatusID" ColumnName="UserStatusID" />
+            <ScalarProperty Name="Address" ColumnName="Address" />
+            <ScalarProperty Name="FollowMe" ColumnName="FollowMe" />
+            <ScalarProperty Name="LastPositionDateTime" ColumnName="LastPositionDateTime" />
+            <ScalarProperty Name="LastSpeed" ColumnName="LastSpeed" />
+            <ScalarProperty Name="LastStatusChange" ColumnName="LastStatusChange" />
+            <ScalarProperty Name="ProfilePictureThumb" ColumnName="ProfilePictureThumb" />
+            <ScalarProperty Name="UserTypeID" ColumnName="UserTypeID" />
+            <ScalarProperty Name="CurrentSessionID" ColumnName="CurrentSessionID" />
+            <ScalarProperty Name="CompanyID" ColumnName="CompanyID" />
+            <ScalarProperty Name="LastCarID" ColumnName="LastCarID" />
+            <ScalarProperty Name="TaxiStateID" ColumnName="TaxiStateID" />
+            <ScalarProperty Name="Comments" ColumnName="Comments" />
+            <ScalarProperty Name="PushDeviceRegistrationID" ColumnName="PushDeviceRegistrationID" />
+            <ScalarProperty Name="TaxiGuardianVersion" ColumnName="TaxiGuardianVersion" />
+            <ScalarProperty Name="DeviceInfo" ColumnName="DeviceInfo" />
+            <ScalarProperty Name="AndroidVersion" ColumnName="AndroidVersion" />
+            <ScalarProperty Name="SignInToken" ColumnName="SignInToken" />
+            <ScalarProperty Name="SignInTokenDate" ColumnName="SignInTokenDate" />
+            <ScalarProperty Name="ContactName" ColumnName="ContactName" />
+            <ScalarProperty Name="ContactNumber" ColumnName="ContactNumber" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="UserCar"><EntityTypeMapping TypeName="TaxiGuardianModel.UserCar"><MappingFragment StoreEntitySet="UserCar">
+            <ScalarProperty Name="UserCarID" ColumnName="UserCarID" />
+            <ScalarProperty Name="UserID" ColumnName="UserID" />
+            <ScalarProperty Name="CarID" ColumnName="CarID" />
+            <ScalarProperty Name="UserCarDatetime" ColumnName="UserCarDatetime" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="UserFleet"><EntityTypeMapping TypeName="TaxiGuardianModel.UserFleet"><MappingFragment StoreEntitySet="UserFleet">
+            <ScalarProperty Name="FleetID" ColumnName="FleetID" />
+            <ScalarProperty Name="UserID" ColumnName="UserID" />
+            <ScalarProperty Name="AssignmentDate" ColumnName="AssignmentDate" />
+            <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="UserPartnerCompany"><EntityTypeMapping TypeName="TaxiGuardianModel.UserPartnerCompany"><MappingFragment StoreEntitySet="UserPartnerCompany">
+            <ScalarProperty Name="CompanyPartnerCompanyID" ColumnName="CompanyPartnerCompanyID" />
+            <ScalarProperty Name="Dni" ColumnName="Dni" />
+            <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="UserStatus"><EntityTypeMapping TypeName="TaxiGuardianModel.UserStatus"><MappingFragment StoreEntitySet="UserStatus">
+            <ScalarProperty Name="UserStatusID" ColumnName="UserStatusID" />
+            <ScalarProperty Name="UserStatusName" ColumnName="UserStatusName" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="UserType"><EntityTypeMapping TypeName="TaxiGuardianModel.UserType"><MappingFragment StoreEntitySet="UserType">
+            <ScalarProperty Name="UserTypeID" ColumnName="UserTypeID" />
+            <ScalarProperty Name="UserTypeName" ColumnName="UserTypeName" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Zone"><EntityTypeMapping TypeName="TaxiGuardianModel.Zone"><MappingFragment StoreEntitySet="Zone">
+            <ScalarProperty Name="ZoneID" ColumnName="ZoneID" />
+            <ScalarProperty Name="ZoneName" ColumnName="ZoneName" />
+            <ScalarProperty Name="CompanyID" ColumnName="CompanyID" />
+            <ScalarProperty Name="Color" ColumnName="Color" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <AssociationSetMapping Name="MenuItemUserType" TypeName="TaxiGuardianModel.MenuItemUserType" StoreEntitySet="MenuItemUserType">
+            <EndProperty Name="MenuItem">
+              <ScalarProperty Name="MenuItemID" ColumnName="MenuItemID" />
+            </EndProperty>
+            <EndProperty Name="UserType">
+              <ScalarProperty Name="UserTypeID" ColumnName="UserTypeID" />
+            </EndProperty>
+          </AssociationSetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="Model1">
+        <EntityTypeShape EntityType="TaxiGuardianModel.Alert" Width="1.5" PointX="12" PointY="15.625" Height="2.9417936197916674" IsExpanded="true" />
+        <EntityTypeShape EntityType="TaxiGuardianModel.AlertType" Width="1.5" PointX="9.75" PointY="15.875" Height="2.3648893229166674" IsExpanded="true" />
+        <EntityTypeShape EntityType="TaxiGuardianModel.CalificationTrip" Width="1.5" PointX="17.75" PointY="13" Height="1.5956835937499996" IsExpanded="true" />
+        <EntityTypeShape EntityType="TaxiGuardianModel.Car" Width="1.5" PointX="12.5" PointY="9.75" Height="4.480205078125" IsExpanded="true" />
+        <EntityTypeShape EntityType="TaxiGuardianModel.CarSize" Width="1.5" PointX="10.25" PointY="11" Height="1.9802864583333317" IsExpanded="true" />
+        <EntityTypeShape EntityType="TaxiGuardianModel.City" Width="1.5" PointX="5.25" PointY="18.625" Height="2.9417936197916674" IsExpanded="true" />
+        <EntityTypeShape EntityType="TaxiGuardianModel.Company" Width="1.5" PointX="7.5" PointY="18.25" Height="3.7109993489583317" IsExpanded="true" />
+        <EntityTypeShape EntityType="TaxiGuardianModel.CompanyPartnerCompany" Width="1.5" PointX="9.75" PointY="19" Height="2.1725878906250031" IsExpanded="true" />
+        <EntityTypeShape EntityType="TaxiGuardianModel.Coordinate" Width="1.5" PointX="12" PointY="37" Height="1.9802864583333246" IsExpanded="true" />
+        <EntityTypeShape EntityType="TaxiGuardianModel.Country" Width="1.5" PointX="0.75" PointY="19.25" Height="1.7879850260416674" IsExpanded="true" />
+        <EntityTypeShape EntityType="TaxiGuardianModel.Fleet" Width="1.5" PointX="17.75" PointY="29.875" Height="2.3648893229166745" IsExpanded="true" />
+        <EntityTypeShape EntityType="TaxiGuardianModel.Gender" Width="1.5" PointX="12.5" PointY="23" Height="1.5956835937500031" IsExpanded="true" />
+        <EntityTypeShape EntityType="TaxiGuardianModel.LoginAudit" Width="1.5" PointX="17" PointY="17.75" Height="1.9802864583333388" IsExpanded="true" />
+        <EntityTypeShape EntityType="TaxiGuardianModel.MenuItem" Width="1.5" PointX="10.25" PointY="30" Height="2.3648893229166674" IsExpanded="true" />
+        <EntityTypeShape EntityType="TaxiGuardianModel.Message" Width="1.5" PointX="20" PointY="18.5" Height="3.3263964843750031" IsExpanded="true" />
+        <EntityTypeShape EntityType="TaxiGuardianModel.MessageRecipient" Width="1.5" PointX="22.25" PointY="22.125" Height="1.9802864583333388" IsExpanded="true" />
+        <EntityTypeShape EntityType="TaxiGuardianModel.MessageState" Width="1.5" PointX="17.75" PointY="27.25" Height="1.5956835937500031" IsExpanded="true" />
+        <EntityTypeShape EntityType="TaxiGuardianModel.Parameter" Width="1.5" PointX="0.75" PointY="0.75" Height="2.1725878906250031" IsExpanded="true" />
+        <EntityTypeShape EntityType="TaxiGuardianModel.PartnerCompany" Width="1.5" PointX="7.5" PointY="14.875" Height="2.5571907552083388" IsExpanded="true" />
+        <EntityTypeShape EntityType="TaxiGuardianModel.PushEvent" Width="1.5" PointX="22.25" PointY="13.75" Height="3.326396484374996" IsExpanded="true" />
+        <EntityTypeShape EntityType="TaxiGuardianModel.PushEventState" Width="1.5" PointX="20" PointY="10.375" Height="1.5956835937500031" IsExpanded="true" />
+        <EntityTypeShape EntityType="TaxiGuardianModel.PushEventType" Width="1.5" PointX="20" PointY="7.75" Height="1.595683593749996" IsExpanded="true" />
+        <EntityTypeShape EntityType="TaxiGuardianModel.PushEventUser" Width="1.5" PointX="24.5" PointY="18.375" Height="2.5571907552083246" IsExpanded="true" />
+        <EntityTypeShape EntityType="TaxiGuardianModel.PushEventUserState" Width="1.5" PointX="22.25" PointY="25.75" Height="1.595683593749996" IsExpanded="true" />
+        <EntityTypeShape EntityType="TaxiGuardianModel.ReferencesPoint" Width="1.5" PointX="9.75" PointY="22.25" Height="2.3648893229166674" IsExpanded="true" />
+        <EntityTypeShape EntityType="TaxiGuardianModel.Server" Width="1.5" PointX="2.75" PointY="0.75" Height="1.9802864583333246" IsExpanded="true" />
+        <EntityTypeShape EntityType="TaxiGuardianModel.State" Width="1.5" PointX="3" PointY="19" Height="2.1725878906250102" IsExpanded="true" />
+        <EntityTypeShape EntityType="TaxiGuardianModel.TaxiState" Width="1.5" PointX="12.5" PointY="25.375" Height="1.595683593749996" IsExpanded="true" />
+        <EntityTypeShape EntityType="TaxiGuardianModel.TrackingInfo" Width="1.5" PointX="17" PointY="24.5" Height="1.9802864583333246" IsExpanded="true" />
+        <EntityTypeShape EntityType="TaxiGuardianModel.Trip" Width="1.5" PointX="20" PointY="13" Height="4.2879036458333388" IsExpanded="true" />
+        <EntityTypeShape EntityType="TaxiGuardianModel.TripLog" Width="1.5" PointX="22.25" PointY="17.875" Height="2.7494921875000102" IsExpanded="true" />
+        <EntityTypeShape EntityType="TaxiGuardianModel.TripState" Width="1.5" PointX="17.75" PointY="10.375" Height="1.7879850260416674" IsExpanded="true" />
+        <EntityTypeShape EntityType="TaxiGuardianModel.User" Width="1.5" PointX="14.75" PointY="14.75" Height="10.826152343749996" IsExpanded="true" />
+        <EntityTypeShape EntityType="TaxiGuardianModel.UserCar" Width="1.5" PointX="17" PointY="21" Height="2.1725878906250102" IsExpanded="true" />
+        <EntityTypeShape EntityType="TaxiGuardianModel.UserFleet" Width="1.5" PointX="20" PointY="23" Height="2.1725878906250102" IsExpanded="true" />
+        <EntityTypeShape EntityType="TaxiGuardianModel.UserPartnerCompany" Width="1.5" PointX="12" PointY="20.25" Height="1.7879850260416674" IsExpanded="true" />
+        <EntityTypeShape EntityType="TaxiGuardianModel.UserStatus" Width="1.5" PointX="12.5" PointY="27.75" Height="1.595683593749996" IsExpanded="true" />
+        <EntityTypeShape EntityType="TaxiGuardianModel.UserType" Width="1.5" PointX="12.5" PointY="30.375" Height="1.7879850260416674" IsExpanded="true" />
+        <EntityTypeShape EntityType="TaxiGuardianModel.Zone" Width="1.5" PointX="9.75" PointY="36.875" Height="2.1725878906250102" IsExpanded="true" />
+        <AssociationConnector Association="TaxiGuardianModel.FK_Alert_AlertType" ManuallyRouted="false">
+          <ConnectorPoint PointX="11.25" PointY="17.057444661458334" />
+          <ConnectorPoint PointX="12" PointY="17.057444661458334" />
+        </AssociationConnector>
+        <AssociationConnector Association="TaxiGuardianModel.FK_AlertType_Company" ManuallyRouted="false">
+          <ConnectorPoint PointX="9" PointY="18.25" />
+          <ConnectorPoint PointX="9.375" PointY="17.875" />
+          <ConnectorPoint PointX="9.375" PointY="18.614889322916667" />
+          <ConnectorPoint PointX="9.50357443490112" PointY="18.486314888015546" />
+          <ConnectorPoint PointX="9.6214255650988783" PointY="18.368463757817789" />
+          <ConnectorPoint PointX="9.75" PointY="18.239889322916667" />
+        </AssociationConnector>
+        <AssociationConnector Association="TaxiGuardianModel.FK_Trip_CalificationTrip" ManuallyRouted="false">
+          <ConnectorPoint PointX="19.25" PointY="13.797841796875" />
+          <ConnectorPoint PointX="19.541666666666668" PointY="13.797841796875" />
+          <ConnectorPoint PointX="19.708333333333332" PointY="13.797841796875" />
+          <ConnectorPoint PointX="20" PointY="13.797841796875" />
+        </AssociationConnector>
+        <AssociationConnector Association="TaxiGuardianModel.FK_Car_CarSize" ManuallyRouted="false">
+          <ConnectorPoint PointX="11.75" PointY="11.990143229166666" />
+          <ConnectorPoint PointX="12.5" PointY="11.990143229166666" />
+        </AssociationConnector>
+        <AssociationConnector Association="TaxiGuardianModel.FK_User_Car" ManuallyRouted="false">
+          <ConnectorPoint PointX="14" PointY="11.9901025390625" />
+          <ConnectorPoint PointX="15.5" PointY="11.9901025390625" />
+          <ConnectorPoint PointX="15.5" PointY="14.75" />
+        </AssociationConnector>
+        <AssociationConnector Association="TaxiGuardianModel.FK_UserCar_Car" ManuallyRouted="false">
+          <ConnectorPoint PointX="14" PointY="13.141405808593751" />
+          <ConnectorPoint PointX="15.416666666666666" PointY="13.141405808593751" />
+          <ConnectorPoint PointX="15.583333333333334" PointY="13.141405808593751" />
+          <ConnectorPoint PointX="16.75" PointY="13.141405808593751" />
+          <ConnectorPoint PointX="16.75" PointY="20.625" />
+          <ConnectorPoint PointX="17.75" PointY="20.625" />
+          <ConnectorPoint PointX="17.75" PointY="21" />
+        </AssociationConnector>
+        <AssociationConnector Association="TaxiGuardianModel.FK_CarSize_Car" ManuallyRouted="false">
+          <ConnectorPoint PointX="10.781923076923077" PointY="12.980286458333332" />
+          <ConnectorPoint PointX="10.781923076923077" PointY="13.230286458333332" />
+          <ConnectorPoint PointX="11.228461538461538" PointY="13.230286458333332" />
+          <ConnectorPoint PointX="11.228461538461538" PointY="12.980286458333332" />
+        </AssociationConnector>
+        <AssociationConnector Association="TaxiGuardianModel.FK_City_State" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="20.086293945312505" />
+          <ConnectorPoint PointX="5.25" PointY="20.086293945312505" />
+        </AssociationConnector>
+        <AssociationConnector Association="TaxiGuardianModel.FK_Company_City" ManuallyRouted="false">
+          <ConnectorPoint PointX="6.75" PointY="20.095896809895834" />
+          <ConnectorPoint PointX="7.5" PointY="20.095896809895834" />
+        </AssociationConnector>
+        <AssociationConnector Association="TaxiGuardianModel.FK_CompanyPartnerCompany_Company" ManuallyRouted="false">
+          <ConnectorPoint PointX="9" PointY="20.0862939453125" />
+          <ConnectorPoint PointX="9.75" PointY="20.0862939453125" />
+        </AssociationConnector>
+        <AssociationConnector Association="TaxiGuardianModel.FK_ReferencesPoint_Company" ManuallyRouted="false">
+          <ConnectorPoint PointX="8.25" PointY="21.960999348958332" />
+          <ConnectorPoint PointX="8.25" PointY="23.432444661458334" />
+          <ConnectorPoint PointX="8.5729191666666669" PointY="23.432444661458334" />
+          <ConnectorPoint PointX="8.7395858333333347" PointY="23.432444661458334" />
+          <ConnectorPoint PointX="9.75" PointY="23.432444661458334" />
+        </AssociationConnector>
+        <AssociationConnector Association="TaxiGuardianModel.FK_User_Company" ManuallyRouted="false">
+          <ConnectorPoint PointX="9" PointY="18.783396809895834" />
+          <ConnectorPoint PointX="9.4791666666666661" PointY="18.783396809895834" />
+          <ConnectorPoint PointX="9.6458333333333339" PointY="18.783396809895834" />
+          <ConnectorPoint PointX="14.75" PointY="18.783396809895834" />
+        </AssociationConnector>
+        <AssociationConnector Association="TaxiGuardianModel.FK_Zone_Zone" ManuallyRouted="false">
+          <ConnectorPoint PointX="8.6562525" PointY="21.960999348958332" />
+          <ConnectorPoint PointX="8.6562525" PointY="37.961293945312505" />
+          <ConnectorPoint PointX="9.75" PointY="37.961293945312505" />
+        </AssociationConnector>
+        <AssociationConnector Association="TaxiGuardianModel.FK_CompanyPartnerCompany_PartnerCompany" ManuallyRouted="false">
+          <ConnectorPoint PointX="9" PointY="17.369882062900647" />
+          <ConnectorPoint PointX="9.5625" PointY="17.932382062900647" />
+          <ConnectorPoint PointX="9.5625" PointY="19.511894972656251" />
+          <ConnectorPoint PointX="9.75" PointY="19.511894972656251" />
+        </AssociationConnector>
+        <AssociationConnector Association="TaxiGuardianModel.FK_UserPartnerCompany_CompanyPartnerCompany" ManuallyRouted="false">
+          <ConnectorPoint PointX="11.25" PointY="20.7112939453125" />
+          <ConnectorPoint PointX="12" PointY="20.7112939453125" />
+        </AssociationConnector>
+        <AssociationConnector Association="TaxiGuardianModel.FK_Coordinate_Zone" ManuallyRouted="false">
+          <ConnectorPoint PointX="11.25" PointY="37.990143229166662" />
+          <ConnectorPoint PointX="12" PointY="37.990143229166662" />
+        </AssociationConnector>
+        <AssociationConnector Association="TaxiGuardianModel.FK_State_Country" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="20.143992513020834" />
+          <ConnectorPoint PointX="3" PointY="20.143992513020834" />
+        </AssociationConnector>
+        <AssociationConnector Association="TaxiGuardianModel.FK_UserFleet_Fleet" ManuallyRouted="false">
+          <ConnectorPoint PointX="19.25" PointY="31.057444661458337" />
+          <ConnectorPoint PointX="20.75" PointY="31.057444661458337" />
+          <ConnectorPoint PointX="20.75" PointY="25.17258789062501" />
+        </AssociationConnector>
+        <AssociationConnector Association="TaxiGuardianModel.FK_User_Gender" ManuallyRouted="false">
+          <ConnectorPoint PointX="14" PointY="23.797841796875" />
+          <ConnectorPoint PointX="14.75" PointY="23.797841796875" />
+        </AssociationConnector>
+        <AssociationConnector Association="TaxiGuardianModel.FK_LoginAudit_User" ManuallyRouted="false">
+          <ConnectorPoint PointX="16.25" PointY="18.740143229166669" />
+          <ConnectorPoint PointX="16.666666666666668" PointY="18.740143229166669" />
+          <ConnectorPoint PointX="16.833333333333332" PointY="18.740143229166669" />
+          <ConnectorPoint PointX="17" PointY="18.740143229166669" />
+        </AssociationConnector>
+        <AssociationConnector Association="TaxiGuardianModel.FK_Message_MessageState" ManuallyRouted="false">
+          <ConnectorPoint PointX="18.90625" PointY="27.25" />
+          <ConnectorPoint PointX="18.90625" PointY="20.365143229166669" />
+          <ConnectorPoint PointX="19.416666666666668" PointY="20.365143229166669" />
+          <ConnectorPoint PointX="19.583333333333332" PointY="20.365143229166669" />
+          <ConnectorPoint PointX="19.666666666666668" PointY="20.365143229166669" />
+          <ConnectorPoint PointX="19.833333333333332" PointY="20.365143229166669" />
+          <ConnectorPoint PointX="20" PointY="20.365143229166669" />
+        </AssociationConnector>
+        <AssociationConnector Association="TaxiGuardianModel.FK_Message_User" ManuallyRouted="false">
+          <ConnectorPoint PointX="16.25" PointY="20.016464843750004" />
+          <ConnectorPoint PointX="16.666666666666668" PointY="20.016464843750004" />
+          <ConnectorPoint PointX="16.833333333333332" PointY="20.016464843750004" />
+          <ConnectorPoint PointX="19.416666666666668" PointY="20.016464843750004" />
+          <ConnectorPoint PointX="19.583333333333332" PointY="20.016464843750004" />
+          <ConnectorPoint PointX="19.666666666666668" PointY="20.016464843750004" />
+          <ConnectorPoint PointX="19.833333333333332" PointY="20.016464843750004" />
+          <ConnectorPoint PointX="20" PointY="20.016464843750004" />
+        </AssociationConnector>
+        <AssociationConnector Association="TaxiGuardianModel.FK_MessageRecipient_Message" ManuallyRouted="false">
+          <ConnectorPoint PointX="21.5" PointY="21.826396484375003" />
+          <ConnectorPoint PointX="21.875" PointY="22.201396484375003" />
+          <ConnectorPoint PointX="21.875" PointY="21.75" />
+          <ConnectorPoint PointX="22.25" PointY="22.125" />
+        </AssociationConnector>
+        <AssociationConnector Association="TaxiGuardianModel.FK_PushEvent_Message" ManuallyRouted="false">
+          <ConnectorPoint PointX="21.5" PointY="18.5" />
+          <ConnectorPoint PointX="21.875" PointY="18.125" />
+          <ConnectorPoint PointX="21.875" PointY="15.413198242187498" />
+          <ConnectorPoint PointX="22.25" PointY="15.413198242187498" />
+        </AssociationConnector>
+        <AssociationConnector Association="TaxiGuardianModel.FK_MessageRecipient_User" ManuallyRouted="false">
+          <ConnectorPoint PointX="16.25" PointY="16.2187505" />
+          <ConnectorPoint PointX="16.666666666666668" PointY="16.2187505" />
+          <ConnectorPoint PointX="16.833333333333332" PointY="16.2187505" />
+          <ConnectorPoint PointX="19.75" PointY="16.2187505" />
+          <ConnectorPoint PointX="19.75" PointY="22.076396484375003" />
+          <ConnectorPoint PointX="21.666666666666668" PointY="22.076396484375003" />
+          <ConnectorPoint PointX="21.958333333333332" PointY="22.076396484375003" />
+          <ConnectorPoint PointX="22" PointY="22.076396484375003" />
+          <ConnectorPoint PointX="22" PointY="21.875" />
+          <ConnectorPoint PointX="23.031252000000002" PointY="21.875" />
+          <ConnectorPoint PointX="23.031252000000002" PointY="22.125" />
+        </AssociationConnector>
+        <AssociationConnector Association="TaxiGuardianModel.FK_PushEvent_PushEventState" ManuallyRouted="false">
+          <ConnectorPoint PointX="21.5" PointY="11.172841796875002" />
+          <ConnectorPoint PointX="22.510414166666667" PointY="11.172841796875002" />
+          <ConnectorPoint PointX="22.677080833333331" PointY="11.172841796875002" />
+          <ConnectorPoint PointX="23" PointY="11.172841796875002" />
+          <ConnectorPoint PointX="23" PointY="13.75" />
+        </AssociationConnector>
+        <AssociationConnector Association="TaxiGuardianModel.FK_PushEvent_PushEventType" ManuallyRouted="false">
+          <ConnectorPoint PointX="21.5" PointY="8.547841796874998" />
+          <ConnectorPoint PointX="22.5937475" PointY="8.547841796874998" />
+          <ConnectorPoint PointX="22.5937475" PointY="13.75" />
+        </AssociationConnector>
+        <AssociationConnector Association="TaxiGuardianModel.FK_PushEvent_Trip" ManuallyRouted="false">
+          <ConnectorPoint PointX="21.5" PointY="14.519099121093749" />
+          <ConnectorPoint PointX="21.854166666666668" PointY="14.519099121093749" />
+          <ConnectorPoint PointX="22.020833333333332" PointY="14.519099121093749" />
+          <ConnectorPoint PointX="22.25" PointY="14.519099121093749" />
+        </AssociationConnector>
+        <AssociationConnector Association="TaxiGuardianModel.FK_PushEventUser_PushEvent" ManuallyRouted="false">
+          <ConnectorPoint PointX="23.75" PointY="15.413198242187498" />
+          <ConnectorPoint PointX="25.25" PointY="15.413198242187498" />
+          <ConnectorPoint PointX="25.25" PointY="18.375" />
+        </AssociationConnector>
+        <AssociationConnector Association="TaxiGuardianModel.FK_PushEventUser_PushEventUserState" ManuallyRouted="false">
+          <ConnectorPoint PointX="23.75" PointY="26.547841796874998" />
+          <ConnectorPoint PointX="25.25" PointY="26.547841796874998" />
+          <ConnectorPoint PointX="25.25" PointY="20.932190755208325" />
+        </AssociationConnector>
+        <AssociationConnector Association="TaxiGuardianModel.FK_PushEventUser_User" ManuallyRouted="false">
+          <ConnectorPoint PointX="16.25" PointY="17.518951822916669" />
+          <ConnectorPoint PointX="16.666666666666668" PointY="17.518951822916669" />
+          <ConnectorPoint PointX="16.833333333333332" PointY="17.518951822916669" />
+          <ConnectorPoint PointX="19.666666666666668" PointY="17.518951822916669" />
+          <ConnectorPoint PointX="19.833333333333332" PointY="17.518951822916669" />
+          <ConnectorPoint PointX="20.448589743589743" PointY="17.518951822916669" />
+          <ConnectorPoint PointX="20.615256410256407" PointY="17.518951822916669" />
+          <ConnectorPoint PointX="20.895128205128206" PointY="17.518951822916669" />
+          <ConnectorPoint PointX="21.06179487179487" PointY="17.518951822916669" />
+          <ConnectorPoint PointX="21.71002353605769" PointY="17.518951822916669" />
+          <ConnectorPoint PointX="21.958333333333329" PointY="17.518951822916669" />
+          <ConnectorPoint PointX="24.8437475" PointY="17.518951822916669" />
+          <ConnectorPoint PointX="24.8437475" PointY="18.375" />
+        </AssociationConnector>
+        <AssociationConnector Association="TaxiGuardianModel.FK_User_TaxiState" ManuallyRouted="false">
+          <ConnectorPoint PointX="14" PointY="26.273418468749995" />
+          <ConnectorPoint PointX="15.010414166666665" PointY="26.273418468749995" />
+          <ConnectorPoint PointX="15.177080833333333" PointY="26.273418468749995" />
+          <ConnectorPoint PointX="15.5" PointY="26.273418468749995" />
+          <ConnectorPoint PointX="15.5" PointY="25.576152343749996" />
+        </AssociationConnector>
+        <AssociationConnector Association="TaxiGuardianModel.FK_TrackingInfo_User" ManuallyRouted="false">
+          <ConnectorPoint PointX="16.25" PointY="25.038076171874998" />
+          <ConnectorPoint PointX="17" PointY="25.038076171874998" />
+        </AssociationConnector>
+        <AssociationConnector Association="TaxiGuardianModel.FK_Trip_Trip" ManuallyRouted="false">
+          <ConnectorPoint PointX="20.531923076923075" PointY="17.287903645833339" />
+          <ConnectorPoint PointX="20.531923076923075" PointY="17.787903645833339" />
+          <ConnectorPoint PointX="20.978461538461538" PointY="17.787903645833339" />
+          <ConnectorPoint PointX="20.978461538461538" PointY="17.287903645833339" />
+        </AssociationConnector>
+        <AssociationConnector Association="TaxiGuardianModel.FK_Trip_TripState" ManuallyRouted="false">
+          <ConnectorPoint PointX="19.225769230769231" PointY="12.162985026041667" />
+          <ConnectorPoint PointX="19.625" PointY="12.562215795272437" />
+          <ConnectorPoint PointX="19.625" PointY="15.039548648437492" />
+          <ConnectorPoint PointX="20" PointY="15.039548648437492" />
+        </AssociationConnector>
+        <AssociationConnector Association="TaxiGuardianModel.FK_Trip_User" ManuallyRouted="false">
+          <ConnectorPoint PointX="16.25" PointY="16.815827072916669" />
+          <ConnectorPoint PointX="16.666666666666668" PointY="16.815827072916669" />
+          <ConnectorPoint PointX="16.833333333333332" PointY="16.815827072916669" />
+          <ConnectorPoint PointX="19.666666666666668" PointY="16.815827072916669" />
+          <ConnectorPoint PointX="19.833333333333332" PointY="16.815827072916669" />
+          <ConnectorPoint PointX="20" PointY="16.815827072916669" />
+        </AssociationConnector>
+        <AssociationConnector Association="TaxiGuardianModel.FK_Trip_User1" ManuallyRouted="false">
+          <ConnectorPoint PointX="16.25" PointY="15.629149574218745" />
+          <ConnectorPoint PointX="16.666666666666668" PointY="15.629149574218745" />
+          <ConnectorPoint PointX="16.833333333333332" PointY="15.629149574218745" />
+          <ConnectorPoint PointX="20" PointY="15.629149574218745" />
+        </AssociationConnector>
+        <AssociationConnector Association="TaxiGuardianModel.FK_TripLog_Trip" ManuallyRouted="false">
+          <ConnectorPoint PointX="21.5" PointY="17.225594953525647" />
+          <ConnectorPoint PointX="21.816074434901122" PointY="17.541669388426769" />
+          <ConnectorPoint PointX="21.933925565098878" PointY="17.659520518624525" />
+          <ConnectorPoint PointX="22.0625" PointY="17.788094953525647" />
+          <ConnectorPoint PointX="22.0625" PointY="17.711730769230769" />
+          <ConnectorPoint PointX="22.25" PointY="17.899230769230769" />
+        </AssociationConnector>
+        <AssociationConnector Association="TaxiGuardianModel.FK_TripLog_TripState" ManuallyRouted="false">
+          <ConnectorPoint PointX="19.25" PointY="12.137599410657053" />
+          <ConnectorPoint PointX="19.650385615384614" PointY="12.537985026041667" />
+          <ConnectorPoint PointX="21.9375" PointY="12.537985026041667" />
+          <ConnectorPoint PointX="21.9375" PointY="17.537116384615384" />
+          <ConnectorPoint PointX="22.275383615384616" PointY="17.875" />
+        </AssociationConnector>
+        <AssociationConnector Association="TaxiGuardianModel.FK_TripLog_User" ManuallyRouted="false">
+          <ConnectorPoint PointX="16.25" PointY="23.836293945312505" />
+          <ConnectorPoint PointX="18.822916666666668" PointY="23.836293945312505" />
+          <ConnectorPoint PointX="18.989583333333332" PointY="23.836293945312505" />
+          <ConnectorPoint PointX="19.5" PointY="23.836293945312505" />
+          <ConnectorPoint PointX="19.5" PointY="17.625" />
+          <ConnectorPoint PointX="19.666666666666668" PointY="17.625" />
+          <ConnectorPoint PointX="19.833333333333332" PointY="17.625" />
+          <ConnectorPoint PointX="20.448589743589743" PointY="17.625" />
+          <ConnectorPoint PointX="20.615256410256407" PointY="17.625" />
+          <ConnectorPoint PointX="20.895128205128206" PointY="17.625" />
+          <ConnectorPoint PointX="21.06179487179487" PointY="17.625" />
+          <ConnectorPoint PointX="21.791666666666668" PointY="17.625" />
+          <ConnectorPoint PointX="22.108716948717944" PointY="17.625" />
+          <ConnectorPoint PointX="23.043943807692308" PointY="17.625" />
+          <ConnectorPoint PointX="23.043943807692308" PointY="17.875" />
+        </AssociationConnector>
+        <AssociationConnector Association="TaxiGuardianModel.FK_User_UserStatus" ManuallyRouted="false">
+          <ConnectorPoint PointX="14" PointY="28.547841796874998" />
+          <ConnectorPoint PointX="15.0937475" PointY="28.547841796874998" />
+          <ConnectorPoint PointX="15.0937475" PointY="25.576152343749996" />
+        </AssociationConnector>
+        <AssociationConnector Association="TaxiGuardianModel.FK_User_UserType" ManuallyRouted="false">
+          <ConnectorPoint PointX="14" PointY="31.268992513020834" />
+          <ConnectorPoint PointX="15.9062525" PointY="31.268992513020834" />
+          <ConnectorPoint PointX="15.9062525" PointY="25.576152343749996" />
+        </AssociationConnector>
+        <AssociationConnector Association="TaxiGuardianModel.FK_UserCar_User" ManuallyRouted="false">
+          <ConnectorPoint PointX="16.25" PointY="22.086293945312505" />
+          <ConnectorPoint PointX="17" PointY="22.086293945312505" />
+        </AssociationConnector>
+        <AssociationConnector Association="TaxiGuardianModel.FK_UserFleet_User" ManuallyRouted="false">
+          <ConnectorPoint PointX="16.25" PointY="24.199396972656253" />
+          <ConnectorPoint PointX="18.822916666666668" PointY="24.199396972656253" />
+          <ConnectorPoint PointX="18.989583333333332" PointY="24.199396972656253" />
+          <ConnectorPoint PointX="20" PointY="24.199396972656253" />
+        </AssociationConnector>
+        <AssociationConnector Association="TaxiGuardianModel.MenuItemUserType" ManuallyRouted="false">
+          <ConnectorPoint PointX="11.75" PointY="31.268992513020834" />
+          <ConnectorPoint PointX="12.5" PointY="31.268992513020834" />
+        </AssociationConnector>
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

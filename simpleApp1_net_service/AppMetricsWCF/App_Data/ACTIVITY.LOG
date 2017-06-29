@@ -1,0 +1,248 @@
+**********************************************************
+* Session del log iniciada  (28-03-2017 a las 12:15:28)  *
+**********************************************************
+TH: 5 - 28/03/2017 12:18:49 - MSG: |************************************ Start: CreateScheduledTrip ************************************|
+TH: 5 - ::1:63638 - 28/03/2017 12:18:49 - MSG: Error al crear el viaje programado: El usuario no es valido
+TH: 5 - 28/03/2017 12:18:49 - MSG: |************************************ Finish: CreateScheduledTrip ************************************|
+TH: 5 - 28/03/2017 12:19:14 - MSG: |************************************ Start: CreateScheduledTrip ************************************|
+TH: 5 - ::1:63638 - 28/03/2017 12:19:34 - MSG: Error al crear el viaje programado: Input string was not in a correct format. (   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at WCFOndaVerde.Mobile.CreateScheduledTrip(Double tripFromLocationLat, Double tripFromLocationLng, Nullable`1 tripToLocationLat, Nullable`1 tripToLocationLng, String tripFromAddress, String tripToAddress, String accountCode, Nullable`1 partnerCompanyID, String reference, String date, String time, String tripType, String passengerPhone, Boolean outOfCapital, String sessionID) in e:\Projects\OndaVerde - Etapa_3\OndaVerde\WCFOndaVerde\Services\Mobile.svc.cs:line 1918)
+TH: 5 - 28/03/2017 12:19:34 - MSG: |************************************ Finish: CreateScheduledTrip ************************************|
+TH: 5 - 28/03/2017 12:19:36 - MSG: |************************************ Start: CreateScheduledTrip ************************************|
+TH: 5 - ::1:63638 - 28/03/2017 12:20:58 - MSG: Error al crear el viaje programado: Input string was not in a correct format. (   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at WCFOndaVerde.Mobile.CreateScheduledTrip(Double tripFromLocationLat, Double tripFromLocationLng, Nullable`1 tripToLocationLat, Nullable`1 tripToLocationLng, String tripFromAddress, String tripToAddress, String accountCode, Nullable`1 partnerCompanyID, String reference, String date, String time, String tripType, String passengerPhone, Boolean outOfCapital, String sessionID) in e:\Projects\OndaVerde - Etapa_3\OndaVerde\WCFOndaVerde\Services\Mobile.svc.cs:line 1918)
+TH: 5 - 28/03/2017 12:20:58 - MSG: |************************************ Finish: CreateScheduledTrip ************************************|
+TH: 5 - 28/03/2017 12:21:01 - MSG: |************************************ Start: CreateScheduledTrip ************************************|
+TH: 5 - ::1:63638 - 28/03/2017 12:21:02 - MSG: Error al crear el viaje programado: El usuario no es valido
+TH: 5 - 28/03/2017 12:21:02 - MSG: |************************************ Finish: CreateScheduledTrip ************************************|
+TH: 5 - 28/03/2017 12:21:13 - MSG: |************************************ Start: CreateScheduledTrip ************************************|
+TH: 5 - ::1:63638 - 28/03/2017 12:21:50 - MSG: Error al crear el viaje programado: Object reference not set to an instance of an object. (   at WCFOndaVerde.Mobile.CreateScheduledTrip(Double tripFromLocationLat, Double tripFromLocationLng, Nullable`1 tripToLocationLat, Nullable`1 tripToLocationLng, String tripFromAddress, String tripToAddress, String accountCode, Nullable`1 partnerCompanyID, String reference, String date, String time, String tripType, String passengerPhone, Boolean outOfCapital, String sessionID) in e:\Projects\OndaVerde - Etapa_3\OndaVerde\WCFOndaVerde\Services\Mobile.svc.cs:line 1919)
+TH: 5 - 28/03/2017 12:21:50 - MSG: |************************************ Finish: CreateScheduledTrip ************************************|
+TH: 5 - 28/03/2017 12:21:52 - MSG: |************************************ Start: CreateScheduledTrip ************************************|
+TH: 5 - ::1:63638 - 28/03/2017 12:23:15 - MSG: Error al crear el viaje programado: Object reference not set to an instance of an object. (   at WCFOndaVerde.Mobile.CreateScheduledTrip(Double tripFromLocationLat, Double tripFromLocationLng, Nullable`1 tripToLocationLat, Nullable`1 tripToLocationLng, String tripFromAddress, String tripToAddress, String accountCode, Nullable`1 partnerCompanyID, String reference, String date, String time, String tripType, String passengerPhone, Boolean outOfCapital, String sessionID) in e:\Projects\OndaVerde - Etapa_3\OndaVerde\WCFOndaVerde\Services\Mobile.svc.cs:line 1919)
+TH: 5 - 28/03/2017 12:23:15 - MSG: |************************************ Finish: CreateScheduledTrip ************************************|
+TH: 5 - 28/03/2017 12:23:54 - MSG: |************************************ Start: CreateScheduledTrip ************************************|
+TH: 5 - ::1:63638 - 28/03/2017 12:23:58 - MSG: Error al crear el viaje programado: El usuario no es valido
+TH: 5 - 28/03/2017 12:23:58 - MSG: |************************************ Finish: CreateScheduledTrip ************************************|
+TH: 5 - 28/03/2017 12:24:46 - MSG: |************************************ Start: LoginClient ************************************|
+TH: 5 - ::1:63638 - 28/03/2017 12:24:49 - MSG: Obteniendo DataTable...
+TH: 5 - ::1:63638 - 28/03/2017 12:24:49 - MSG: QueryString -> SELECT [User].* FROM [User] WITH(NOLOCK) WHERE UserName = @Phone AND [User].UserTypeID IN (@UserTypeID_1,@UserTypeID_2)
+TH: 5 - ::1:63638 - 28/03/2017 12:24:49 - MSG: ParamsValues -> @Phone = '3413210153'@UserTypeID_1 = '5'@UserTypeID_2 = '1007'
+TH: 5 - ::1:63638 - 28/03/2017 12:24:49 - MSG: El DataTable se ha obtenido satisfactoriamente...
+TH: 5 - ::1:63638 - 28/03/2017 12:24:49 - MSG: Realizando ExecuteNonQuery...
+TH: 5 - ::1:63638 - 28/03/2017 12:24:49 - MSG: QueryString -> UPDATE [User] SET LastLogin=GetDate(), UserStatusID=@UserStatusID, CurrentSessionID=@CurrentSessionID , PushDeviceRegistrationID=@PushDeviceRegistrationID  WHERE UserID=@UserID
+TH: 5 - ::1:63638 - 28/03/2017 12:24:49 - MSG: ParamsValues -> @UserStatusID = 'Online'@CurrentSessionID = 'AWAPa1u%2bv%2fQ%3d'@PushDeviceRegistrationID = 'asdas'@UserID = '687'
+TH: 5 - ::1:63638 - 28/03/2017 12:24:49 - MSG: Obteniendo DataTable...
+TH: 5 - ::1:63638 - 28/03/2017 12:24:49 - MSG: QueryString -> SELECT * FROM [FavoriteUsersAddress] WHERE UserID = @UserID
+TH: 5 - ::1:63638 - 28/03/2017 12:24:49 - MSG: ParamsValues -> @UserID = '687'
+TH: 5 - ::1:63638 - 28/03/2017 12:24:49 - MSG: El DataTable se ha obtenido satisfactoriamente...
+TH: 5 - ::1:63638 - 28/03/2017 12:24:49 - MSG: Obteniendo DataTable...
+TH: 5 - ::1:63638 - 28/03/2017 12:24:49 - MSG: QueryString -> SELECT ParameterID, ParameterName, ParameterKey, ParameterValue, Description FROM Parameter WITH(NOLOCK)
+TH: 5 - ::1:63638 - 28/03/2017 12:24:49 - MSG: ParamsValues -> 
+TH: 5 - ::1:63638 - 28/03/2017 12:24:49 - MSG: El DataTable se ha obtenido satisfactoriamente...
+TH: 5 - ::1:63638 - 28/03/2017 12:24:49 - MSG: Obteniendo DataTable...
+TH: 5 - ::1:63638 - 28/03/2017 12:24:49 - MSG: QueryString ->  SELECT * FROM [Parameter] WITH(NOLOCK) WHERE IsMobile = @IsMobile 
+TH: 5 - ::1:63638 - 28/03/2017 12:24:49 - MSG: ParamsValues -> @IsMobile = '1'
+TH: 5 - ::1:63638 - 28/03/2017 12:24:49 - MSG: El DataTable se ha obtenido satisfactoriamente...
+TH: 5 - ::1:63638 - 28/03/2017 12:24:49 - MSG: Obteniendo DataTable...
+TH: 5 - ::1:63638 - 28/03/2017 12:24:49 - MSG: QueryString -> SELECT * FROM [Server] WITH(NOLOCK) 
+TH: 5 - ::1:63638 - 28/03/2017 12:24:49 - MSG: ParamsValues -> 
+TH: 5 - ::1:63638 - 28/03/2017 12:24:49 - MSG: El DataTable se ha obtenido satisfactoriamente...
+TH: 5 - 28/03/2017 12:24:49 - MSG: |************************************ Finish: LoginClient ************************************|
+TH: 5 - 28/03/2017 12:25:06 - MSG: |************************************ Start: CreateScheduledTrip ************************************|
+TH: 5 - ::1:63638 - 28/03/2017 12:25:57 - MSG: Realizando Rollback...
+TH: 5 - ::1:63638 - 28/03/2017 12:25:57 - MSG: Error al crear el viaje programado: Crear Viaje Programado: Error inesperado al insertar el registro.(24201: Latitude values must be between -90 and 90 degrees.:    at OndaVerde.Data.ADONETDataAccess.DataAccess.AddGeoPointParameter(String parameterName, Nullable`1 lat, Nullable`1 lng) in e:\Projects\OndaVerde - Etapa_3\OndaVerde\DataAccess\DataAccess.cs:line 1255
+   at OndaVerde.Logic.Trip.AddScheduleTrip(Double TripFromLocationLat, Double TripFromLocationLng, Nullable`1 TripToLocationLat, Nullable`1 TripToLocationLng, String TripFromAddress, String TripToAddress, Int32 ClientUserID, Nullable`1 partnerCompanyID, String accountCode, String subCardCode, String reference, DateTime start, String tripType, Boolean isMobile, String observations, String passenger, String contactPhone, String additionalData, String userTelephonist, Boolean outOfCapital, String tableTransfersCode, String conditions) in e:\Projects\OndaVerde - Etapa_3\OndaVerde\Logic\Trip.cs:line 2580) (   at OndaVerde.Logic.Trip.AddScheduleTrip(Double TripFromLocationLat, Double TripFromLocationLng, Nullable`1 TripToLocationLat, Nullable`1 TripToLocationLng, String TripFromAddress, String TripToAddress, Int32 ClientUserID, Nullable`1 partnerCompanyID, String accountCode, String subCardCode, String reference, DateTime start, String tripType, Boolean isMobile, String observations, String passenger, String contactPhone, String additionalData, String userTelephonist, Boolean outOfCapital, String tableTransfersCode, String conditions) in e:\Projects\OndaVerde - Etapa_3\OndaVerde\Logic\Trip.cs:line 2651
+   at WCFOndaVerde.Mobile.CreateScheduledTrip(Double tripFromLocationLat, Double tripFromLocationLng, Nullable`1 tripToLocationLat, Nullable`1 tripToLocationLng, String tripFromAddress, String tripToAddress, String accountCode, Nullable`1 partnerCompanyID, String reference, String date, String time, String tripType, String passengerPhone, Boolean outOfCapital, String sessionID) in e:\Projects\OndaVerde - Etapa_3\OndaVerde\WCFOndaVerde\Services\Mobile.svc.cs:line 1919)
+TH: 5 - 28/03/2017 12:25:57 - MSG: |************************************ Finish: CreateScheduledTrip ************************************|
+TH: 5 - 28/03/2017 12:26:23 - MSG: |************************************ Start: CreateScheduledTrip ************************************|
+TH: 5 - 28/03/2017 12:26:25 - MSG: ItemRemoved (removed reason: Expired)
+TH: 5 - 28/03/2017 12:26:25 - MSG: Logging out user...
+TH: 5 - 28/03/2017 12:26:25 - MSG: Logout - UserID: 687
+TH: 5 - ::1:63638 - 28/03/2017 12:26:25 - MSG: Realizando ExecuteNonQuery...
+TH: 5 - ::1:63638 - 28/03/2017 12:26:25 - MSG: QueryString -> UPDATE [User] SET UserStatusID=@UserStatusID, CurrentSessionID=null, PushDeviceRegistrationID=null, LastSpeed = 0, TaxiStateID = 1 WHERE UserID=@UserID AND CurrentSessionID=@CurrentSessionID
+TH: 5 - ::1:63638 - 28/03/2017 12:26:25 - MSG: ParamsValues -> @UserStatusID = 'Offline'@UserID = '687'@CurrentSessionID = 'AWAPa1u%2bv%2fQ%3d'
+TH: 5 - 28/03/2017 12:26:25 - MSG: User (687) logged out...
+TH: 5 - ::1:63638 - 28/03/2017 12:26:25 - MSG: Error al crear el viaje programado: El usuario no es valido
+TH: 5 - 28/03/2017 12:26:25 - MSG: |************************************ Finish: CreateScheduledTrip ************************************|
+TH: 5 - 28/03/2017 12:26:29 - MSG: |************************************ Start: CreateScheduledTrip ************************************|
+TH: 5 - ::1:63638 - 28/03/2017 12:26:33 - MSG: Error al crear el viaje programado: El usuario no es valido
+TH: 5 - 28/03/2017 12:26:33 - MSG: |************************************ Finish: CreateScheduledTrip ************************************|
+TH: 5 - 28/03/2017 12:26:36 - MSG: |************************************ Start: LoginClient ************************************|
+TH: 5 - ::1:63638 - 28/03/2017 12:26:36 - MSG: Obteniendo DataTable...
+TH: 5 - ::1:63638 - 28/03/2017 12:26:36 - MSG: QueryString -> SELECT [User].* FROM [User] WITH(NOLOCK) WHERE UserName = @Phone AND [User].UserTypeID IN (@UserTypeID_1,@UserTypeID_2)
+TH: 5 - ::1:63638 - 28/03/2017 12:26:36 - MSG: ParamsValues -> @Phone = '3413210153'@UserTypeID_1 = '5'@UserTypeID_2 = '1007'
+TH: 5 - ::1:63638 - 28/03/2017 12:26:36 - MSG: El DataTable se ha obtenido satisfactoriamente...
+TH: 5 - ::1:63638 - 28/03/2017 12:26:36 - MSG: Realizando ExecuteNonQuery...
+TH: 5 - ::1:63638 - 28/03/2017 12:26:36 - MSG: QueryString -> UPDATE [User] SET LastLogin=GetDate(), UserStatusID=@UserStatusID, CurrentSessionID=@CurrentSessionID , PushDeviceRegistrationID=@PushDeviceRegistrationID  WHERE UserID=@UserID
+TH: 5 - ::1:63638 - 28/03/2017 12:26:36 - MSG: ParamsValues -> @UserStatusID = 'Online'@CurrentSessionID = 'pEQvc8oc8n4%3d'@PushDeviceRegistrationID = 'asdas'@UserID = '687'
+TH: 5 - ::1:63638 - 28/03/2017 12:26:36 - MSG: Obteniendo DataTable...
+TH: 5 - ::1:63638 - 28/03/2017 12:26:36 - MSG: QueryString -> SELECT * FROM [FavoriteUsersAddress] WHERE UserID = @UserID
+TH: 5 - ::1:63638 - 28/03/2017 12:26:36 - MSG: ParamsValues -> @UserID = '687'
+TH: 5 - ::1:63638 - 28/03/2017 12:26:36 - MSG: El DataTable se ha obtenido satisfactoriamente...
+TH: 5 - ::1:63638 - 28/03/2017 12:26:36 - MSG: Obteniendo datos del Cache (Cached Item: REFRESH_PARAMS_MOBILE - Timeout: 10)
+TH: 5 - ::1:63638 - 28/03/2017 12:26:36 - MSG: Obteniendo DataTable...
+TH: 5 - ::1:63638 - 28/03/2017 12:26:36 - MSG: QueryString -> SELECT * FROM [Server] WITH(NOLOCK) 
+TH: 5 - ::1:63638 - 28/03/2017 12:26:36 - MSG: ParamsValues -> 
+TH: 5 - ::1:63638 - 28/03/2017 12:26:36 - MSG: El DataTable se ha obtenido satisfactoriamente...
+TH: 5 - 28/03/2017 12:26:36 - MSG: |************************************ Finish: LoginClient ************************************|
+TH: 5 - 28/03/2017 12:26:49 - MSG: |************************************ Start: CreateScheduledTrip ************************************|
+TH: 5 - ::1:63638 - 28/03/2017 12:27:43 - MSG: Realizando Rollback...
+TH: 5 - ::1:63638 - 28/03/2017 12:27:43 - MSG: Error al crear el viaje programado: Crear Viaje Programado: Error inesperado al insertar el registro.(24201: Latitude values must be between -90 and 90 degrees.:    at OndaVerde.Data.ADONETDataAccess.DataAccess.AddGeoPointParameter(String parameterName, Nullable`1 lat, Nullable`1 lng) in e:\Projects\OndaVerde - Etapa_3\OndaVerde\DataAccess\DataAccess.cs:line 1255
+   at OndaVerde.Logic.Trip.AddScheduleTrip(Double TripFromLocationLat, Double TripFromLocationLng, Nullable`1 TripToLocationLat, Nullable`1 TripToLocationLng, String TripFromAddress, String TripToAddress, Int32 ClientUserID, Nullable`1 partnerCompanyID, String accountCode, String subCardCode, String reference, DateTime start, String tripType, Boolean isMobile, String observations, String passenger, String contactPhone, String additionalData, String userTelephonist, Boolean outOfCapital, String tableTransfersCode, String conditions) in e:\Projects\OndaVerde - Etapa_3\OndaVerde\Logic\Trip.cs:line 2580) (   at OndaVerde.Logic.Trip.AddScheduleTrip(Double TripFromLocationLat, Double TripFromLocationLng, Nullable`1 TripToLocationLat, Nullable`1 TripToLocationLng, String TripFromAddress, String TripToAddress, Int32 ClientUserID, Nullable`1 partnerCompanyID, String accountCode, String subCardCode, String reference, DateTime start, String tripType, Boolean isMobile, String observations, String passenger, String contactPhone, String additionalData, String userTelephonist, Boolean outOfCapital, String tableTransfersCode, String conditions) in e:\Projects\OndaVerde - Etapa_3\OndaVerde\Logic\Trip.cs:line 2651
+   at WCFOndaVerde.Mobile.CreateScheduledTrip(Double tripFromLocationLat, Double tripFromLocationLng, Nullable`1 tripToLocationLat, Nullable`1 tripToLocationLng, String tripFromAddress, String tripToAddress, String accountCode, Nullable`1 partnerCompanyID, String reference, String date, String time, String tripType, String passengerPhone, Boolean outOfCapital, String sessionID) in e:\Projects\OndaVerde - Etapa_3\OndaVerde\WCFOndaVerde\Services\Mobile.svc.cs:line 1919)
+TH: 5 - 28/03/2017 12:27:43 - MSG: |************************************ Finish: CreateScheduledTrip ************************************|
+TH: 5 - 28/03/2017 12:27:48 - MSG: |************************************ Start: CreateScheduledTrip ************************************|
+TH: 5 - 28/03/2017 12:27:55 - MSG: ItemRemoved (removed reason: Expired)
+TH: 5 - 28/03/2017 12:27:55 - MSG: Logging out user...
+TH: 5 - 28/03/2017 12:27:55 - MSG: Logout - UserID: 687
+TH: 5 - ::1:63638 - 28/03/2017 12:27:55 - MSG: Realizando ExecuteNonQuery...
+TH: 5 - ::1:63638 - 28/03/2017 12:27:55 - MSG: QueryString -> UPDATE [User] SET UserStatusID=@UserStatusID, CurrentSessionID=null, PushDeviceRegistrationID=null, LastSpeed = 0, TaxiStateID = 1 WHERE UserID=@UserID AND CurrentSessionID=@CurrentSessionID
+TH: 5 - ::1:63638 - 28/03/2017 12:27:55 - MSG: ParamsValues -> @UserStatusID = 'Offline'@UserID = '687'@CurrentSessionID = 'pEQvc8oc8n4%3d'
+TH: 5 - 28/03/2017 12:27:55 - MSG: User (687) logged out...
+TH: 5 - ::1:63638 - 28/03/2017 12:27:55 - MSG: Error al crear el viaje programado: El usuario no es valido
+TH: 5 - 28/03/2017 12:27:55 - MSG: |************************************ Finish: CreateScheduledTrip ************************************|
+TH: 5 - 28/03/2017 12:28:20 - MSG: |************************************ Start: CreateScheduledTrip ************************************|
+TH: 5 - ::1:63638 - 28/03/2017 12:29:37 - MSG: Error al crear el viaje programado: El usuario no es valido
+TH: 5 - 28/03/2017 12:29:37 - MSG: |************************************ Finish: CreateScheduledTrip ************************************|
+TH: 35 - 28/03/2017 12:35:28 - MSG: Application_End
+**********************************************************
+* Session del log iniciada  (26-04-2017 a las 12:01:57)  *
+**********************************************************
+TH: 8 - 26/04/2017 12:03:18 - MSG: Application_End
+**********************************************************
+* Session del log iniciada  (04-05-2017 a las 10:44:16)  *
+**********************************************************
+TH: 6 - 04/05/2017 10:45:06 - MSG: |************************************ Start: LoginClient ************************************|
+TH: 6 - ::1:60204 - 04/05/2017 10:45:08 - MSG: Intento de conexion nro: 1
+TH: 6 - ::1:60204 - 04/05/2017 10:45:09 - MSG: Intento de conexion nro: 2
+TH: 6 - ::1:60204 - 04/05/2017 10:45:10 - MSG: Intento de conexion nro: 3
+TH: 6 - ::1:60204 - 04/05/2017 10:45:10 - MSG: Error de autenticacion: Error inesperado al realizar el login.(Login failed for user 'TaxiGuardian'.:    at TaxiGuardian.Data.ADONETDataAccess.DataAccess.AddParameter(String parameterName, Object parameterValue) in e:\Projects\TaxiGuardianSL\TaxiGuardian\DataAccess\DataAccess.cs:line 1219
+   at TaxiGuardian.Logic.User.LoginClient(String mobile, String userPassword, String sessionID, Boolean updateLastLogin, String pushDeviceRegistrationID, Object& oResult) in e:\Projects\TaxiGuardian\TaxiGuardian\Logic\User.cs:line 1271) (   at TaxiGuardian.Logic.User.LoginClient(String mobile, String userPassword, String sessionID, Boolean updateLastLogin, String pushDeviceRegistrationID, Object& oResult) in e:\Projects\TaxiGuardian\TaxiGuardian\Logic\User.cs:line 1305
+   at WCFTaxiGuardian.Mobile.LoginClient(String mobile, String userPassword, String pushDeviceRegistrationID) in e:\Projects\TaxiGuardian\TaxiGuardian\WCFTaxiGuardian\Services\Mobile.svc.cs:line 279)
+TH: 6 - 04/05/2017 10:45:10 - MSG: |************************************ Finish: LoginClient ************************************|
+TH: 6 - 04/05/2017 10:45:45 - MSG: |************************************ Start: LoginClient ************************************|
+TH: 6 - ::1:60204 - 04/05/2017 10:45:47 - MSG: Intento de conexion nro: 1
+TH: 6 - ::1:60204 - 04/05/2017 10:45:48 - MSG: Intento de conexion nro: 2
+TH: 6 - ::1:60204 - 04/05/2017 10:45:49 - MSG: Intento de conexion nro: 3
+TH: 6 - ::1:60204 - 04/05/2017 10:45:49 - MSG: Error de autenticacion: Error inesperado al realizar el login.(Login failed for user 'TaxiGuardian'.:    at TaxiGuardian.Data.ADONETDataAccess.DataAccess.AddParameter(String parameterName, Object parameterValue) in e:\Projects\TaxiGuardianSL\TaxiGuardian\DataAccess\DataAccess.cs:line 1219
+   at TaxiGuardian.Logic.User.LoginClient(String mobile, String userPassword, String sessionID, Boolean updateLastLogin, String pushDeviceRegistrationID, Object& oResult) in e:\Projects\TaxiGuardian\TaxiGuardian\Logic\User.cs:line 1271) (   at TaxiGuardian.Logic.User.LoginClient(String mobile, String userPassword, String sessionID, Boolean updateLastLogin, String pushDeviceRegistrationID, Object& oResult) in e:\Projects\TaxiGuardian\TaxiGuardian\Logic\User.cs:line 1305
+   at WCFTaxiGuardian.Mobile.LoginClient(String mobile, String userPassword, String pushDeviceRegistrationID) in e:\Projects\TaxiGuardian\TaxiGuardian\WCFTaxiGuardian\Services\Mobile.svc.cs:line 279)
+TH: 6 - 04/05/2017 10:45:49 - MSG: |************************************ Finish: LoginClient ************************************|
+TH: 6 - 04/05/2017 10:46:18 - MSG: |************************************ Start: LoginClient ************************************|
+TH: 6 - ::1:60204 - 04/05/2017 10:46:22 - MSG: Intento de conexion nro: 1
+TH: 6 - ::1:60204 - 04/05/2017 10:46:23 - MSG: Intento de conexion nro: 2
+TH: 6 - ::1:60204 - 04/05/2017 10:46:24 - MSG: Intento de conexion nro: 3
+TH: 6 - ::1:60204 - 04/05/2017 10:46:41 - MSG: Error de autenticacion: Error inesperado al realizar el login.(Login failed for user 'TaxiGuardian'.:    at TaxiGuardian.Data.ADONETDataAccess.DataAccess.AddParameter(String parameterName, Object parameterValue) in e:\Projects\TaxiGuardianSL\TaxiGuardian\DataAccess\DataAccess.cs:line 1219
+   at TaxiGuardian.Logic.User.LoginClient(String mobile, String userPassword, String sessionID, Boolean updateLastLogin, String pushDeviceRegistrationID, Object& oResult) in e:\Projects\TaxiGuardian\TaxiGuardian\Logic\User.cs:line 1271) (   at TaxiGuardian.Logic.User.LoginClient(String mobile, String userPassword, String sessionID, Boolean updateLastLogin, String pushDeviceRegistrationID, Object& oResult) in e:\Projects\TaxiGuardian\TaxiGuardian\Logic\User.cs:line 1305
+   at WCFTaxiGuardian.Mobile.LoginClient(String mobile, String userPassword, String pushDeviceRegistrationID) in e:\Projects\TaxiGuardian\TaxiGuardian\WCFTaxiGuardian\Services\Mobile.svc.cs:line 279)
+TH: 6 - 04/05/2017 10:46:41 - MSG: |************************************ Finish: LoginClient ************************************|
+TH: 13 - 04/05/2017 10:47:31 - MSG: Application_End
+**********************************************************
+* Session del log iniciada  (04-05-2017 a las 10:47:35)  *
+**********************************************************
+TH: 6 - 04/05/2017 10:47:51 - MSG: |************************************ Start: LoginClient ************************************|
+TH: 6 - ::1:60710 - 04/05/2017 10:47:54 - MSG: Obteniendo DataTable...
+TH: 6 - ::1:60710 - 04/05/2017 10:47:54 - MSG: QueryString -> SELECT [User].* FROM [User] WITH(NOLOCK) WHERE UserName = @Phone AND [User].UserTypeID IN (@UserTypeID_1,@UserTypeID_2)
+TH: 6 - ::1:60710 - 04/05/2017 10:47:54 - MSG: ParamsValues -> @Phone = '3413210153'@UserTypeID_1 = '5'@UserTypeID_2 = '8'
+TH: 6 - ::1:60710 - 04/05/2017 10:47:54 - MSG: El DataTable se ha obtenido satisfactoriamente...
+TH: 6 - ::1:60710 - 04/05/2017 10:47:54 - MSG: Realizando ExecuteNonQuery...
+TH: 6 - ::1:60710 - 04/05/2017 10:47:54 - MSG: QueryString -> UPDATE [User] SET LastLogin=GetDate(), UserStatusID=@UserStatusID, CurrentSessionID=@CurrentSessionID , PushDeviceRegistrationID=@PushDeviceRegistrationID  WHERE UserID=@UserID
+TH: 6 - ::1:60710 - 04/05/2017 10:47:54 - MSG: ParamsValues -> @UserStatusID = 'Online'@CurrentSessionID = '701r5lN8%2bHE%3d'@PushDeviceRegistrationID = 'asd'@UserID = '1005'
+TH: 6 - ::1:60710 - 04/05/2017 10:47:59 - MSG: Obteniendo DataTable...
+TH: 6 - ::1:60710 - 04/05/2017 10:47:59 - MSG: QueryString -> SELECT * FROM [FavoriteUsersAddress] WHERE UserID = @UserID
+TH: 6 - ::1:60710 - 04/05/2017 10:47:59 - MSG: ParamsValues -> @UserID = '1005'
+TH: 6 - ::1:60710 - 04/05/2017 10:47:59 - MSG: El DataTable se ha obtenido satisfactoriamente...
+TH: 6 - ::1:60710 - 04/05/2017 10:47:59 - MSG: Obteniendo DataTable...
+TH: 6 - ::1:60710 - 04/05/2017 10:47:59 - MSG: QueryString -> SELECT ParameterID, ParameterName, ParameterKey, ParameterValue, Description FROM Parameter WITH(NOLOCK)
+TH: 6 - ::1:60710 - 04/05/2017 10:47:59 - MSG: ParamsValues -> 
+TH: 6 - ::1:60710 - 04/05/2017 10:47:59 - MSG: El DataTable se ha obtenido satisfactoriamente...
+TH: 6 - ::1:60710 - 04/05/2017 10:47:59 - MSG: Obteniendo DataTable...
+TH: 6 - ::1:60710 - 04/05/2017 10:47:59 - MSG: QueryString ->  SELECT * FROM [Parameter] WITH(NOLOCK) WHERE IsMobile = @IsMobile 
+TH: 6 - ::1:60710 - 04/05/2017 10:47:59 - MSG: ParamsValues -> @IsMobile = '1'
+TH: 6 - ::1:60710 - 04/05/2017 10:47:59 - MSG: El DataTable se ha obtenido satisfactoriamente...
+TH: 6 - ::1:60710 - 04/05/2017 10:47:59 - MSG: Obteniendo DataTable...
+TH: 6 - ::1:60710 - 04/05/2017 10:47:59 - MSG: QueryString -> SELECT * FROM [Server] WITH(NOLOCK) 
+TH: 6 - ::1:60710 - 04/05/2017 10:47:59 - MSG: ParamsValues -> 
+TH: 6 - ::1:60710 - 04/05/2017 10:47:59 - MSG: El DataTable se ha obtenido satisfactoriamente...
+TH: 6 - 04/05/2017 10:47:59 - MSG: |************************************ Finish: LoginClient ************************************|
+TH: 6 - 04/05/2017 10:48:56 - MSG: |************************************ Start: GetNearTaxis ************************************|
+TH: 6 - ::1:60710 - 04/05/2017 10:49:07 - MSG: Obteniendo DataTable...
+TH: 6 - ::1:60710 - 04/05/2017 10:49:07 - MSG: QueryString -> SELECT * FROM Trip WITH(NOLOCK) WHERE TripID = @TripID
+TH: 6 - ::1:60710 - 04/05/2017 10:49:07 - MSG: ParamsValues -> @TripID = '6079'
+TH: 6 - ::1:60710 - 04/05/2017 10:49:07 - MSG: El DataTable se ha obtenido satisfactoriamente...
+TH: 6 - ::1:60710 - 04/05/2017 10:49:28 - MSG: Obteniendo DataTable...
+TH: 6 - ::1:60710 - 04/05/2017 10:49:28 - MSG: QueryString -> SELECT [User].* FROM [User] WITH(NOLOCK)  WHERE UserID = @userID
+TH: 6 - ::1:60710 - 04/05/2017 10:49:28 - MSG: ParamsValues -> @userID = '1005'
+TH: 6 - ::1:60710 - 04/05/2017 10:49:28 - MSG: El DataTable se ha obtenido satisfactoriamente...
+TH: 6 - ::1:60710 - 04/05/2017 10:49:38 - MSG: Obteniendo DataTable...
+TH: 6 - ::1:60710 - 04/05/2017 10:49:38 - MSG: QueryString -> SELECT TOP(@Top) [User].* FROM [User] WITH(NOLOCK) INNER JOIN Company WITH(NOLOCK) ON [User].CompanyID = Company.CompanyID  WHERE (geography::STGeomFromText('POINT(' + CONVERT(VARCHAR(50),@FromLongitude,128) + ' ' + CONVERT(VARCHAR(50),@FromLatitude,128) + ')', 4326).STDistance([User].LastPosition) < @Radius) AND [User].TaxiStateID = @TaxiStateID AND [User].UserTypeID = @UserTypeID AND [User].IsActive = 1 AND [User].UserStatusID = @UserStatusID AND [User].PushDeviceRegistrationID IS NOT NULL
+TH: 6 - ::1:60710 - 04/05/2017 10:49:38 - MSG: ParamsValues -> @Top = '5'@FromLongitude = '-60,6394414'@FromLatitude = '-32,9588241'@Radius = '50000'@TaxiStateID = 'Libre'@UserTypeID = 'AppTaxi'@UserStatusID = 'Online'
+TH: 6 - ::1:60710 - 04/05/2017 10:49:38 - MSG: El DataTable se ha obtenido satisfactoriamente...
+TH: 6 - 04/05/2017 10:50:01 - MSG: |************************************ Finish: NEARTAXIS 1 ************************************|
+TH: 6 - 04/05/2017 10:50:01 - MSG: |************************************ Finish: GetNearTaxis ************************************|
+TH: 34 - 04/05/2017 10:58:32 - MSG: ItemRemoved (removed reason: CacheSpecificEviction)
+TH: 34 - 04/05/2017 10:58:32 - MSG: Application_End
+**********************************************************
+* Session del log iniciada  (31-05-2017 a las 18:09:55)  *
+**********************************************************
+TH: 16 - 31/05/2017 18:10:46 - MSG: |************************************ Start: GetPromos ************************************|
+TH: 16 - ::1:61470 - 31/05/2017 18:10:54 - MSG: Obteniendo DataTable...
+TH: 16 - ::1:61470 - 31/05/2017 18:10:54 - MSG: QueryString -> SELECT * FROM Promo  WHERE (IsTaxiPromo IS NULL OR IsTaxiPromo = @IsTaxiPromo)  AND IsActive = 1
+TH: 16 - ::1:61470 - 31/05/2017 18:10:54 - MSG: ParamsValues -> @IsTaxiPromo = 'True'
+TH: 16 - ::1:61470 - 31/05/2017 18:10:54 - MSG: El DataTable se ha obtenido satisfactoriamente...
+TH: 16 - ::1:61470 - 31/05/2017 18:11:39 - MSG: Error al obtener el viaje: Object reference not set to an instance of an object. (   at WCFTaxiGuardian.Mobile.GetPromos(Int32 userTypeID, String sessionID) in e:\Projects\TaxiGuardian\TaxiGuardian\WCFTaxiGuardian\Services\Mobile.svc.cs:line 1703)
+TH: 16 - 31/05/2017 18:11:39 - MSG: |************************************ Finish: GetPromos ************************************|
+TH: 99 - 01/06/2017 10:46:20 - MSG: Application_End
+**********************************************************
+* Session del log iniciada  (27-06-2017 a las 15:41:45)  *
+**********************************************************
+TH: 10 - 27/06/2017 15:42:45 - MSG: |************************************ Start: GetOnlinePassengerUsers ************************************|
+TH: 10 - 27/06/2017 15:42:49 - MSG: GetDataTable 702
+TH: 10 - ::1:64258 - 27/06/2017 15:42:49 - MSG: Obteniendo DataTable...
+TH: 10 - ::1:64258 - 27/06/2017 15:42:50 - MSG: QueryString -> SELECT [User].* FROM [User] WITH(NOLOCK)  WHERE UserTypeID = 5  AND UserStatusID = 1 
+TH: 10 - ::1:64258 - 27/06/2017 15:42:50 - MSG: ParamsValues -> 
+TH: 10 - ::1:64258 - 27/06/2017 15:42:50 - MSG: El DataTable se ha obtenido satisfactoriamente...
+TH: 10 - 27/06/2017 15:42:50 - MSG: **** **** **** **** **** **** LOGUEAME ESTA START **** **** **** **** **** ****
+TH: 10 - System.Data.SqlClient.SqlDataAdapter - 27/06/2017 15:42:50 - MSG: oAdpt -> 
+TH: 10 -  - 27/06/2017 15:42:50 - MSG: oData -> 
+TH: 10 - 27/06/2017 15:42:50 - MSG: **** **** **** **** **** **** LOGUEAME ESTA END **** **** **** **** **** ****
+TH: 10 - 4 - 27/06/2017 15:42:50 - MSG: users.Rows.Count ->
+TH: 10 -  - 27/06/2017 15:42:50 - MSG: users ->
+TH: 16 - 27/06/2017 15:44:41 - MSG: Application_End
+**********************************************************
+* Session del log iniciada  (27-06-2017 a las 15:44:43)  *
+**********************************************************
+TH: 10 - 27/06/2017 15:44:53 - MSG: |************************************ Start: GetOnlinePassengerUsers ************************************|
+TH: 10 - 27/06/2017 15:44:55 - MSG: GetDataTable 702
+TH: 10 - ::1:64979 - 27/06/2017 15:44:55 - MSG: Obteniendo DataTable...
+TH: 10 - ::1:64979 - 27/06/2017 15:44:55 - MSG: QueryString -> SELECT [User].* FROM [User] WITH(NOLOCK)  WHERE UserTypeID = 5  AND UserStatusID = 1 
+TH: 10 - ::1:64979 - 27/06/2017 15:44:55 - MSG: ParamsValues -> 
+TH: 10 - ::1:64979 - 27/06/2017 15:44:55 - MSG: El DataTable se ha obtenido satisfactoriamente...
+TH: 10 - 27/06/2017 15:44:55 - MSG: **** **** **** **** **** **** LOGUEAME ESTA START **** **** **** **** **** ****
+TH: 10 - System.Data.SqlClient.SqlDataAdapter - 27/06/2017 15:44:55 - MSG: oAdpt -> 
+TH: 10 -  - 27/06/2017 15:44:55 - MSG: oData -> 
+TH: 10 - 27/06/2017 15:44:55 - MSG: **** **** **** **** **** **** LOGUEAME ESTA END **** **** **** **** **** ****
+TH: 10 - 5 - 27/06/2017 15:44:55 - MSG: users.Rows.Count ->
+TH: 10 -  - 27/06/2017 15:44:55 - MSG: users ->
+TH: 8 - 27/06/2017 15:47:58 - MSG: Application_End
+**********************************************************
+* Session del log iniciada  (27-06-2017 a las 15:50:32)  *
+**********************************************************
+TH: 10 - 27/06/2017 15:50:42 - MSG: |************************************ Start: GetOnlinePassengerUsers ************************************|
+TH: 10 - 27/06/2017 15:50:46 - MSG: GetDataTable 702
+TH: 10 - ::1:50513 - 27/06/2017 15:50:46 - MSG: Obteniendo DataTable...
+TH: 10 - ::1:50513 - 27/06/2017 15:50:46 - MSG: QueryString -> SELECT [User].* FROM [User] WITH(NOLOCK)  WHERE UserTypeID = 5  AND UserStatusID = 1 
+TH: 10 - ::1:50513 - 27/06/2017 15:50:46 - MSG: ParamsValues -> 
+TH: 10 - ::1:50513 - 27/06/2017 15:50:46 - MSG: El DataTable se ha obtenido satisfactoriamente...
+TH: 10 - 27/06/2017 15:50:46 - MSG: **** **** **** **** **** **** LOGUEAME ESTA START **** **** **** **** **** ****
+TH: 10 - System.Data.SqlClient.SqlDataAdapter - 27/06/2017 15:50:46 - MSG: oAdpt -> 
+TH: 10 -  - 27/06/2017 15:50:46 - MSG: oData -> 
+TH: 10 - 27/06/2017 15:50:46 - MSG: **** **** **** **** **** **** LOGUEAME ESTA END **** **** **** **** **** ****
+TH: 10 - 5 - 27/06/2017 15:50:46 - MSG: users.Rows.Count ->
+TH: 10 -  - 27/06/2017 15:50:46 - MSG: users ->
+TH: 30 - 27/06/2017 15:56:45 - MSG: Application_End

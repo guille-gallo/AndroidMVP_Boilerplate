@@ -1,0 +1,15 @@
+E:\Projects\OndaVerde - Etapa_3\OndaVerde\Logger\bin\Release\Logger.dll
+E:\Projects\OndaVerde - Etapa_3\OndaVerde\Logger\bin\Release\Logger.pdb
+E:\Projects\OndaVerde - Etapa_3\OndaVerde\Logger\obj\Release\Logger.csprojResolveAssemblyReference.cache
+E:\Projects\OndaVerde - Etapa_3\OndaVerde\Logger\obj\Release\Logger.dll
+E:\Projects\OndaVerde - Etapa_3\OndaVerde\Logger\obj\Release\Logger.pdb
+E:\Projects\TaxiGuardianSL\TaxiGuardian\Logger\bin\Release\Logger.dll
+E:\Projects\TaxiGuardianSL\TaxiGuardian\Logger\bin\Release\Logger.pdb
+E:\Projects\TaxiGuardianSL\TaxiGuardian\Logger\obj\Release\Logger.csprojResolveAssemblyReference.cache
+E:\Projects\TaxiGuardianSL\TaxiGuardian\Logger\obj\Release\Logger.dll
+E:\Projects\TaxiGuardianSL\TaxiGuardian\Logger\obj\Release\Logger.pdb
+C:\proyectos\FrameworkMobile\AppMetrics_Service\Logger\bin\Release\Logger.dll
+C:\proyectos\FrameworkMobile\AppMetrics_Service\Logger\bin\Release\Logger.pdb
+C:\proyectos\FrameworkMobile\AppMetrics_Service\Logger\obj\Release\Logger.csprojResolveAssemblyReference.cache
+C:\proyectos\FrameworkMobile\AppMetrics_Service\Logger\obj\Release\Logger.dll
+C:\proyectos\FrameworkMobile\AppMetrics_Service\Logger\obj\Release\Logger.pdb

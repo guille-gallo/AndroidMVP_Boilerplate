@@ -1,0 +1,36 @@
+E:\Projects\OndaVerde - Etapa_3\OndaVerde\DataAccess\bin\Release\DataAccess.dll
+E:\Projects\OndaVerde - Etapa_3\OndaVerde\DataAccess\bin\Release\DataAccess.pdb
+E:\Projects\OndaVerde - Etapa_3\OndaVerde\DataAccess\bin\Release\Common.dll
+E:\Projects\OndaVerde - Etapa_3\OndaVerde\DataAccess\bin\Release\Logger.dll
+E:\Projects\OndaVerde - Etapa_3\OndaVerde\DataAccess\bin\Release\Logger.pdb
+E:\Projects\OndaVerde - Etapa_3\OndaVerde\DataAccess\bin\Release\Common.pdb
+E:\Projects\OndaVerde - Etapa_3\OndaVerde\DataAccess\obj\Release\DataAccess.csprojResolveAssemblyReference.cache
+E:\Projects\OndaVerde - Etapa_3\OndaVerde\DataAccess\obj\Release\DataAccess.dll
+E:\Projects\OndaVerde - Etapa_3\OndaVerde\DataAccess\obj\Release\DataAccess.pdb
+E:\Projects\TaxiGuardianSL\TaxiGuardian\DataAccess\bin\Release\DataAccess.dll
+E:\Projects\TaxiGuardianSL\TaxiGuardian\DataAccess\bin\Release\DataAccess.pdb
+E:\Projects\TaxiGuardianSL\TaxiGuardian\DataAccess\bin\Release\Common.dll
+E:\Projects\TaxiGuardianSL\TaxiGuardian\DataAccess\bin\Release\Logger.dll
+E:\Projects\TaxiGuardianSL\TaxiGuardian\DataAccess\bin\Release\Logger.pdb
+E:\Projects\TaxiGuardianSL\TaxiGuardian\DataAccess\bin\Release\Common.pdb
+E:\Projects\TaxiGuardianSL\TaxiGuardian\DataAccess\obj\Release\DataAccess.csprojResolveAssemblyReference.cache
+E:\Projects\TaxiGuardianSL\TaxiGuardian\DataAccess\obj\Release\DataAccess.dll
+E:\Projects\TaxiGuardianSL\TaxiGuardian\DataAccess\obj\Release\DataAccess.pdb
+E:\Projects\TaxiGuardian\TaxiGuardian\DataAccess\bin\Release\DataAccess.dll
+E:\Projects\TaxiGuardian\TaxiGuardian\DataAccess\bin\Release\DataAccess.pdb
+E:\Projects\TaxiGuardian\TaxiGuardian\DataAccess\bin\Release\Common.dll
+E:\Projects\TaxiGuardian\TaxiGuardian\DataAccess\bin\Release\Logger.dll
+E:\Projects\TaxiGuardian\TaxiGuardian\DataAccess\bin\Release\Logger.pdb
+E:\Projects\TaxiGuardian\TaxiGuardian\DataAccess\bin\Release\Common.pdb
+E:\Projects\TaxiGuardian\TaxiGuardian\DataAccess\obj\Release\DataAccess.csprojResolveAssemblyReference.cache
+E:\Projects\TaxiGuardian\TaxiGuardian\DataAccess\obj\Release\DataAccess.dll
+E:\Projects\TaxiGuardian\TaxiGuardian\DataAccess\obj\Release\DataAccess.pdb
+C:\proyectos\FrameworkMobile\AppMetrics_Service\DataAccess\bin\Release\DataAccess.dll
+C:\proyectos\FrameworkMobile\AppMetrics_Service\DataAccess\bin\Release\DataAccess.pdb
+C:\proyectos\FrameworkMobile\AppMetrics_Service\DataAccess\bin\Release\Common.dll
+C:\proyectos\FrameworkMobile\AppMetrics_Service\DataAccess\bin\Release\Logger.dll
+C:\proyectos\FrameworkMobile\AppMetrics_Service\DataAccess\bin\Release\Common.pdb
+C:\proyectos\FrameworkMobile\AppMetrics_Service\DataAccess\bin\Release\Logger.pdb
+C:\proyectos\FrameworkMobile\AppMetrics_Service\DataAccess\obj\Release\DataAccess.csprojResolveAssemblyReference.cache
+C:\proyectos\FrameworkMobile\AppMetrics_Service\DataAccess\obj\Release\DataAccess.dll
+C:\proyectos\FrameworkMobile\AppMetrics_Service\DataAccess\obj\Release\DataAccess.pdb

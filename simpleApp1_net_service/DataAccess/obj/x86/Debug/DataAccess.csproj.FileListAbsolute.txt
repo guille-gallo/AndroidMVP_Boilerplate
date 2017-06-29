@@ -1,0 +1,8 @@
+C:\proyectos\taxiguardian\TaxiGuardian\DataAccess\bin\x86\Debug\DataAccess.dll
+C:\proyectos\taxiguardian\TaxiGuardian\DataAccess\bin\x86\Debug\DataAccess.pdb
+C:\proyectos\taxiguardian\TaxiGuardian\DataAccess\bin\x86\Debug\Logger.dll
+C:\proyectos\taxiguardian\TaxiGuardian\DataAccess\bin\x86\Debug\Logger.pdb
+C:\proyectos\taxiguardian\TaxiGuardian\DataAccess\bin\x86\Debug\Common.pdb
+C:\proyectos\taxiguardian\TaxiGuardian\DataAccess\obj\x86\Debug\DataAccess.csprojResolveAssemblyReference.cache
+C:\proyectos\taxiguardian\TaxiGuardian\DataAccess\obj\x86\Debug\DataAccess.dll
+C:\proyectos\taxiguardian\TaxiGuardian\DataAccess\obj\x86\Debug\DataAccess.pdb
